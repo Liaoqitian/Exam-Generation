@@ -1,0 +1,16 @@
+<pl-question-panel>
+    <p>So far, we have only learned how to represent positive numbers in binary. However, there are
+        schemes to represent negative numbers in binary as well. Consider the sign and magnitude scheme:
+        given a binary number, the leftmost bit represents the sign (if it’s 1, the number is negative, if it’s 0,
+        the number is positive), and the rest of the bits represent the number itself. For example, $0b1100_2$
+        would be $-0b0100_2$. </p>
+</pl-question-panel>
+
+    <p> <pl-question-panel> a. In the box to the right, write out the representation for ${{params.a}}$ using sign and magnitude. </pl-question-panel></p>
+    <pl-string-input answers-name="first_soln"></pl-string-input>
+    
+    <p> <pl-question-panel> b. What is the minimum number (in decimal) we can represent using ${{params.b}}$ digits in sign and magnitude? </pl-question-panel></p>
+    <pl-integer-input answers-name="second_soln" label="Minimum Value"></pl-integer-input>
+
+    <p> <pl-question-panel> c. What is the maximum number (in decimal) we can represent using ${{params.c}}$ digits in sign and magnitude?</pl-question-panel></p>
+    <pl-integer-input answers-name="third_soln" label="Maximum Value"></pl-integer-input>
