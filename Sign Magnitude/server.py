@@ -3,7 +3,10 @@ import random, copy, math
 def generate(data):
 
     # Sample one random integer between -100 and 100 (inclusive) for questions a
-    a = random.randint(-100, 100)
+    x1 = random.randint(-100, -50)
+    x2 = random.randint(50, 100)
+    lst = [x1, x2]
+    a = random.choice(lst)
 
     # Sample two random integers between 5 and 10 (inclusive) for questions part b and c. 
     b = random.randint(5, 10)
