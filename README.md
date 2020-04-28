@@ -1,7 +1,7 @@
 # Exam-Generation Project 
 This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations.   
 
-## Sign and Magnitude (Summer 2019, Question 5)
+* ## Sign and Magnitude (Summer 2019, Question 5)* 
 ### Question Description:  
 The concept of positive and negative binary numbers is not formally introduced in CS10. However, the question starts with a detailed explanation of the definition. This justifies the question to be present on a CS10 midterm. Meanwhile, the problem can be directly used in a CS61C exam. 
 ### Solution Form: 
