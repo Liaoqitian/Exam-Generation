@@ -95,6 +95,7 @@ def generate(data):
     i10 = solution
     iBase9 = Selected_Bases[3]
     iBase10 = Selected_Bases[0]
+    
     # Store all the variables in params
     data['params']["i0"] = i0
     data['params']["i1"] = i1
