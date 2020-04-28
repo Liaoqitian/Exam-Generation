@@ -59,8 +59,3 @@ Multiple Choice.
 The input of the four texts are stored in strings. The sequence in which they appear and their corresponding solutions is randomized. 
 ### Demonstration:
 ![alt_text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Programming%20Paradigm/Solution%20Demo.png "Question Demo")
-    
-
-
-
-
