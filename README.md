@@ -47,12 +47,19 @@ This question focuses on the relationship between infinite cores and maximum spe
 Multiple Choice. 
 ### Implementation Details:
 The percentage of program which is serial is randomized in the list [5, 10, 20, 25, 50, 100]. Then the corresponding solution is computed by taking its reciprical. 
-## Demonstration: 
+### Demonstration: 
 ![alt_text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Speed%20Up/Solution%20Demo.png "Question Demo")
 
-
+## Programming Paradigm (Fall 2018, Question 8)
+### Question Description: 
+This question focuses on matching each programming paradigm with a problem best suited to it. 
+### Solution Form: 
+Multiple Choice. 
+### Implementation Details: 
+The input of the four texts are stored in strings. The sequence in which they appear and their corresponding solutions is randomized. 
+### Demonstration:
+![alt_text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Programming%20Paradigm/Solution%20Demo.png "Question Demo")
     
-
 
 
 
