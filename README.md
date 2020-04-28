@@ -8,5 +8,8 @@ The concept of positive and negative binary numbers is not formally introduced i
 For all the questions, a solution will be automatically computed corresponding to the randomized input. This solution will then be compared with the input of the student for checking and grading purposes. 
 1. For the first question, a random number in the interval (-100, -50) and (50, 100) is generated. This restricts the variety of difficulty of the question, since the length of the binary number is restricted with no more than 8 digits and no less than 7 digits (including the sign digit). 
 2. For the second question, a random number between 5 and 9 is generated. This restricts the variety of difficulty of the question. The number of digits does not significantly affect the difficulty of the question if the student is familiar with the clever method.
-3. For the third question, a random number between 5 and 9 is generated. This restricts the variety of difficulty of the question. The number of digits does not significantly affect the difficulty of the question if the student is familiar with the clever method.
+3. For the third question, a random number between 5 and 9 is generated. This restricts the variety of difficulty of the question. The number of digits does not significantly affect the difficulty of the question if the student is familiar with the clever method.  
+
+### Other Details: 
+![alt text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Sign%20Magnitude/Question%20Demo.png "Question Demo")
 
