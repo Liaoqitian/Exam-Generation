@@ -3,7 +3,7 @@ This repo includes the auto-generated problems I wrote during Spring 2020. They 
 [Sign and Magnitude](#Sign-and-Magnitude)
 [Number Division](#Number-Division)
 [Number Multiplication](#my-multi-word-header)
-[Speed Up ](#my-multi-word-header)
+[Speed Up ](#Speed-Up-Spring-2019-Question-5)
 [Programming Paradigm](#my-multi-word-header) 
 ***
 ## Sign and Magnitude (Summer 2019, Question 5)
