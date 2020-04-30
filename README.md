@@ -1,7 +1,7 @@
 # Exam-Generation Project 
 This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations.  
 [Sign and Magnitude](#Sign-and-Magnitude)
-[Number Division](#Number-Division-(-Fall-2019-,-Question-)-)
+[Number Division](#Number-Division)
 [Number Multiplication](#my-multi-word-header)
 [Speed Up ](#my-multi-word-header)
 [Programming Paradigm](#my-multi-word-header) 
@@ -20,7 +20,7 @@ For all the questions, solutions will be automatically computed corresponding to
 ### Demonstration: 
 ![alt text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Sign%20Magnitude/Question%20Demo.png "Question Demo")
 ***
-## Number Division (Fall 2019, Question 6)
+## Number Division
 ### Question Description: 
 This question focuses on the division of numbers represented in different bases. 
 ### Solution Form:
