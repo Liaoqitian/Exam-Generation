@@ -1,10 +1,10 @@
 # Exam-Generation Project 
-This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations.  
-[Sign and Magnitude](#Sign-and-Magnitude)
-[Number Division](#Number-Division)
-[Number Multiplication](#my-multi-word-header)
-[Speed Up ](#Speed-Up-Spring-2019-Question-5)
-[Programming Paradigm](#my-multi-word-header) 
+This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations. Here is a full table of contents. 
+[Sign and Magnitude](#Sign-and-Magnitude-Summer-2019-Question-5)  
+[Number Division](#Number-Division-Fall-2019-Question-6)  
+[Number Multiplication](#Number-Multiplication-Spring-2019-Question-6)  
+[Speed Up](#Speed-Up-Spring-2019-Question-5)  
+[Programming Paradigm](#Programming-Paradigm-Fall-2018-Question-8)  
 ***
 ## Sign and Magnitude (Summer 2019, Question 5)
 ### Question Description:  
@@ -20,7 +20,7 @@ For all the questions, solutions will be automatically computed corresponding to
 ### Demonstration: 
 ![alt text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Sign%20Magnitude/Question%20Demo.png "Question Demo")
 ***
-## Number Division
+## Number Division (Fall 2019, Question 6)
 ### Question Description: 
 This question focuses on the division of numbers represented in different bases. 
 ### Solution Form:
