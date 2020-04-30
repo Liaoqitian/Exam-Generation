@@ -1,7 +1,7 @@
 # Exam-Generation Project 
 This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations.  
 [Sign and Magnitude](#Sign-and-Magnitude)
-[Number Division](#Number-Division)
+[Number Division](#Number-Division-(-Fall-2019-,-Question-)-)
 [Number Multiplication](#my-multi-word-header)
 [Speed Up ](#my-multi-word-header)
 [Programming Paradigm](#my-multi-word-header) 
