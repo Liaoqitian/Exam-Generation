@@ -1,6 +1,11 @@
 # Exam-Generation Project 
-This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations.   
-
+This repo includes the auto-generated problems I wrote during Spring 2020. They are supported by PrairieLearn. The following is a more detailed description of each question's implemenations. Here is a full table of contents.  
+[Sign Magnitude](#Sign-and-Magnitude-Summer-2019-Question-5)  
+[Number Division](#Number-Division-Fall-2019-Question-6)  
+[Number Multiplication](#Number-Multiplication-Spring-2019-Question-6)  
+[Speed Up](#Speed-Up-Spring-2019-Question-5)  
+[Programming Paradigm](#Programming-Paradigm-Fall-2018-Question-8)  
+***
 ## Sign and Magnitude (Summer 2019, Question 5)
 ### Question Description:  
 The concept of positive and negative binary numbers is not formally introduced in CS10. However, the question starts with a detailed explanation of the definition. This justifies the question to be present on a CS10 midterm. Meanwhile, the problem can be directly used in a CS61C exam. 
@@ -14,7 +19,7 @@ For all the questions, solutions will be automatically computed corresponding to
 
 ### Demonstration: 
 ![alt text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Sign%20Magnitude/Question%20Demo.png "Question Demo")
-
+***
 ## Number Division (Fall 2019, Question 6)
 ### Question Description: 
 This question focuses on the division of numbers represented in different bases. 
@@ -25,7 +30,7 @@ The numbers I implemented are in binary, octal or hex. The divisor and the divid
 The solution is generated throughout the process. Student's solutions will be checked up to two significant digits. 
 ### Demonstration 
 ![alt text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Number%20Division/Solution%20Demo.png "Question Demo")
-
+***
 ## Number Multiplication (Spring 2019, Question 6)
 ### Question Description: 
 This question focuses on the multiplication of numbers represented in different bases. 
@@ -39,7 +44,7 @@ The numbers I implemented are in binary, octal, decimal or hex. The divisor and 
 
 ### Demonstration: 
 ![alt_text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Number%20Multiplication/Solution%20Demo.png "Question Demo")
-
+***
 ## Speed Up (Spring 2019, Question 5)
 ### Question Description:
 This question focuses on the relationship between infinite cores and maximum speedup.  
@@ -47,13 +52,16 @@ This question focuses on the relationship between infinite cores and maximum spe
 Multiple Choice. 
 ### Implementation Details:
 The percentage of program which is serial is randomized in the list [5, 10, 20, 25, 50, 100]. Then the corresponding solution is computed by taking its reciprical. 
-## Demonstration: 
+### Demonstration: 
 ![alt_text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Speed%20Up/Solution%20Demo.png "Question Demo")
-
-
-    
-
-
-
-
+***
+## Programming Paradigm (Fall 2018, Question 8)
+### Question Description: 
+This question focuses on matching each programming paradigm with a problem best suited to it. 
+### Solution Form: 
+Multiple Choice. 
+### Implementation Details: 
+The input of the four texts are stored in strings. The sequence in which they appear and their corresponding solutions is randomized. 
+### Demonstration:
+![alt_text](https://github.com/Liaoqitian/Exam-Generation-/blob/master/Programming%20Paradigm/Solution%20Demo.png "Question Demo")
 
