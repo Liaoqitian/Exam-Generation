@@ -1,48 +1,60 @@
 <pl-question-panel>
-    <p> >>> A = {{params.A}} </p>
-</pl-question-panel>
-</pl-question-panel>
-<p> >>> A[{{params.i}}] + {{params.adder}}</p>
+    <p> >>> A = {{params.A}} </p>  
+    <p> A[{{params.i}}] <pl-python-variable params-name="adder"></pl-python-variable></p>
+    <!--<p> <pl-python-variable params-name="test"></pl-python-variable></p>-->
+    <!--<p> >>> A[{{params.i}}] + <pl-python-variable params-name="adder"></pl-python-variable> </p>-->
 </pl-question-panel>
 
 <pl-multiple-choice answers-name="b" weight="1">
     <pl-answer correct="true"> 
-        {{params.solution}}
+        <pl-python-variable params-name="solution"></pl-python-variable>
     </pl-answer>
     <pl-answer correct="false">
-        {{params.i0}}
+        <pl-python-variable params-name="i0"></pl-python-variable>
+        <!--{{params.i0}}-->
     </pl-answer>
     <pl-answer correct="false">
-        "{{params.i1}}"
+        <pl-python-variable params-name="i1"></pl-python-variable>
+        <!-- "{{params.i1}}" -->
     </pl-answer>
     <pl-answer correct="false">
-        {{params.i2}}
+        <pl-python-variable params-name="i2"></pl-python-variable>
+        <!-- {{params.i2}} -->
     </pl-answer>
     <pl-answer correct="false">
-        "{{params.i3}}"
+        <pl-python-variable params-name="i3"></pl-python-variable>
+        <!-- "{{params.i3}}" -->
     </pl-answer>
     <pl-answer correct="false">
-        {{params.i4}}
+        <pl-python-variable params-name="i4"></pl-python-variable>
+        <!-- {{params.i4}} -->
     </pl-answer>
     <pl-answer correct="false">
-        "{{params.i5}}"
+        <pl-python-variable params-name="i5"></pl-python-variable>
+        <!-- "{{params.i5}}" -->
     </pl-answer>
     <pl-answer correct="false">
-        [{{params.i6}}]
+        <pl-python-variable params-name="i6"></pl-python-variable>
+        <!-- [{{params.i6}}] -->
     </pl-answer>
     <pl-answer correct="false">
-        ["{{params.i7}}"]
+        <pl-python-variable params-name="i7"></pl-python-variable>
+        <!-- ["{{params.i7}}"] -->
     </pl-answer>
     <pl-answer correct="false">
-        [{{params.i8}}]
+        <pl-python-variable params-name="i8"></pl-python-variable>
+        <!-- [{{params.i8}}] -->
     </pl-answer>
     <pl-answer correct="false">
-        ["{{params.i9}}"]
+        <pl-python-variable params-name="i9"></pl-python-variable>
+        <!-- ["{{params.i9}}"] -->
     </pl-answer>
     <pl-answer correct="false">
-        [{{params.i10}}]
+        <pl-python-variable params-name="i10"></pl-python-variable>
+        <!-- [{{params.i10}}] -->
     </pl-answer>
     <pl-answer correct="false">
-        ["{{params.i11}}"]
+        <pl-python-variable params-name="i11"></pl-python-variable>
+        <!-- ["{{params.i11}}"] -->
     </pl-answer>
 </pl-multiple-choice>
