@@ -1,27 +1,7 @@
-import random, copy, math
-
-def generate(data):
-
-    # Sample one random integer between -100 and 100 (inclusive) for questions a
-    x1 = random.randint(-100, -50)
-    x2 = random.randint(50, 100)
-    lst = [x1, x2]
-    a = random.choice(lst)
-
-    # Sample two random integers between 5 and 10 (inclusive) for questions part b and c. 
-    b = random.randint(5, 10)
-    c = random.randint(5, 10)
-
-    # Put these three integers into data['params']
-    data['params']['a'] = a
-    data['params']['b'] = b
-    data['params']['c'] = c
-
-    # Compute the corresponding solutions of the three parts. (stored in "first_soln", "second_soln", and "third_soln"). 
-    first_soln = number_representation(a)
-    second_soln = find_min(b)
-    third_soln = find_max(c)
-    # Put the sum into data['correct_answers']
-    data['correct_answers']['first_soln'] = first_soln
-    data['correct_answers']['second_soln'] = second_soln
-    data['correct_answers']['third_soln'] = third_soln
+{
+    "uuid": "b2ab51a9-3e2a-4360-9cb5-18cc93a3533e",
+    "title": "List Comprehension",
+    "topic": "List Comprehension",
+    "tags": ["Fa19"],
+    "type": "v3"
+}
