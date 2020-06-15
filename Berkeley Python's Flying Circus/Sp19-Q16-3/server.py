@@ -11,19 +11,19 @@ def generate(data):
     b = random.randint(a + 1, a + 3)
 
     # Compute the solution. 
-    if b > len(elem):
-        solution = "Error"
-    else: 
-        solution = elem[a:b]
+    # if b > len(elem):
+    #     solution = "Error"
+    # else: 
+    solution = elem[a:b]
 
     # Build the confounding choices. 
-    if solution == "Error": 
-        i0 = elem[a : b - 1]
-        i1 = elem[a : b - 2]
-        i2 = elem[a + 1: b - 1]
-        i3 = elem[a - 1: b - 1]
-        i4 = 'None of these'
-    elif b - a == 1:
+    # if solution == "Error": 
+    #     i0 = elem[a : b - 1]
+    #     i1 = elem[a : b - 2]
+    #     i2 = elem[a + 1: b - 1]
+    #     i3 = elem[a - 1: b - 1]
+    #     i4 = 'None of these'
+    if b - a == 1:
         i0 = elem[a : b - 1]
         i1 = 'Error'
         i2 = elem[b]
