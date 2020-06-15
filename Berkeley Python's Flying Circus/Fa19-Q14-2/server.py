@@ -78,7 +78,7 @@ def generate(data):
         i11 = i5
 
     # Store the parameters.
-    data['params']['A'] = A
+    data['params']['A'] = str(A).replace("'", '"') # Preformat as string
     data['params']['i'] = i
     data['params']['adder'] = adder
     data['params']['solution'] = solution
