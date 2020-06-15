@@ -16,7 +16,7 @@ def generate(data):
     data['params']['x2'] = x2
     data['params']['y2'] = y2
 
-    # Compute the solution of the three parts. 
+    # Compute the solution. 
     data['params']['solution'] = R[x2: y2]
     # Build the confounding choices. 
     data['params']['i0'] = R[x2: y2 + 1]
