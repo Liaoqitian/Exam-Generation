@@ -80,7 +80,7 @@ def generate(data):
     # Store the parameters.
     data['params']['A'] = str(A).replace("'", '"') # Preformat as string
     data['params']['i'] = i
-    data['params']['adder'] = adder
+    data['params']['adder'] = str(adder).replace("'", '"') # Preformat as string
     data['params']['solution'] = solution
     data['params']['i0'] = i0
     data['params']['i1'] = i1
