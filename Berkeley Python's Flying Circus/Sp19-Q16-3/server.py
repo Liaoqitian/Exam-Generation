@@ -3,7 +3,7 @@ import random, copy, math
 
 def generate(data):
     # Sample from a list of possible strings 
-    lst = ['SUGAR', 'MAINE', 'CASEY', 'SPEAR', 'TRASH', 'PRICY']
+    lst = ['SUGAR', 'MAINE', 'CASEY', 'SPEAR', 'PEACE', 'PRICY']
     elem = random.choice(lst)
 
     # Sample the starting and ending point
