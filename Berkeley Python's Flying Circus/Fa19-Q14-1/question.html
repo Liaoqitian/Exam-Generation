@@ -1,49 +1,49 @@
 <pl-question-panel>
-    <p> >>> R = range({{params.x1}}, {{params.y1}}) </p>
-    <p> >>> list(R[{{params.x2}}: {{params.y2}}]) </p>
+    <p> >>> R = range({{params.start}}, {{params.end}}) </p>
+    <p> >>> list(R[{{params.start_index}}: {{params.end_index}}]) </p>
 </pl-question-panel>
 
-<pl-multiple-choice answers-name="b" weight="1">
+<pl-multiple-choice answers-name="b" weight="1" number-answers = 8>
     <pl-answer correct="true"> 
-        $[{{params.solution}}]$
+        [{{params.solution}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i0}}]$
+        [{{params.i0}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i1}}]$
+        [{{params.i1}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i2}}]$
+        [{{params.i2}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i3}}]$
+        [{{params.i3}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i4}}]$
+        [{{params.i4}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i5}}]$
+        [{{params.i5}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i6}}]$
+        [{{params.i6}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i7}}]$
+        [{{params.i7}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i8}}]$
+        [{{params.i8}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i9}}]$
+        [{{params.i9}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i10}}]$
+        [{{params.i10}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i11}}]$
+        [{{params.i11}}]
     </pl-answer>
     <pl-answer correct="false">
-        $[{{params.i12}}]$
+        [{{params.i12}}]
     </pl-answer>
 </pl-multiple-choice>
