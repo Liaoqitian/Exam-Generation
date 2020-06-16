@@ -6,7 +6,7 @@ def generate(data):
     # Sample a list of random length between 3 and 5. 
     l = random.randint(3, 6)
 
-    # Sample random elements in (0, 1000) to fill the list. Then randomly reassign each element into its string form.  
+    # Sample random elements in (0, 1000) to fill the list. 
 
     A = [0] * l
     for i in range(l):
