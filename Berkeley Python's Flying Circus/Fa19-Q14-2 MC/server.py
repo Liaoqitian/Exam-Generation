@@ -26,10 +26,8 @@ def generate(data):
     i3 = int(A[index + 1]) + int(adder)
     i4 = str(A[index - 1]) + str(adder)
     i5 = str(A[index + 1]) + str(adder)
-    # Create replicates of the previous four wrong choices, but with brackets around them. This will be handled by the html file. 
 
     # Store the parameters.
-    # data['params']['A'] = str(A).replace("'", '"') # Preformat as string
     A = str(A).replace("'", '"')
     data['params']['A'] = A
     data['params']['index'] = index
@@ -41,8 +39,3 @@ def generate(data):
     data['params']['i3'] = i3 
     data['params']['i4'] = i4 
     data['params']['i5'] = i5 
-    # data['params']['i6'] = i6 
-    # data['params']['i7'] = i7 
-    # data['params']['i8'] = i8 
-    # data['params']['i8'] = i9 
-    # data['params']['i8'] = i10 

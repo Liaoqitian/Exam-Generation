@@ -1,4 +1,3 @@
-    
 import prairielearn as pl
 import random, copy, math
 
