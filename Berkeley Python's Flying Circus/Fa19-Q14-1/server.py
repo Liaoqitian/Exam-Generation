@@ -7,7 +7,7 @@ def generate(data):
     y1 = random.randint(x1 + 10, x1 + 20)
     R = [x for x in range(x1, y1 + 1)]
     # Sample a random starting point and a corresponding ending point of list to be queried.
-    x2 = random.randint(2, 6)
+    x2 = random.randint(2, 4)
     y2 = random.randint(x2 + 2, x2+ 4)
 
     # Put the four parameters into data['params']
