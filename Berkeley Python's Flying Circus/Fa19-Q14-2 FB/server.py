@@ -6,6 +6,21 @@ def enquote_string(s):
         return '"' + s + '"'
     else:
         return s
+# only use after ensuring that s is a string
+def parse_quoted(s):
+    s = s.strip()
+    if len(s) == 0 or len(s) == 1:
+        return (False,"Malformed input: put string in quotes","")
+    if s[0] != s[len(s)-1] or s[0] not in ['"', "'"]:
+        return (False,"Malformed input: put string in matching quotes","")
+    quote_char = s[0]
+    opposite_char = '"' if quote_char == "'" else "'"
+    escaped_quote_token = "\\" + quote_char
+    s_copy = s[1:-1]
+    s_copy = s_copy.replace(escaped_quote_token, "")
+    if s_copy.find(quote_char) != -1:
+        return (False,"Malformed input: If you use the same quotation mark character internally, escape it with a single backslash: \\","")
+    return (True,s,s[1:-1])
 
 def generate(data):
 
