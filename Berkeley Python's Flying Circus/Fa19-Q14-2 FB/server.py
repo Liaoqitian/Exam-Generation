@@ -19,7 +19,8 @@ def generate(data):
     
     # Compute the correct solution.
     solution = A[index] + adder
-
+    solution = str([solution]).replace("[","").replace("]","").replace("'",'"')
+    
     # Store the parameters.
     A = str(A).replace("'", '"')
     data['params']['A'] = A
