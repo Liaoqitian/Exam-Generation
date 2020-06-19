@@ -49,11 +49,11 @@ def generate(data):
     data['params']['A'] = A
     data['params']['index'] = index
     data['params']['adder'] = adder 
-    data['correct_answers']['solution'] = solution
+    data['correct_answers']['solution'] = solution.replace("'",'"')
 
 def grade(data):
     if data['score'] == 0: 
-        if data["submitted_answers"]["solution"] == data['correct_answers']['solution'].replace("'",'"'):
+        if data["submitted_answers"]["solution"] == data['correct_answers']['solution'].replace('"',"'"):
             data["partial_scores"]["score"] = 1
             data['score'] = 1
             data["feedback"]["solution"] = "you got this correct!"
