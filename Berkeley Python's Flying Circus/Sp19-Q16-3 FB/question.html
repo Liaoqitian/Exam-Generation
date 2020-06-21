@@ -1,10 +1,11 @@
-<pl-question-panel>
-    <p> >>> A[{{params.start_index}}: {{params.end_index}}] = "{{params.output}}"</p>
-</pl-question-panel>
 <pl-question-panel> 
-    <p> Please assign a string with five unique characters to A such that the above equation holds. The string is case-sensitive. Please do not include quotation marks in your input. </p> 
+    <p> >>> <b># Please assign a string with five unique characters to A and do not include quotation marks in your input.</b> </p> 
 </pl-question-panel>
-<pl-string-input answers-name="solution" remove-leading-trailing = True remove-spaces = True></pl-string-input>
+<pl-string-input answers-name="solution" label = "A = "></pl-string-input>
+<pl-question-panel>
+    <p> >>> <b>A[{{params.start_index}}: {{params.end_index}}]</b></p>
+    <p><b>'{{params.output}}'</b></p>
+</pl-question-panel>
 <pl-submission-panel>
     {{feedback.solution}}
 </pl-submission-panel>

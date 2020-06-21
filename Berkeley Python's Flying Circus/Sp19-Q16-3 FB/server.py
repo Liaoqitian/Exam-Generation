@@ -20,21 +20,31 @@ def generate(data):
     data['params']['end_index'] = end_index
     data['params']['output'] = output
 
+def find_duplicate(s): 
+    dict = {} 
+    for elem in s:
+        if elem in dict: 
+            return elem 
+        dict[elem] = 1
+    return 
+
 def grade(data):
     if data["submitted_answers"]["solution"] not in data["format_errors"]: # check we don't already have a format error
         if len(data["submitted_answers"]["solution"]) != 5:
-            data["format_errors"]["solution"] = "Only a 5-character string is allowed."
-            data["feedback"]["solution"] = "Only a 5-character string is allowed."
+            feedback = "Only a 5-character string is allowed."
+            data["format_errors"]["solution"] = feedback
+            data["feedback"]["solution"] = feedback
             return
         if len(set(data["submitted_answers"]["solution"])) != 5: 
-            data["format_errors"]["solution"] = "Unique characters must be used."
-            data["feedback"]["solution"] = "Only strings with unique characters are allowed."
+            duplicated_character = find_duplicate(data["submitted_answers"]["solution"])
+            feedback = "Only strings with unique characters are allowed. You have too many " + str(duplicated_character) + "'s."
+            data["format_errors"]["solution"] = feedback
+            data["feedback"]["solution"] = feedback
             return
     if data['score'] == 0: 
         if data["submitted_answers"]["solution"][data['params']['start_index']:data['params']['end_index']] == data['params']['output']:
             data["partial_scores"]["score"] = 1
             data['score'] = 1
-            data["feedback"]["solution"] = "you got this correct!"
         else:
             # data["partial_scores"]["solution"] = 0
             data["feedback"]["solution"] = "you got this wrong, sorry"
