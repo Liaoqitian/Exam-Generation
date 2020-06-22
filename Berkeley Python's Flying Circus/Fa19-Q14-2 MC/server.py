@@ -23,9 +23,7 @@ def generate(data):
     i0 = 'Error'
     i1 = int(A[index]) + int(adder)
     i2 = int(A[index - 1]) + int(adder)
-    i3 = int(A[index + 1]) + int(adder)
-    i4 = str(A[index - 1]) + str(adder)
-    i5 = str(A[index + 1]) + str(adder)
+    i3 = str(A[index - 1]) + str(adder)
 
     # Store the parameters.
     A = str(A).replace("'", '"')
@@ -37,5 +35,3 @@ def generate(data):
     data['params']['i1'] = i1
     data['params']['i2'] = i2 
     data['params']['i3'] = i3 
-    data['params']['i4'] = i4 
-    data['params']['i5'] = i5 
