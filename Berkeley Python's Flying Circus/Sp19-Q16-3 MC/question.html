@@ -1,23 +1,24 @@
 <pl-question-panel>
-    <p> >>> '{{params.elem}}'[{{params.start_index}}: {{params.end_index}}] </p>
+    <p> >>> <b>'{{params.elem}}'[{{params.start_index}}: {{params.end_index}}] </b></p>
 </pl-question-panel>
 
 <pl-multiple-choice answers-name="c" weight="1">
     <pl-answer correct="true"> 
-        "{{params.solution}}"
+        <b>"{{params.solution}}"</b>
     </pl-answer>
     <pl-answer correct="false">
-        "{{params.i0}}"
+        <b>"{{params.i0}}"</b>
     </pl-answer>
     <pl-answer correct="false">
         {{params.i1}}
     </pl-answer>
     <pl-answer correct="false">
-        "{{params.i2}}"
+        <b>"{{params.i2}}"</b>
     </pl-answer>
     <pl-answer correct="false">
-        "{{params.i3}}"
+        <b>"{{params.i3}}"</b>
     </pl-answer>
     <pl-answer correct="false">
         {{params.i4}}
     </pl-answer>
+</pl-multiple-choice>
