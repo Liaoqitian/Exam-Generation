@@ -11,16 +11,15 @@ code {
 </style>
 </head>
 <body>
-    
 <pl-question-panel> 
-    <p> <code>>>> <b>### Please assign a string with five unique characters to A and do not include quotation marks in your input.</b></code> </p> 
+    <p> Please assign A to a string with five unique characters and do not include quotation marks in your input.</p> 
 </pl-question-panel>
-<pl-string-input answers-name="solution" label = "A = "></pl-string-input>
+<code>>>> <b>A = </b><pl-string-input answers-name="solution"></pl-string-input></code>
 <br>
 <br>
 <pl-question-panel>
-    <p> <code>>>> <b>A[{{params.start_index}}: {{params.end_index}}]</b></code></p>
-    <p><code><b>'{{params.output}}'</b></code></p>
+    <p> <code>>>> <b>A = [{{params.start_index}}: {{params.end_index}}]</b></code></p>
+    <p><code>'{{params.output}}'</code></p>
 </pl-question-panel>
 <pl-submission-panel>
     {{feedback.solution}}
