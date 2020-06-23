@@ -1,37 +1,54 @@
+<html>
+<head>
+<style>
+code {
+  /*font-family: Consolas,"courier new";*/
+  color: black;
+  /*background-color: #f1f1f1;*/
+  padding: 2px;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
+    
 <pl-question-panel>
-    <p> >>> <b> A = {{params.A}} </b> </p>  
-    <p> >>> <b> A[{{params.index}}] + "{{params.adder}}" </b></p>
+    <p> <code>>>> <b> A = {{params.A}} </b></code> </p>  
+    <p> <code>>>> <b> A[{{params.index}}] + "{{params.adder}}" </b></code></p>
 </pl-question-panel>
 
 <pl-multiple-choice answers-name="b" weight="1" number-answers = 8>
     <pl-answer correct="true"> 
-        <b> "{{params.solution}}"</b> 
+        <code><b> "{{params.solution}}"</b> </code>
     </pl-answer>
     <pl-answer correct="false">
         {{params.i0}}
     </pl-answer>
     <pl-answer correct="false">
-        <b>{{params.i1}}</b>
+        <code><b>{{params.i1}}</b></code>
     </pl-answer>
-    <pl-answer correct="false">
-        <b>{{params.i2}}</b>
-    </pl-answer>
-    <pl-answer correct="false">
-        <b>{{params.i3}}</b>
-    </pl-answer>
+    <!--<pl-answer correct="false">-->
+    <!--    <code><b>{{params.i2}}</b></code>-->
+    <!--</pl-answer>-->
+    <!--<pl-answer correct="false">-->
+    <!--    <code><b>{{params.i3}}</b></code>-->
+    <!--</pl-answer>-->
     <pl-answer correct="false">
         {{params.i4}}
     </pl-answer>
+    <!--<pl-answer correct="false">-->
+    <!--    <code><b>[{{params.solution}}]</b></code>-->
+    <!--</pl-answer>-->
     <pl-answer correct="false">
-        <b>"{{params.i1}}"</b>
+        <code><b>"{{params.i1}}"</b></code>
+    </pl-answer>
+    <!--<pl-answer correct="false">-->
+    <!--    <code><b>"{{params.i2}}"</b></code>-->
+    <!--</pl-answer>-->
+    <pl-answer correct="false">
+        <code><b>"{{params.i3}}"</b></code>
     </pl-answer>
     <pl-answer correct="false">
-        <b>"{{params.i2}}"</b>
-    </pl-answer>
-    <pl-answer correct="false">
-        <b>"{{params.i3}}"</b>
-    </pl-answer>
-    <pl-answer correct="false">
-        <b>[{{params.i1}}]</b>
+        <code><b>[{{params.i2}}]</b></code>
     </pl-answer>
 </pl-multiple-choice>
