@@ -1,8 +1,22 @@
+<html>
+<head>
+<style>
+code {
+  /*font-family: Consolas,"courier new";*/
+  color: black;
+  /*background-color: #f1f1f1;*/
+  padding: 2px;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
+    
 <pl-integer-input answers-name="start_index" label = "a ="></pl-integer-input>
 <pl-integer-input answers-name="end_index" label = "b ="></pl-integer-input>
 <br>
 <br>
 <pl-question-panel>
-    <p> >>> <b>'{{params.elem}}'[a: b] </b></p>
-    <p> <b>'{{params.output}}'</b></p>
+    <p> <code>>>> <b>'{{params.elem}}'[a: b] </b></code></p>
+    <p> <code><b>'{{params.output}}'</b></code></p>
 </pl-question-panel>

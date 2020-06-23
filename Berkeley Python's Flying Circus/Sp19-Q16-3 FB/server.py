@@ -1,11 +1,13 @@
 import prairielearn as pl
 import random, copy, math, string
 
+def randomString(stringLength=5):
+    letters = string.ascii_letters
+    return ''.join(random.sample(letters, stringLength))
+
 def generate(data):
     # Randomly create start_index string of length 5.This will be the solution
-    def id_generator(size=5, chars = string.ascii_uppercase + string.digits):
-        return ''.join(random.choice(chars) for _ in range(size))
-    solution = id_generator()
+    solution = randomString(5)
 
     # Sample the starting and ending point
     start_index = random.randint(1, 3)

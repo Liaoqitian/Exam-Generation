@@ -1,12 +1,25 @@
+<html>
+<head>
+<style>
+code {
+  /*font-family: Consolas,"courier new";*/
+  color: black;
+  /*background-color: #f1f1f1;*/
+  padding: 2px;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
 <pl-question-panel> 
-    <p> >>> <b># Please assign a string with five unique characters to A and do not include quotation marks in your input.</b> </p> 
+    <p> <code>>>> <b>### Please assign a string with five unique characters to A and do not include quotation marks in your input.</b></code> </p> 
 </pl-question-panel>
 <pl-string-input answers-name="solution" label = "A = "></pl-string-input>
 <br>
 <br>
 <pl-question-panel>
-    <p> >>> <b>A[{{params.start_index}}: {{params.end_index}}]</b></p>
-    <p><b>'{{params.output}}'</b></p>
+    <p> <code>>>> <b>A[{{params.start_index}}: {{params.end_index}}]</b></code></p>
+    <p><code><b>'{{params.output}}'</b></code></p>
 </pl-question-panel>
 <pl-submission-panel>
     {{feedback.solution}}
