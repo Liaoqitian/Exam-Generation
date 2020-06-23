@@ -7,7 +7,7 @@ import numpy.random
 
 
 class Test(PLTestCase):
-    @points(1)
+    @points(0.5)
     @name('Check fib(0)')
     def test_0(self):
         user_val = Feedback.call_user(self.st.fib, 0)
@@ -16,7 +16,7 @@ class Test(PLTestCase):
         else:
             Feedback.set_score(0)
 
-    @points(1)
+    @points(0.5)
     @name('Check fib(1)')
     def test_1(self):
         user_val = Feedback.call_user(self.st.fib, 1)
@@ -25,7 +25,7 @@ class Test(PLTestCase):
         else:
             Feedback.set_score(0)
 
-    @points(2)
+    @points(1)
     @name('Check fib(7)')
     def test_2(self):
         user_val = Feedback.call_user(self.st.fib, 7)
@@ -34,12 +34,12 @@ class Test(PLTestCase):
         else:
             Feedback.set_score(0)
 
-    @points(3)
+    @points(8)
     @name('Check random values')
     def test_3(self):
         points = 0
-        num_tests = 10
-        test_values = np.random.choice(np.arange(2, 30), size=num_tests, replace=False)
+        num_tests = 8
+        test_values = np.random.choice(np.arange(2, 20), size=num_tests, replace=False)
         for in_val in test_values:
             correct_val = self.ref.fib(in_val)
             user_val = Feedback.call_user(self.st.fib, in_val)
