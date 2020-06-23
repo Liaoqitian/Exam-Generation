@@ -1,10 +1,23 @@
+<html>
+<head>
+<style>
+code {
+  /*font-family: Consolas,"courier new";*/
+  color: black;
+  /*background-color: #f1f1f1;*/
+  padding: 2px;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
 <pl-question-panel>
-    <p> >>> <b>R = range({{params.start}}, {{params.end}})</b> </p>
+    <p> <code>>>> <b>R = range({{params.start}}, {{params.end}})</b></code></p>
 </pl-question-panel>
 <pl-integer-input answers-name="start_index" label = "a = "></pl-integer-input>
 <pl-integer-input answers-name="end_index" label = "b = "></pl-integer-input>
 <br>
 <br>
 <pl-question-panel>
-    <p> >>> <b>list(R[a: b]) = {{params.output}}</b> </p>
+    <p> <code>>>> <b>list(R[a: b]) = {{params.output}}</b></code></p>
 </pl-question-panel>
