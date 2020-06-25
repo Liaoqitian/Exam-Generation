@@ -6,5 +6,5 @@ def generate(data):
         {'name': 'all_but_last_of', 'description': 'Function to remove the last character of a string', 'type': 'python function'}
     ]
     data['params']['names_from_user'] = [
-        {'name': 'isPalindromeAll', 'description': 'Function to determine whether a string is a palindrome', 'type': 'python function'}
+        {'name': 'isPalindromeAll', 'description': 'Function to determine whether a string is a palindrome-All', 'type': 'python function'}
     ]

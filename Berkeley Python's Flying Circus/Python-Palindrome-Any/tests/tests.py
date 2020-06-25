@@ -29,7 +29,7 @@ class Test(PLTestCase):
     @name('Check isPalindromeAny(peek)')
     def test_2(self):
         user_val = Feedback.call_user(self.st.isPalindromeAny, 'peek')
-        if Feedback.check_scalar("isPalindromeAny('peek')", self.ref.isPalindromeAny('aba'), user_val):
+        if Feedback.check_scalar("isPalindromeAny('peek')", self.ref.isPalindromeAny('peek'), user_val):
             Feedback.set_score(1)
         else:
             Feedback.set_score(0)
@@ -39,7 +39,7 @@ class Test(PLTestCase):
     def test_3(self):
         points = 0
         num_tests = 10
-        test_strings = ['abc', 'abca', 'aabb', 'berkeley','palindrome', 'abbba', 'abcba', 'abccba', 'refer', 'abcdedcba']
+        test_strings = ['abc', 'c a l', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca', 'refer', 'berkeley']
         for s in test_strings:
             correct_val = self.ref.isPalindromeAny(s)
             user_val = Feedback.call_user(self.st.isPalindromeAny, s)

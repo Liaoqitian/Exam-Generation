@@ -1,0 +1,2 @@
+def isPalindromeAny(s):
+    pass
