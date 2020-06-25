@@ -2,7 +2,7 @@ import prairielearn as pl
 import random, copy, math, string
 
 def randomString(stringLength=5):
-    letters = string.ascii_letters
+    letters = string.ascii_uppercase
     return ''.join(random.sample(letters, stringLength))
 
 def generate(data):
