@@ -12,13 +12,13 @@ code {
 
 <pl-question-panel>
     <p>
-        A palindrome-Any is a string that has at least one character match when you flip it. In other
-        words, we need the first letter equal the last letter, or the second letter equal the second to last
-        letter, ... etc. 
+        A palindrome-None is a string that has no character match when you flip it. In other
+        words, the first letter <b>MUST NOT</b> equal the last letter, and the second letter <b>MUST NOT</b> equal the second to last
+        letter ... etc. 
         <br> 
-        For example, "peek" is a palindrome-Any, because when you flip it, it becomes "keep". Both the second and third character match that of the original string. But "peak" is not. 
+        For example, "peak" is a palindrome-None, because when you flip it, it becomes "kaep". None of the characters match. But "peek" is not. 
         <br>
-        For the purposes of this problem, all zero-letter and one-letter words are <b>NOT</b> palindrome-Any's.
+        For the purposes of this problem, all zero-letter and one-letter words are palindrome-None's.
         You have access to these two functions:
     <br>
     <br>
@@ -31,8 +31,8 @@ code {
     <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
     </p>
     <p>
-      Write a Python function <code><b>isPalindromeAny</b></code> that takes a string <code><b>s</b></code>
-      and returns <code><b>True</b></code> if it is a palindrome-Any and <code><b>False</b></code> otherwise.
+      Write a Python function <code><b>isPalindromeNone</b></code> that takes a string <code><b>s</b></code>
+      and returns <code><b>True</b></code> if it is a palindrome-None and <code><b>False</b></code> otherwise.
     </p>
   
     <p>Your code snippet should define the following variables:</p>
