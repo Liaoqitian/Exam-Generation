@@ -39,7 +39,7 @@ class Test(PLTestCase):
     def test_3(self):
         points = 0
         num_tests = 10
-        test_strings = ['abc', 'abca', 'aabb', 'string','palindrome', 'abbba', 'abcba', 'abccba', 'adada', 'abcdedcba']
+        test_strings = ['abc', 'abca', 'aabb', 'berkeley','palindrome', 'abbba', 'abcba', 'abccba', 'refer', 'abcdedcba']
         for s in test_strings:
             correct_val = self.ref.isPalindrome(s)
             user_val = Feedback.call_user(self.st.isPalindrome, s)

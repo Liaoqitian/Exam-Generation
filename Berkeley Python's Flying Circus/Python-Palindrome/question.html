@@ -2,20 +2,21 @@
 <head>
 <style>
 code {
-  /*font-family: Consolas,"courier new";*/
   color: black;
-  /*background-color: #f1f1f1;*/
   padding: 2px;
   font-size: 105%;
 }
 </style>
 </head>
 <body>
+
 <pl-question-panel>
     <p>
         A palindrome is a word that is spelled the same way forwards and backwards. In other
         words, the first letter must equal the last letter, the second letter must equal the second to last
-        letter ... etc. For the purposes of this problem, all zero-letter and one-letter words are
+        letter ... etc. 
+        For example, "refer" is a palindrome, but "berkeley" is not. 
+        For the purposes of this problem, all zero-letter and one-letter words are
         palindromes.
         You have access to these two functions:
     <br>
@@ -40,18 +41,9 @@ code {
   
     <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
     </pl-file-editor>
-  
-    <!--<p class="mt-2">-->
-    <!--  <strong>Note:</strong> In the above example, the attribute-->
-    <!--  <code>source-file-name='initial_code.py'</code> was used to add existing code-->
-    <!--  to the in-browser file editor from a source file. Another option is omit the <code>source-file-name</code>-->
-    <!--  attribute and instead write the existing code directly inside the html element, between the-->
-    <!--  <code>pl-file-editor</code> tags.-->
-    <!--</p>-->
-  
+
   </pl-question-panel>
   
   <pl-submission-panel>
     <pl-external-grader-results></pl-external-grader-results>
     <pl-file-preview></pl-file-preview>
-  </pl-submission-panel>
