@@ -1,7 +1,7 @@
 {
     "uuid": "039e03b8-cad1-4058-9bf2-69d1c2894c98",
     "title": "Python2.2",
-    "topic": "String Comprehension",
-    "tags": ["Sp19"],
+    "topic": "String Slicing",
+    "tags": ["String Slicing"],
     "type": "v3"
 }

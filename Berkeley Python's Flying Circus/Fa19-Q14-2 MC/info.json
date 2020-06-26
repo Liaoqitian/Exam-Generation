@@ -1,7 +1,7 @@
 {
     "uuid": "d17e58a9-5836-4d2e-926b-60a08709666b",
     "title": "Python3",
-    "topic": "List and String Comprehension",
-    "tags": ["Fa19"],
+    "topic": "List Indexing & String Concatenation",
+    "tags": ["List Indexing", "String Concatenation"],
     "type": "v3"
 }

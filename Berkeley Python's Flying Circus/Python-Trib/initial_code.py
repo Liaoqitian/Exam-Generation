@@ -1,0 +1,2 @@
+def trib(n):
+    pass

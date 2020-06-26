@@ -1,0 +1,15 @@
+{
+    "uuid": "987386ab-af2f-472b-af1b-65d27600764d",
+    "title": "Python-Trib",
+    "topic": "Functions",
+    "tags": ["Recursion"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "timeout": 20
+    }
+}
