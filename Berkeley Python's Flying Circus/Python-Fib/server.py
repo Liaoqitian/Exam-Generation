@@ -17,21 +17,23 @@ def generate(data):
     sixth_number = fourth_number * multiplier_1 + fifth_number * multiplier_2
 
     #Convert multipliers into English words used in HTML file
+    word_multiplier_1 = ''
+    word_multiplier_2 = ''
     if multiplier_1 == 1: 
-        multiplier_1 = 'one'
+        word_multiplier_1 = 'one'
     elif multiplier_1 == 2:
-        multiplier_1 = 'two'
+        word_multiplier_1 = 'two'
     elif multiplier_1 ==3: 
-        multiplier_1 = 'three'
+        word_multiplier_1 = 'three'
     else: 
-        multiplier_1 = 'four'
+        word_multiplier_1 = 'four'
 
     if multiplier_2 == 2:
-        multiplier_2 = 'two'
+        word_multiplier_2 = 'two'
     elif multiplier_2 ==3: 
-        multiplier_2 = 'three'
+        word_multiplier_2 = 'three'
     else: 
-        multiplier_2 = 'four'
+        word_multiplier_2 = 'four'
 
     #Store the variable:
     data['params']['first_number'] = first_number
@@ -43,6 +45,8 @@ def generate(data):
 
     data['params']['multiplier_1'] = multiplier_1
     data['params']['multiplier_2'] = multiplier_2
+    data['params']['word_multiplier_1'] = word_multiplier_1
+    data['params']['word_multiplier_2'] = word_multiplier_2
 
     data['params']['names_for_user'] = []
     data['params']['names_from_user'] = [
