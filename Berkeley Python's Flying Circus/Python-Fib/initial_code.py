@@ -1,2 +1,2 @@
-def fib(n):
+def nib(n):
     pass
