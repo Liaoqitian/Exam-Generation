@@ -2,7 +2,7 @@
     "uuid": "bb0c9d3c-9878-4aed-affc-79aeb7f375a6",
     "title": "Python-Palindrome-Any",
     "topic": "Functions",
-    "tags": ["code", "v3"],
+    "tags": ["Recursion", "String Slicing"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
