@@ -4,7 +4,7 @@ def all_but_first_of(s):
 def all_but_last_of(s):
     return s[:len(s) - 1]
 
-def isPalindrome(s):
+def checkPalindrome(s):
     # if len(s) < 2:
     #     return True 
     # else: 
@@ -12,4 +12,7 @@ def isPalindrome(s):
     #         return isPalindromeAll(all_but_first_of(all_but_last_of(s)))
     #     else:
     #         return False
-    return ans[s]
+    try: 
+        return ans[s]
+    except KeyError:
+        return 0

@@ -8,28 +8,28 @@ import numpy.random
 
 class Test(PLTestCase):
     @points(0.5)
-    @name('Check isPalindromeAll()')
+    @name('Check checkPalindrome()')
     def test_0(self):
-        user_val = Feedback.call_user(self.st.isPalindromeAll, '')
-        if Feedback.check_scalar("isPalindromeAll('')", self.ref.isPalindromeAll(''), user_val):
+        user_val = Feedback.call_user(self.st.checkPalindrome, '')
+        if Feedback.check_scalar("checkPalindrome('')", self.ref.checkPalindrome(''), user_val):
             Feedback.set_score(1)
         else:
             Feedback.set_score(0)
 
     @points(0.5)
-    @name('Check isPalindromeAll(a)')
+    @name('Check checkPalindrome(a)')
     def test_1(self):
-        user_val = Feedback.call_user(self.st.isPalindromeAll, 'a')
-        if Feedback.check_scalar("isPalindromeAll('a')", self.ref.isPalindromeAll('a'), user_val):
+        user_val = Feedback.call_user(self.st.checkPalindrome, 'a')
+        if Feedback.check_scalar("checkPalindrome('a')", self.ref.checkPalindrome('a'), user_val):
             Feedback.set_score(1)
         else:
             Feedback.set_score(0)
 
     @points(1)
-    @name('Check isPalindromeAll(peak)')
+    @name('Check checkPalindrome(peak)')
     def test_2(self):
-        user_val = Feedback.call_user(self.st.isPalindromeAll, 'peak')
-        if Feedback.check_scalar("isPalindromeAll('peak')", self.ref.isPalindromeAll('peak'), user_val):
+        user_val = Feedback.call_user(self.st.checkPalindrome, 'peak')
+        if Feedback.check_scalar("checkPalindrome('peak')", self.ref.checkPalindrome('peak'), user_val):
             Feedback.set_score(1)
         else:
             Feedback.set_score(0)
@@ -41,10 +41,10 @@ class Test(PLTestCase):
         num_tests = 8
         test_strings = ['abc', 'c al', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca', 'refer', 'berkeley', 'abccba', 'abcdedcba']
         for s in test_strings:
-            if s in ans:
-                correct_val = self.ref.isPalindromeAll(s)
-                user_val = Feedback.call_user(self.st.isPalindromeAll, s)
-                if Feedback.check_scalar(f"isPalindromeAll({s})", correct_val, user_val):
+            correct_val = self.ref.checkPalindrome(s)
+            if isinstance(correct_val, bool): 
+                user_val = Feedback.call_user(self.st.checkPalindrome, s)
+                if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
                     points += 1
         if points <= 5:
             points = 0 

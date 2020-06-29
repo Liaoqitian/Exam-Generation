@@ -6,19 +6,44 @@ code {
   padding: 2px;
   font-size: 105%;
 }
+table.palindrome {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 100%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.palindrome, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+  
 </style>
 </head>
 <body>
 
 <pl-question-panel>
     <p>
-        A palindrome-All is a string that is spelled the same way forwards and backwards. In other
-        words, the first letter <b>MUST</b> equal the last letter, the second letter <b>MUST</b> equal the second to last
-        letter ... etc. 
+        {{params.text}}
         <br>
-        For example, "refer" is a palindrome-All, but "berkeley" is not. 
+        <table class="palindrome" style="width:600px">
+          <tr>
+              <th>{{params.example_title_one}}</th>
+              <th>{{params.example_title_two}}</th>
+          </tr>
+          <tr>
+              <td>{{params.example_one}}</td>
+              <td>{{params.example_two}}</td>
+          </tr>
+      </table>
+        <!-- {{params.example}}  -->
         <br>
-        For the purposes of this problem, all zero-letter and one-letter words are palindrome-All's.
+        {{params.requirement}}
         You have access to these two functions:
     <br>
     <br>
@@ -31,13 +56,13 @@ code {
     <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
     </p>
     <p>
-      Write a Python function <code><b>isPalindromeAll</b></code> that takes a string <code><b>s</b></code>
-      and returns <code><b>True</b></code> if it is a palindrome-All and <code><b>False</b></code> otherwise.
+      Write a Python function <code><b>checkPalindrome</b></code> that takes a string <code><b>s</b></code>
+      and returns <code><b>True</b></code> if it is a palindrome-{{params.variant}} and <code><b>False</b></code> otherwise.
     </p>
   
-    <p>Your code snippet should define the following variables:</p>
+    <!-- <p>Your code snippet should define the following variables:</p>
     <pl-external-grader-variables params-name="names_from_user"></pl-external-grader-variables>
-  
+   -->
     <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
     </pl-file-editor>
 

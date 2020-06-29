@@ -1,2 +1,2 @@
-def isPalindromeAll(s):
+def checkPalindrome(s):
     pass
