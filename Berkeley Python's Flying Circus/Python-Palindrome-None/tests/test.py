@@ -26,10 +26,10 @@ class Test(PLTestCase):
             Feedback.set_score(0)
 
     @points(1)
-    @name('Check isPalindromeNone(peek)')
+    @name('Check isPalindromeNone(peak)')
     def test_2(self):
-        user_val = Feedback.call_user(self.st.isPalindromeNone, 'peek')
-        if Feedback.check_scalar("isPalindromeNone('peek')", self.ref.isPalindromeNone('peek'), user_val):
+        user_val = Feedback.call_user(self.st.isPalindromeNone, 'peak')
+        if Feedback.check_scalar("isPalindromeNone('peak')", self.ref.isPalindromeNone('peak'), user_val):
             Feedback.set_score(1)
         else:
             Feedback.set_score(0)

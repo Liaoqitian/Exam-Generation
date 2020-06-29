@@ -26,25 +26,26 @@ class Test(PLTestCase):
             Feedback.set_score(0)
 
     @points(1)
-    @name('Check isPalindromeAll(aba)')
+    @name('Check isPalindromeAll(peak)')
     def test_2(self):
-        user_val = Feedback.call_user(self.st.isPalindromeAll, 'aba')
-        if Feedback.check_scalar("isPalindromeAll('aba')", self.ref.isPalindromeAll('aba'), user_val):
+        user_val = Feedback.call_user(self.st.isPalindromeAll, 'peak')
+        if Feedback.check_scalar("isPalindromeAll('peak')", self.ref.isPalindromeAll('peak'), user_val):
             Feedback.set_score(1)
         else:
             Feedback.set_score(0)
 
-    @points(10)
+    @points(8)
     @name('Check several strings')
     def test_3(self):
         points = 0
-        num_tests = 10
-        test_strings = ['abc', 'abca', 'aabb', 'berkeley','palindrome', 'abbba', 'abcba', 'abccba', 'refer', 'abcdedcba']
+        num_tests = 8
+        test_strings = ['abc', 'c al', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca', 'refer', 'berkeley', 'abccba', 'abcdedcba']
         for s in test_strings:
-            correct_val = self.ref.isPalindromeAll(s)
-            user_val = Feedback.call_user(self.st.isPalindromeAll, s)
-            if Feedback.check_scalar(f"isPalindromeAll({s})", correct_val, user_val):
-                points += 1
+            if s in ans:
+                correct_val = self.ref.isPalindromeAll(s)
+                user_val = Feedback.call_user(self.st.isPalindromeAll, s)
+                if Feedback.check_scalar(f"isPalindromeAll({s})", correct_val, user_val):
+                    points += 1
         if points <= 5:
             points = 0 
         Feedback.set_score(points / num_tests)
