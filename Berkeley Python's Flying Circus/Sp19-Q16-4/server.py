@@ -13,7 +13,7 @@ def generate(data):
 
     # Randomly determine if number_two has a bracket. 
     booleans = [True, False]
-    has_bracket = booleans[random.ranint(0, 1)]
+    has_bracket = booleans[random.randint(0, 1)]
 
     if has_bracket: 
         number_two = [number_two]
@@ -22,16 +22,15 @@ def generate(data):
     solution = ""
     if keyword == 'extend' and not has_bracket: 
         solution = 'Error'
-    if keyword == 'append':
-        solution = A.append(number_two)
-    if keyword == 'extend':
-        solution = A.extend(number_two)
-    solution = str(solution)
+    elif keyword == 'append':
+        A.append(number_two)
+    elif keyword == 'extend':
+        A.extend(number_two)
+    solution = str(A)
 
     # Store the parameters
-    params['number_one'] = number_one 
-    params['number_two'] = number_two 
-    params['A'] = A
-    params['keyword'] = keyword
-    params['solution'] = solution 
-    
+    data['params']['number_one'] = number_one 
+    data['params']['number_two'] = str(number_two)
+    data['params']['A'] = A
+    data['params']['keyword'] = keyword
+    data['correct_answers']['solution'] = solution 
