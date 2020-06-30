@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+code {
+  color: black;
+  padding: 2px;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
+
+>>> <code><b>A = [{{params.number_one}}]</b></code>
+<br>
+>>> <code><b>B = A</b></code>
+<br>
+>>> <code><b>A.{{params.keyword}}({{params.number_two}})</b></code>
+<br>
+>>> <code><b>B</b></code>
+<br>
+<pl-multiple-choice answers-name="b" weight="1">
+  <pl-answer correct="true"> 
+  <code>{{params.solution}}</code>
+  </pl-answer>
+  <pl-answer correct="false">
+  <code>{{params.i0}}</code>
+  </pl-answer>
+  <pl-answer correct="false">
+  <code>{{params.i1}}</code>
+  </pl-answer>
+  <pl-answer correct="false">
+  <code>{{params.i2}}</code>
+  </pl-answer>
+  <pl-answer correct="false">
+  <code>{{params.i3}}</code>
+  </pl-answer>
+  <pl-answer correct="false">
+  {{params.i4}}
+  </pl-answer>
+</pl-multiple-choice>

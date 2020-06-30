@@ -1,8 +1,8 @@
-  {
+{
     "uuid": "3551731f-b6b4-4afc-b1f8-a8a4f7f73bcc",
     "title": "Python-Fib-Family",
-    "topic": "Functions",
-    "tags": ["Recursion"],
+    "topic": "Python",
+    "tags": ["QL", "Recursion", "Beta", "Final", "DeadPython", "Hard"], 
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",

@@ -25,7 +25,6 @@ def generate(data):
         example_one = "peek"
         example_two = "peak"
 
-
         example = """For example, "peek" is a palindrome-Any, because when you flip it, it becomes "keep". 
         Both the second and third character match that of the original string. But "peak" is not. """
         requirement = """For the purposes of this problem, all zero-letter and one-letter words are palindrome-Any's. """
