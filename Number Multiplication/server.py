@@ -3,7 +3,7 @@ import numpy as np
 
 def generate(data):
     # The possible bases are Binary, Decimal and Hex 
-    Bases = ["2", "8", "d", "x"]
+    Bases = ["2", "8", "10", "16"]
     Selected_Bases = random.sample(Bases, 4)
 
     # The following represents the first number in decimal and its base. Store the information in params. 
@@ -20,7 +20,7 @@ def generate(data):
     elif Base1 == "8": 
         Converted_Number1 = str(oct(Number1))
         Converted_Number1 = Converted_Number1[2:]
-    elif Base1 == "x":
+    elif Base1 == "16":
         Converted_Number1 = str(hex(Number1))
         Converted_Number1 = Converted_Number1[2:]
     data['params']['Converted_Number1'] = Converted_Number1
@@ -39,7 +39,7 @@ def generate(data):
     elif Base2 == "8":
         Converted_Number2 = str(oct(Number2))
         Converted_Number2 = Converted_Number2[2:]
-    elif Base2 == "x":
+    elif Base2 == "16":
         Converted_Number2 = str(hex(Number2))
         Converted_Number2 = Converted_Number2[2:]
     data['params']['Converted_Number2'] = Converted_Number2
@@ -83,7 +83,7 @@ def generate(data):
     i6 = i_choices[6]
 
     # Create two dummy choices based on the question 
-    if Base2 != "x": 
+    if Base2 != "16": 
         i7 = int(str(Converted_Number1) + str(Converted_Number2))
         i8 = i7 + 2
     else: 
