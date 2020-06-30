@@ -55,7 +55,7 @@ def generate(data):
     elif Base3 == "8":
         solution = str(oct(unconverted_solution))
         solution = solution[2:]
-    elif Base3 == "x":
+    elif Base3 == "16":
         solution = str(hex(unconverted_solution))
         solution = solution[2:]
     data['params']['solution'] = solution
