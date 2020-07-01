@@ -1,2 +1,0 @@
-def checkPalindrome(s):
-    pass

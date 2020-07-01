@@ -51,17 +51,6 @@ table.palindrome {
       </table>
         <br>
         {{params.requirement}}
-        You have access to these two functions:
-    <br>
-    <br>
-    <code>>>> <b> def all_but_first_of(s): </b></code>
-    <br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the first character gone. </code>
-    <br>
-    <code>>>> <b> def all_but_last_of(s): </b></code>
-    <br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
-    </p>
     <p>
       Write a Python function <code><b>{{params.function}}</b></code> that takes a string <code><b>s</b></code>
       and returns <code><b>True</b></code> if it is a {{params.function}} and <code><b>False</b></code> otherwise.
@@ -79,6 +68,18 @@ table.palindrome {
     <br>
     <code>False</code>
     <br>
+    <br>
+    You have access to these two functions:
+    <br>
+    <br>
+    <code>>>> <b> def all_but_first_of(s): </b></code>
+    <br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the first character gone. </code>
+    <br>
+    <code>>>> <b> def all_but_last_of(s): </b></code>
+    <br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
+    </p>
     <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python">
       def {{params.function}}(n):
     pass

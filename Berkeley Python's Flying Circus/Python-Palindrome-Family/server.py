@@ -19,8 +19,8 @@ def generate(data):
         counter_example_one = "berkeley"
         counter_example_two = "buffer"
         counter_example_three = "california"
-        example_text = "All the letters of 'refer' are the same when reversed, meaning 'refer' = 'refer'."
-        counter_example_text = "Not all the letters are the same, meaning, 'berkeley' != 'yelekreb'."
+        example_text = "All the characters of 'refer' are the same when reversed, meaning 'refer' = 'refer'."
+        counter_example_text = "Not all the characters are the same, meaning, 'berkeley' != 'yelekreb'."
         requirement = """For the purposes of this problem, all zero-letter and one-letter words are palindrome_All's."""
     elif variant == 'Any': 
         text = """A palindrome_Any is a string that has at least one character match when you flip it. In other words, we need the first letter equal the last letter, 
