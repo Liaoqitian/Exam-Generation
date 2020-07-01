@@ -3,46 +3,47 @@ import numpy as np
 
 def generate(data):
     # The possible bases are Binary, Decimal and Hex 
-    Bases = ["2", "8", "x"]
+    Bases = ["2", "8", "16"]
     Selected_Bases = random.sample(Bases, 2)
 
-    # The following represents the first number in decimal and its base. Store the information in params. 
-    Number1 = random.randint(50, 100)
-    Base1 = Selected_Bases[0]
-    data['params']['Number1'] = Number1
-    data['params']['Base1'] = Base1
+    # The following represents the divisor in decimal and its base. Store the information in params. 
+    divisor = random.randint(10, 20)
+    divisor_base = Selected_Bases[0]
+    data['params']['divisor'] = divisor
+    data['params']['divisor_base'] = divisor_base
 
-    # Convert the first number into base form. Store the information in params. 
-    Converted_Number1 = Number1
-    if Base1 == "2": 
-        Converted_Number1 = str(bin(Number1))
-    elif Base1 == "8": 
-        Converted_Number1 = str(oct(Number1))
-    elif Base1 == "x":
-        Converted_Number1 = str(hex(Number1))
-    Converted_Number1 = Converted_Number1[2:]
-    data['params']['Converted_Number1'] = Converted_Number1
+    # Convert the divisor into base form. Store the information in params. 
+    converted_divisor = divisor
+    if divisor_base == "2": 
+        converted_divisor = str(bin(divisor))
+    elif divisor_base == "8": 
+        converted_divisor = str(oct(divisor))
+    elif divisor_base == "16":
+        converted_divisor = str(hex(divisor))
+    converted_divisor = converted_divisor[2:]
+    data['params']['converted_divisor'] = converted_divisor
 
-    # The following represents the second number and its base. 
-    Number2 = random.randint(50, 100)
-    Base2 = Selected_Bases[1]
-    data['params']['Number2'] = Number2
-    data['params']['Base2'] = Base2
-
-    # Convert the second number into decimal form. Store the information in params. 
-    Converted_Number2 = Number2
-    if Base2 == "2": 
-        Converted_Number2 = str(bin(Number2))
-    elif Base2 == "8":
-        Converted_Number2 = str(oct(Number2))
-    elif Base2 == "x":
-        Converted_Number2 = str(hex(Number2))
-    Converted_Number2 = Converted_Number2[2:]
-    data['params']['Converted_Number2'] = Converted_Number2
-    
-    # Computes the solution to the problem, rounded to two significant digits. Store the information in correct_answers. 
-    solution = round(Number1 / Number2, 2)
+    # Randomizes the solution to the problem. Store the information in correct_answers. 
+    solution = random.randint(2, 4)
     data['correct_answers']['solution'] = solution
+
+    # Compute the dividend and randomize its base. 
+    dividend = divisor * solution
+    dividend_base = Selected_Bases[1]
+    data['params']['dividend'] = dividend
+    data['params']['dividend_base'] = dividend_base
+
+    # Convert the dividend into base form. Store the information in params. 
+    converted_dividend = dividend
+    if dividend_base == "2": 
+        converted_dividend = str(bin(dividend))
+    elif dividend_base == "8":
+        converted_dividend = str(oct(dividend))
+    elif dividend_base == "16":
+        converted_dividend = str(hex(dividend))
+    converted_dividend = converted_dividend[2:]
+    data['params']['converted_dividend'] = converted_dividend
+    
 
 def decimalToBinary(num):
     # This function converts decimal number to binary # 
