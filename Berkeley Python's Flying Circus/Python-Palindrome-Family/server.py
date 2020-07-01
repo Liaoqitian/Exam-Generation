@@ -11,8 +11,8 @@ def generate(data):
         text = """A palindrome_All is a string that is spelled the same way forwards and backwards. In other words, the first letter
         MUST equal the last letter, the second letter MUST equal the second to last letter ... etc. """
         function = "isPalindrome_All"
-        example_title_one = "Palindrome_All Example"
-        example_title_two = "Not Palindrome_All Example"
+        example_title_one = "Palindrome_All Examples"
+        example_title_two = "Not Palindrome_All Examples"
         example_one = "refer"
         example_two = "level"
         example_three = "civic"
@@ -26,8 +26,8 @@ def generate(data):
         text = """A palindrome_Any is a string that has at least one character match when you flip it. In other words, we need the first letter equal the last letter, 
         or the second letter equal the second to last letter, ... etc. """
         function = "isPalindrome_Any"
-        example_title_one = "Palindrome_Any Example"
-        example_title_two = "Not Palindrome_Any Example"
+        example_title_one = "Palindrome_Any Examples"
+        example_title_two = "Not Palindrome_Any Examples"
         example_one = "peek"
         example_two = "trust"
         example_three = "butter"
@@ -41,8 +41,8 @@ def generate(data):
         text = """A palindrome_None is a string that has no character match when you flip it. In other words, the first letter MUST NOT equal the last letter, 
         and the second letter MUST NOT equal the second to last letter ... etc. """ 
         function = "isPalindrome_None"
-        example_title_one = "Palindrome_None Example"
-        example_title_two = "Not Palindrome_None Example"
+        example_title_one = "Palindrome_None Examples"
+        example_title_two = "Not Palindrome_None Examples"
         example_one = "peak"
         example_two = "trustworthy"
         example_three = "butterfly"
