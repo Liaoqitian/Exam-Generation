@@ -38,10 +38,17 @@ table.palindrome {
           </tr>
           <tr>
               <td>{{params.example_one}}</td>
-              <td>{{params.example_two}}</td>
+              <td>{{params.counter_example_one}}</td>
           </tr>
+          <tr>
+            <td>{{params.example_two}}</td>
+            <td>{{params.counter_example_two}}</td>
+        </tr>
+        <tr>
+          <td>{{params.example_three}}</td>
+          <td>{{params.counter_example_three}}</td>
+      </tr>
       </table>
-        <!-- {{params.example}}  -->
         <br>
         {{params.requirement}}
         You have access to these two functions:
@@ -56,14 +63,25 @@ table.palindrome {
     <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
     </p>
     <p>
-      Write a Python function <code><b>checkPalindrome</b></code> that takes a string <code><b>s</b></code>
-      and returns <code><b>True</b></code> if it is a palindrome-{{params.variant}} and <code><b>False</b></code> otherwise.
+      Write a Python function <code><b>{{params.function}}</b></code> that takes a string <code><b>s</b></code>
+      and returns <code><b>True</b></code> if it is a {{params.function}} and <code><b>False</b></code> otherwise.
     </p>
-  
-    <!-- <p>Your code snippet should define the following variables:</p>
-    <pl-external-grader-variables params-name="names_from_user"></pl-external-grader-variables>
-   -->
-    <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
+    <code>>>> <b>{{params.function}}(“{{params.example_one}}”) </b></code>
+    <br>
+    <code>### {{params.example_text}}</code>
+    <br>
+    <code>True</code>
+    <br>
+    <br>
+    <code>>>> <b>{{params.function}}(“{{params.counter_example_one}}”): </b></code>
+    <br>
+    <code>### {{params.counter_example_text}}</code>
+    <br>
+    <code>False</code>
+    <br>
+    <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python">
+      def {{params.function}}(n):
+    pass
     </pl-file-editor>
 
   </pl-question-panel>
