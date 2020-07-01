@@ -30,7 +30,7 @@ def generate(data):
 
     if multiplier_2 == 2:
         word_multiplier_2 = 'two'
-    elif multiplier_2 ==3: 
+    elif multiplier_2 == 3: 
         word_multiplier_2 = 'three'
     else: 
         word_multiplier_2 = 'four'

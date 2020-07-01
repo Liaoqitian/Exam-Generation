@@ -39,7 +39,7 @@ class Test(PLTestCase):
     def test_3(self):
         points = 0
         num_tests = 8
-        test_values = np.random.choice(np.arange(2, 20), size=num_tests, replace=False)
+        test_values = np.random.choice(np.arange(6, 20), size=num_tests, replace=False)
         for in_val in test_values:
             correct_val = self.ref.trib(in_val)
             user_val = Feedback.call_user(self.st.trib, in_val)

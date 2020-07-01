@@ -1,35 +1,67 @@
-<html>
-<head>
-<style>
-code {
-  color: black;
-  padding: 2px;
-  font-size: 105%;
-}
-</style>
-</head>
-<body>
-<pl-question-panel>
-    <p>
-      The Tribonacci numbers are 
-      <pl-figure file-name="python_trib.png" directory="clientFilesQuestion" type="static"></pl-figure>
-      where each number is the sum of the three before it.
-      <br>
-      <center><code>fib(n) = fib(n - 1) + fib(n - 2) + fib(n - 3)</code></center>
-      <br>
-      Write a Python function <code>fib</code> that takes a number <code>n</code>
-      and returns the n<sup>th</sup> Tribonacci number.
+<html><head><style>
+    code {
+      color: black;
+      padding: 2px;
+      font-size: 105%;
+    }
+    table.nib {
+      margin-left: auto; 
+      margin-right: auto;
+      table-layout: fixed;
+      width: 100%;  
+    }
     
+    th, td {
+      height: 50px;
+    }
+    table.nib, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      text-align: center;
+    }
+    
+    </style></head><body>
+    
+    <pl-question-panel>
+        <p>
+          Let us define a <b>new</b> Fibonacci-like sequence, <b>Tribonacci</b>, by the following two rules. 
+        <br>
+          1. The sequence starts with <b>{{params.first_number}}</b>, <b>{{params.second_number}}</b>, and <b>{{params.third_number}}</b>. 
+        <br>
+          2. Each number is the sum of <b>{{params.word_multiplier_3}}</b> times the previous number and <b>{{params.word_multiplier_2}}</b> times the number before that and <b>{{params.word_multiplier_1}}</b> times the number before that.
+        </p>
   
-    <p>Your code snippet should define the following variables:</p>
-    <pl-external-grader-variables params-name="names_from_user"></pl-external-grader-variables>
-  
-    <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
-    </pl-file-editor>
+         <table class="nib" style="width:600px">
+            <tr>
+                <th><code>n</code></th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+            <tr>
+                <td><code>trib(n)</code></td>
+                <td>{{params.first_number}}</td>
+                <td>{{params.second_number}}</td>
+                <td>{{params.third_number}}</td>
+                <td>{{params.fourth_number}}</td>
+                <td>{{params.fifth_number}}</td>
+                <td>{{params.sixth_number}}</td>
+            </tr>
+        </table>
+    
+          <br>
+          Write a Python function <code>trib</code> that takes a number <code>n</code> and returns the <code>n<sup>th</sup></code> number in the <b>Tribonacci</b> sequence.  
 
-  </pl-question-panel>
-  
-  <pl-submission-panel>
-    <pl-external-grader-results></pl-external-grader-results>
-    <pl-file-preview></pl-file-preview>
-  </pl-submission-panel>
+        <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
+        </pl-file-editor>
+      
+      </pl-question-panel>
+      
+      <pl-submission-panel>
+        <pl-external-grader-results></pl-external-grader-results>
+        <pl-file-preview></pl-file-preview>
+      </pl-submission-panel>
