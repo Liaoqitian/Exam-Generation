@@ -29,40 +29,42 @@ table.palindrome {
 
 <pl-question-panel>
     <p>
-        {{params.text}}
-        <br>
-        <table class="palindrome" style="width:600px">
-          <tr>
-              <th>{{params.example_title_one}}</th>
-              <th>{{params.example_title_two}}</th>
-          </tr>
-          <tr>
-              <td>{{params.example_one}}</td>
-              <td>{{params.counter_example_one}}</td>
-          </tr>
-          <tr>
-            <td>{{params.example_two}}</td>
-            <td>{{params.counter_example_two}}</td>
+      {{params.text}}
+      <br>
+      <table class="palindrome" style="width:600px">
+        <tr>
+          <th>{{params.example_title_one}}</th>
+          <th>{{params.example_title_two}}</th>
+        </tr>
+        <tr>
+          <td>{{params.example_one}}</td>
+          <td>{{params.counter_example_one}}</td>
+        </tr>
+        <tr>
+          <td>{{params.example_two}}</td>
+          <td>{{params.counter_example_two}}</td>
         </tr>
         <tr>
           <td>{{params.example_three}}</td>
           <td>{{params.counter_example_three}}</td>
       </tr>
       </table>
-        <br>
-        {{params.requirement}}
-    <p>
-      Write a Python function <code><b>{{params.function}}</b></code> that takes a string <code><b>s</b></code>
-      and returns <code><b>True</b></code> if it is a {{params.function}} and <code><b>False</b></code> otherwise.
+      <br>
+      {{params.requirement}}
     </p>
-    <code>>>> <b>{{params.function}}(“{{params.example_one}}”) </b></code>
+</pl-question-panel>
+    <p>
+      Write a Python function <code><strong>{{params.function}}</strong></code> that takes a string <code><strong>s</strong></code>
+      and returns <code><strong>True</strong></code> if it is a {{params.function}} and <code><strong>False</strong></code> otherwise.
+    </p>
+    <code>>>> <strong>{{params.function}}(“{{params.example_one}}”) </strong></code>
     <br>
     <code>### {{params.example_text}}</code>
     <br>
     <code>True</code>
     <br>
     <br>
-    <code>>>> <b>{{params.function}}(“{{params.counter_example_one}}”): </b></code>
+    <code>>>> <strong>{{params.function}}(“{{params.counter_example_one}}”): </strong></code>
     <br>
     <code>### {{params.counter_example_text}}</code>
     <br>
@@ -72,21 +74,18 @@ table.palindrome {
     You have access to these two functions:
     <br>
     <br>
-    <code>>>> <b> def all_but_first_of(s): </b></code>
+    <code>>>> <strong> def all_but_first_of(s): </strong></code>
     <br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the first character gone. </code>
     <br>
-    <code>>>> <b> def all_but_last_of(s): </b></code>
+    <code>>>> <strong> def all_but_last_of(s): </strong></code>
     <br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
-    </p>
     <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python">
       def {{params.function}}(n):
     pass
     </pl-file-editor>
 
-  </pl-question-panel>
-  
   <pl-submission-panel>
     <pl-external-grader-results></pl-external-grader-results>
     <pl-file-preview></pl-file-preview>
