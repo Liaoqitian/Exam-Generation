@@ -2,9 +2,7 @@
 <head>
 <style>
 code {
-  /*font-family: Consolas,"courier new";*/
   color: black;
-  /*background-color: #f1f1f1;*/
   padding: 2px;
   font-size: 105%;
 }
@@ -12,14 +10,14 @@ code {
 </head>
 <body>
 <pl-question-panel>
-    <p> <code>>>> <b>R = range({{params.start}}, {{params.end}})</b></code></p>
+    <p> <code>>>> <strong>R = range({{params.start}}, {{params.end}})</strong></code></p>
 </pl-question-panel>
- <code>>>> <b>a =</b></code><pl-integer-input answers-name="start_index" ></pl-integer-input>
+ <code>>>> <strong>a =</strong></code><pl-integer-input answers-name="start_index" ></pl-integer-input>
  <br>
- <code>>>> <b>b =</b></code><pl-integer-input answers-name="end_index" ></pl-integer-input>
+ <code>>>> <strong>b =</strong></code><pl-integer-input answers-name="end_index" ></pl-integer-input>
 <br>
 <br>
 <pl-question-panel>
-    <p> <code>>>> <b>list(R[a: b])</b></code> </p>
+    <p> <code>>>> <strong>list(R[a: b])</strong></code> </p>
     <p> <code>{{params.output}} </code></p>
 </pl-question-panel>
