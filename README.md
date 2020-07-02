@@ -1,4 +1,4 @@
-# CS10 
+# Exam Generation
 
 PrairieLearn (PL) course setup for CS10
 
