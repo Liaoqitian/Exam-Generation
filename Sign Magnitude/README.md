@@ -9,8 +9,8 @@
   - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
 
 ## Examples
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/Sign%20Magnitude/Demo/Question.png "Question Demo")
 	
-
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
 
@@ -30,6 +30,8 @@
   * In the second question, a random number between 5 and 9 is generated. This restricts the variety of difficulty of the question. The number of digits does not significantly affect the difficulty of the question if the student is familiar with the clever method.
   * In the third question, a random number between 5 and 9 is generated. This restricts the variety of difficulty of the question. The number of digits does not significantly affect the difficulty of the question if the student is familiar with the clever method. 
 
+## Solutions
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/Sign%20Magnitude/Demo/Solution.png "Question Demo")
 
 ## How to run on PrairieLearn
 
