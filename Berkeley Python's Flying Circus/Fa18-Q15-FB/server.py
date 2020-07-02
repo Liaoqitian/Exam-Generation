@@ -23,4 +23,9 @@ def generate(data):
     data['correct_answers']['solution_swap_values'] = str(solution_swap_values)
     data['correct_answers']['solution_swap_elements'] = str(solution_swap_elements)
 
-
+def grade(data):
+    if data["score"] != 1:
+        if data["submitted_answers"]["solution_swap_values"] != data['correct_answers']['solution_swap_values']:
+            data["feedback"]["solution_swap_values"] = "A and B are local variables (input parameters), so changes to them directly do not change the called values."
+        if data["submitted_answers"]["solution_swap_elements"] != data['correct_answers']['solution_swap_elements']:
+            data["feedback"]["solution_swap_elements"] = "w is a local variable, so changes to it directly do not change the called values. However, just as in Snap!, if w is a list, we can change the elements of w within the procedure."

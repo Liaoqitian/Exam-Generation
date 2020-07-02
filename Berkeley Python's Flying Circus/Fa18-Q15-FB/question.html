@@ -26,11 +26,17 @@ code {
     <code>>>> <strong>[little, big]</strong></code><br>
 </pl-question-panel>
 
-<pl-string-input answers-name="solution_swap_values" remove-leading-trailing = True remove-spaces = True></pl-string-input>
+<pl-string-input answers-name="solution_swap_values" remove-leading-trailing = True remove-spaces = True allow-blank = True></pl-string-input>
+<pl-submission-panel>
+    {{feedback.solution_swap_values}}
+</pl-submission-panel>
 <br>
 <br>
 <pl-question-panel>
     <p><code>>>> <strong>swap_elements({{params.array}})</strong></code></p>
 </pl-question-panel>
 
-<pl-string-input answers-name="solution_swap_elements" remove-leading-trailing = True remove-spaces = True></pl-string-input>
+<pl-string-input answers-name="solution_swap_elements" remove-leading-trailing = True remove-spaces = True allow-blank = True></pl-string-input>
+<pl-submission-panel>
+    {{feedback.solution_swap_elements}}
+</pl-submission-panel>

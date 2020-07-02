@@ -62,5 +62,4 @@ def grade(data):
             data['score'] = 1
             data["feedback"]["solution"] = "Remember the quotation marks next time!"
         else:
-            # data["partial_scores"]["solution"] = 0
             data["feedback"]["solution"] = "you got this wrong, sorry"
