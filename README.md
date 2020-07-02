@@ -1,12 +1,9 @@
-# CS10 Beauty and Joy of Computing
+# CS10 
 
 PrairieLearn (PL) course setup for CS10
 
-For template README, please direct to [ACE-LAB README](https://github.com/ace-lab/pl-ucb-csxxx/blob/master/README.md)
 
 ## Table of Contents
-
-- [CS10 Beauty and Joy of Computing](#cs10-beauty-and-joy-of-computing)
   - [Table of Contents](#table-of-contents)
   - [Basic Setup](#basic-setup)
   - [Basic Usage](#basic-usage)
@@ -34,13 +31,12 @@ If you have already cloned the course repo, skip to Step 3
 3. Mount PL to course repo. If you cloned the repo to your desktop, it will look like this:
 
 ```bash
-docker run -it --rm -p 3000:3000 -v ~/Desktop/pl-ucb-cs10:/course prairielearn/prairielearn
-```
-
-or
-
-```bash
-docker run -it --rm -p 3000:3000 -v <Directory Location>/pl-ucb-cs10:/course prairielearn/prairielearn
+docker run -it --rm -p 3000:3000 \
+    -v "$PWD":/course `# Map your current directory in as course content` \
+    -v "$HOME/Desktop/pl-cs10/pl_ag_jobs:/jobs" `# Map jobs directory into /jobs` \
+    -e HOST_JOBS_DIR="$HOME/Desktop/pl-cs10/pl_ag_jobs" \
+    -v /var/run/docker.sock:/var/run/docker.sock `# Mount docker into itself so container can spawn others` \
+    prairielearn/prairielearn
 ```
 
 4. Once the Docker Container has been initialized, go to [http://localhost:3000/pl](http://localhost:3000/pl)
@@ -53,9 +49,5 @@ For each new question you author, place the folder containing relevant files and
 
 ## Examples
 
-Some examples can be found inside ACE-LAB [template](https://github.com/ace-lab/pl-ucb-csxxx)
-or inside the official codebase under [exampleCourse](https://github.com/PrairieLearn/PrairieLearn/tree/master/exampleCourse)
+Examples can be found inside the official codebase under [exampleCourse](https://github.com/PrairieLearn/PrairieLearn/tree/master/exampleCourse)
 
-## Contributing
-
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
