@@ -36,7 +36,7 @@ def generate(data):
         counter_example_three = "butterfly"
         example_text = "At least one character of 'peek' matches peek. 'peek' reversed is 'keep', the second and third characters match."
         counter_example_text = "None of the characters of 'peak' matches when reversed, meaning, 'peak' != 'kaep' for any character."
-        requirement = """For the purposes of this problem, all zero-letter and one-letter words are palindrome_Any's. """
+        requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_Any's. """
     else: 
         text = """A palindrome_None is a string that has no character match when you flip it. In other words, the first letter MUST NOT equal the last letter, 
         and the second letter MUST NOT equal the second to last letter ... etc. """ 
@@ -73,5 +73,7 @@ def generate(data):
         {'name': 'all_but_last_of', 'description': 'Function to remove the last character of a string', 'type': 'python function'}
     ]
     data['params']['names_from_user'] = [
-        {'name': 'checkPalindrome', 'description': 'Function to determine whether a string is a palindrome-' + variant, 'type': 'python function'}
+        {'name': 'isPalindrome_All', 'description': 'Function to determine whether a string is a palindrome_All', 'type': 'python function'},
+        {'name': 'isPalindrome_Any', 'description': 'Function to determine whether a string is a palindrome_Any', 'type': 'python function'},
+        {'name': 'isPalindrome_None', 'description': 'Function to determine whether a string is a palindrome_None', 'type': 'python function'}
     ]

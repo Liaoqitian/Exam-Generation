@@ -52,7 +52,6 @@ table.palindrome {
       <br>
       {{params.requirement}}
     </p>
-</pl-question-panel>
     <p>
       Write a Python function <code><strong>{{params.function}}</strong></code> that takes a string <code><strong>s</strong></code>
       and returns <code><strong>True</strong></code> if it is a {{params.function}} and <code><strong>False</strong></code> otherwise.
@@ -81,8 +80,9 @@ table.palindrome {
     <code>>>> <strong> def all_but_last_of(s): </strong></code>
     <br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;### returns string with the last character gone. </code>
+  </pl-question-panel>
     <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python">
-      def {{params.function}}(n):
+      def {{params.function}}(s):
     pass
     </pl-file-editor>
 
