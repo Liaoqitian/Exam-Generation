@@ -22,7 +22,7 @@ class Test(PLTestCase):
             elif self.ref.function == 'is_palindrome_any':
                 user_val = Feedback.call_user(self.st.is_palindrome_any, s)
             else: 
-                user_val = Feedback.call_user(self.st.isPalindrome_None, s)
+                user_val = Feedback.call_user(self.st.is_palindrome_none, s)
             if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
                 points += 1
         if points < 3: 
@@ -45,7 +45,7 @@ class Test(PLTestCase):
                 elif self.ref.function == 'is_palindrome_any':
                     user_val = Feedback.call_user(self.st.is_palindrome_any, s)
                 else: 
-                    user_val = Feedback.call_user(self.st.isPalindrome_None, s)
+                    user_val = Feedback.call_user(self.st.is_palindrome_none, s)
                 if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
                     points += 1
         if points <= 5:
