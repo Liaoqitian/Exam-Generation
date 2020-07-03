@@ -8,7 +8,7 @@ def generate(data):
     text = ""
     examples = ""
     requirement = ""
-    if variant == 'All': 
+    if variant == 'all': 
         text = """A palindrome_all is a string that is spelled the same way forwards and backwards. In other words, the first letter
         MUST equal the last letter, the second letter MUST equal the second to last letter ... etc. """
         function = "is_palindrome_all"
@@ -23,7 +23,7 @@ def generate(data):
         example_text = "All the characters of 'refer' are the same when reversed, meaning 'refer' = 'refer'."
         counter_example_text = "Not all the characters are the same, meaning, 'berkeley' != 'yelekreb'."
         requirement = """For the purposes of this problem, all zero-letter and one-letter words are palindrome_all's."""
-    elif variant == 'Any': 
+    elif variant == 'any': 
         text = """A palindrome_any is a string that has at least one character match when you flip it. In other words, we need the first letter equal the last letter, 
         or the second letter equal the second to last letter, ... etc. """
         function = "is_palindrome_any"
@@ -55,7 +55,7 @@ def generate(data):
         requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_none's. """
     
     data['params']['variant'] = variant 
-    data['params']['variant_num'] = variant_num
+    data['params']['variant_num'] = variant_num + 1
     data['params']['text'] = text 
     data['params']['function'] = function
     data['params']['example_title_one'] = example_title_one
