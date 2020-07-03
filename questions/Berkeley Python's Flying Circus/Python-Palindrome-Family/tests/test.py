@@ -17,10 +17,10 @@ class Test(PLTestCase):
         for s in test_strings:
             correct_val = self.ref.checkPalindrome(s)
             user_val = True
-            if self.ref.function == 'isPalindrome_All':
-                user_val = Feedback.call_user(self.st.isPalindrome_All, s)
-            elif self.ref.function == 'isPalindrome_Any':
-                user_val = Feedback.call_user(self.st.isPalindrome_Any, s)
+            if self.ref.function == 'is_palindrome_all':
+                user_val = Feedback.call_user(self.st.is_palindrome_all, s)
+            elif self.ref.function == 'is_palindrome_any':
+                user_val = Feedback.call_user(self.st.is_palindrome_any, s)
             else: 
                 user_val = Feedback.call_user(self.st.isPalindrome_None, s)
             if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
@@ -40,10 +40,10 @@ class Test(PLTestCase):
             correct_val = self.ref.checkPalindrome(s)
             if isinstance(correct_val, bool):
                 user_val = True
-                if self.ref.function == 'isPalindrome_All':
-                    user_val = Feedback.call_user(self.st.isPalindrome_All, s)
-                elif self.ref.function == 'isPalindrome_Any':
-                    user_val = Feedback.call_user(self.st.isPalindrome_Any, s)
+                if self.ref.function == 'is_palindrome_all':
+                    user_val = Feedback.call_user(self.st.is_palindrome_all, s)
+                elif self.ref.function == 'is_palindrome_any':
+                    user_val = Feedback.call_user(self.st.is_palindrome_any, s)
                 else: 
                     user_val = Feedback.call_user(self.st.isPalindrome_None, s)
                 if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):

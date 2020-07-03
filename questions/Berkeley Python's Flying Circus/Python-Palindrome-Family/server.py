@@ -2,16 +2,16 @@ import prairielearn as pl
 import pandas as pd
 import random 
 def generate(data):    
-    variants = ['All', 'Any', 'None']
+    variants = ['all', 'any', 'none']
     variant = variants[random.randint(0, 2)]
     text = ""
     examples = ""
     requirement = ""
     if variant == 'All': 
-        text = """A palindrome_All is a string that is spelled the same way forwards and backwards. In other words, the first letter
+        text = """A palindrome_all is a string that is spelled the same way forwards and backwards. In other words, the first letter
         MUST equal the last letter, the second letter MUST equal the second to last letter ... etc. """
-        function = "isPalindrome_All"
-        example_title_one = "Palindrome_All Examples"
+        function = "is_palindrome_all"
+        example_title_one = "Palindrome_all Examples"
         example_title_two = "Not Palindrome_All Examples"
         example_one = "refer"
         example_two = "level"
@@ -21,13 +21,13 @@ def generate(data):
         counter_example_three = "california"
         example_text = "All the characters of 'refer' are the same when reversed, meaning 'refer' = 'refer'."
         counter_example_text = "Not all the characters are the same, meaning, 'berkeley' != 'yelekreb'."
-        requirement = """For the purposes of this problem, all zero-letter and one-letter words are palindrome_All's."""
+        requirement = """For the purposes of this problem, all zero-letter and one-letter words are palindrome_all's."""
     elif variant == 'Any': 
-        text = """A palindrome_Any is a string that has at least one character match when you flip it. In other words, we need the first letter equal the last letter, 
+        text = """A palindrome_any is a string that has at least one character match when you flip it. In other words, we need the first letter equal the last letter, 
         or the second letter equal the second to last letter, ... etc. """
-        function = "isPalindrome_Any"
-        example_title_one = "Palindrome_Any Examples"
-        example_title_two = "Not Palindrome_Any Examples"
+        function = "is_palindrome_any"
+        example_title_one = "palindrome_any Examples"
+        example_title_two = "Not palindrome_Any Examples"
         example_one = "peek"
         example_two = "trust"
         example_three = "butter"
@@ -36,11 +36,11 @@ def generate(data):
         counter_example_three = "butterfly"
         example_text = "At least one character of 'peek' matches peek. 'peek' reversed is 'keep', the second and third characters match."
         counter_example_text = "None of the characters of 'peak' matches when reversed, meaning, 'peak' != 'kaep' for any character."
-        requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_Any's. """
+        requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_any's. """
     else: 
-        text = """A palindrome_None is a string that has no character match when you flip it. In other words, the first letter MUST NOT equal the last letter, 
+        text = """A palindrome_none is a string that has no character match when you flip it. In other words, the first letter MUST NOT equal the last letter, 
         and the second letter MUST NOT equal the second to last letter ... etc. """ 
-        function = "isPalindrome_None"
+        function = "is_palindrome_none"
         example_title_one = "Palindrome_None Examples"
         example_title_two = "Not Palindrome_None Examples"
         example_one = "peak"
@@ -51,7 +51,7 @@ def generate(data):
         counter_example_three = "butter"
         example_text = "None of the characters of 'peak' matches when reversed, meaning, 'peak' != 'kaep' for any character."
         counter_example_text = "At least one character of 'peek' matches peek. 'peek' reversed is 'keep', the second and third characters match."
-        requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_None's. """
+        requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_none's. """
     
     data['params']['variant'] = variant 
     data['params']['text'] = text 
@@ -73,7 +73,7 @@ def generate(data):
         {'name': 'all_but_last_of', 'description': 'Function to remove the last character of a string', 'type': 'python function'}
     ]
     data['params']['names_from_user'] = [
-        {'name': 'isPalindrome_All', 'description': 'Function to determine whether a string is a palindrome_All', 'type': 'python function'},
-        {'name': 'isPalindrome_Any', 'description': 'Function to determine whether a string is a palindrome_Any', 'type': 'python function'},
-        {'name': 'isPalindrome_None', 'description': 'Function to determine whether a string is a palindrome_None', 'type': 'python function'}
+        {'name': 'is_palindrome_all', 'description': 'Function to determine whether a string is a palindrome_All', 'type': 'python function'},
+        {'name': 'is_palindrome_any', 'description': 'Function to determine whether a string is a palindrome_Any', 'type': 'python function'},
+        {'name': 'is_palindrome_none', 'description': 'Function to determine whether a string is a palindrome_None', 'type': 'python function'}
     ]
