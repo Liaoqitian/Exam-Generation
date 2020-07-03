@@ -29,24 +29,25 @@ table.palindrome {
 
 <pl-question-panel>
     <p>
+      [{{params.variant_num}}/3]
       {{params.text}}
       <br>
       <table class="palindrome" style="width:600px">
         <tr>
-          <th>{{params.example_title_one}}</th>
-          <th>{{params.example_title_two}}</th>
+          <th><code>palindrome_{{params.variant}}</code> Examples</th>
+          <th>Not <code>palindrome_{{params.variant}}</code> Examples</th>
         </tr>
         <tr>
-          <td>{{params.example_one}}</td>
-          <td>{{params.counter_example_one}}</td>
+          <td><code>{{params.example_one}}</code></td>
+          <td><code>{{params.counter_example_one}}</code></td>
         </tr>
         <tr>
-          <td>{{params.example_two}}</td>
-          <td>{{params.counter_example_two}}</td>
+          <td><code>{{params.example_two}}</code></td>
+          <td><code>{{params.counter_example_two}}</code></td>
         </tr>
         <tr>
-          <td>{{params.example_three}}</td>
-          <td>{{params.counter_example_three}}</td>
+          <td><code>{{params.example_three}}</code></td>
+          <td><code>{{params.counter_example_three}}</code></td>
       </tr>
       </table>
       <br>
@@ -60,14 +61,14 @@ table.palindrome {
     <br>
     <code>### {{params.example_text}}</code>
     <br>
-    <code>True</code>
+    <code><strong>True</strong></code>
     <br>
     <br>
     <code>>>> <strong>{{params.function}}(“{{params.counter_example_one}}”) </strong></code>
     <br>
     <code>### {{params.counter_example_text}}</code>
     <br>
-    <code>False</code>
+    <code><strong>False</strong></code>
     <br>
     <br>
     You have access to these two functions:

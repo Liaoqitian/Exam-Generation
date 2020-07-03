@@ -4,7 +4,7 @@ def all_but_first_of(s):
 def all_but_last_of(s):
     return s[:-1]
 
-function = data['params']['function']
+params = data['params']
 
 ans = {}
 if data['params']['variant'] == 'all': 

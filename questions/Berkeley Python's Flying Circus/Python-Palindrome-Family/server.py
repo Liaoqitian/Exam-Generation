@@ -3,7 +3,8 @@ import pandas as pd
 import random 
 def generate(data):    
     variants = ['all', 'any', 'none']
-    variant = variants[random.randint(0, 2)]
+    variant_num = random.randint(0, 2)
+    variant = variants[variant_num]
     text = ""
     examples = ""
     requirement = ""
@@ -11,8 +12,8 @@ def generate(data):
         text = """A palindrome_all is a string that is spelled the same way forwards and backwards. In other words, the first letter
         MUST equal the last letter, the second letter MUST equal the second to last letter ... etc. """
         function = "is_palindrome_all"
-        example_title_one = "Palindrome_all Examples"
-        example_title_two = "Not Palindrome_All Examples"
+        example_title_one = "palindrome_all Examples"
+        example_title_two = "Not palindrome_All Examples"
         example_one = "refer"
         example_two = "level"
         example_three = "civic"
@@ -41,8 +42,8 @@ def generate(data):
         text = """A palindrome_none is a string that has no character match when you flip it. In other words, the first letter MUST NOT equal the last letter, 
         and the second letter MUST NOT equal the second to last letter ... etc. """ 
         function = "is_palindrome_none"
-        example_title_one = "Palindrome_None Examples"
-        example_title_two = "Not Palindrome_None Examples"
+        example_title_one = "palindrome_none Examples"
+        example_title_two = "Not palindrome_none Examples"
         example_one = "peak"
         example_two = "trustworthy"
         example_three = "butterfly"
@@ -54,6 +55,7 @@ def generate(data):
         requirement = """For the purposes of this problem, all zero-letter and one-letter words are NOT palindrome_none's. """
     
     data['params']['variant'] = variant 
+    data['params']['variant_num'] = variant_num
     data['params']['text'] = text 
     data['params']['function'] = function
     data['params']['example_title_one'] = example_title_one
