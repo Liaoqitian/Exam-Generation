@@ -19,14 +19,7 @@ For detailed instructions to set up PrairieLearn, please direct to [Installing a
 
 1. Start Docker application on your machine.
 
-If you have already cloned the course repo, skip to Step 3
-
 2. Clone the course repo to your machine e.g. your desktop
-
-```bash
-% cd ~/Desktop
-% git clone git@github.com:ace-lab/pl-ucb-cs10.git
-```
 
 3. Mount PL to course repo. If you cloned the repo to your desktop, it will look like this:
 
