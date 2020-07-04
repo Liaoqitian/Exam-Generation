@@ -7,8 +7,9 @@ def generate(data):
     second_number = random.randint(1, 3)
 
     # Randomize the multipliers for the first two numbers: multiplier_1 and multiplier_2
-    multiplier_1 = random.randint(1, 4)
-    multiplier_2 = random.randint(2, 4)
+    multipliers = random.sample(range(1, 5), 2)
+    multiplier_1 = multipliers[0]
+    multiplier_2 = multipliers[1]
 
     # Compute the first six numbers: first_number....sixth_number 
     third_number = first_number * multiplier_1 + second_number * multiplier_2
