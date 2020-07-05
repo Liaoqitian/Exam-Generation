@@ -1,8 +1,8 @@
 {
     "uuid": "bb0c9d3c-9878-4aed-affc-79aeb7f375a6",
     "title": "Python-Palindrome-Any",
-    "topic": "Functions",
-    "tags": ["Recursion", "String Slicing"],
+    "topic": "Python",
+    "tags": ["QL", "Recursion", "String Slicing", "Beta", "Final", "DeadPython", "Hard"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
