@@ -106,8 +106,6 @@ def generate(data):
         data['params']['text_three'] = "def times3(x): return x * 3"
         data['params']['function_three'] = "times3"
     
-    # data['params']['frankenstein'] = "reduce(compose, [)" + multiplication_function + "str, " + function_one + ", " + function_two + ", " + function_three + "])"
-
     data['correct_answers']['solution'] = solution
     data['params']['returned_value'] = returned_value
 

@@ -18,11 +18,10 @@
     <code>>>> 
         <strong>frankenstein = reduce(compose, [{{params.multiplication_function}}, str, {{params.function_one}}, {{params.function_two}}, {{params.function_three}}])</strong><br>
     </code><br>
-    <br> 
 </pl-question-panel>
 <code>>>> <strong>print(frankenstein({{params.input_value}}))</strong></code><br>
-<code>### What is the output?</code>
-<pl-integer-input answers-name="solution"></pl-integer-input>
+<code>### What is the output?</code><br>
+<pl-integer-input answers-name="solution" size = 7></pl-integer-input>
 <code>{{params.returned_value}}</code>
 <pl-submission-panel>
     {{feedback.solution}}
