@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            code {
+            color: black;
+            padding: 2px;
+            font-size: 105%;
+            }
+        </style>
+    </head>
+<body>
+<pl-question-panel>
+    <code>>>> <strong>def compose(f,g): return lambda x: f(g(x))</strong> ### Pregnant shark</code><br>
+    <code>>>> <strong>from functools import reduce</strong> ### reduce is like Snap!’s combine</code><br> 
+    <code>>>> <strong>{{params.text_one}}</strong></code><br>
+    <code>>>> <strong>{{params.text_two}}</strong></code><br>
+    <code>>>> <strong>{{params.text_three}}</strong></code><br>
+    <code>>>> 
+        <strong>frankenstein = reduce(compose, [{{params.multiplication_function}}, str, {{params.function_one}}, {{params.function_two}}, {{params.function_three}}])</strong><br>
+    </code><br>
+    <br> 
+</pl-question-panel>
+<code>>>> <strong>print(frankenstein({{params.input_value}}))</strong></code><br>
+<code>### What is the output?</code>
+<pl-integer-input answers-name="solution"></pl-integer-input>
+<code>{{params.returned_value}}</code>
+<pl-submission-panel>
+    {{feedback.solution}}
+</pl-submission-panel>
