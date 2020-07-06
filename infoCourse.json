@@ -33,7 +33,7 @@
         {"name": "BinaryDecimalHex", "color": "blue2", "description": "BinaryDecimalHex Type question"},
         {"name": "Concurrency", "color": "blue3", "description": "Concurrency Type question"},
         {"name": "Append", "color": "orange1", "description": "Append/Extend Type question"},
-        {"name": "Sharing", "color": "orange2", "description": "Sharing/Non-Sharing Type question"}
-
+        {"name": "Sharing", "color": "orange2", "description": "Sharing/Non-Sharing Type question"},
+        {"name": "Reduce", "color": "orange3", "description": "Reduce Type question"}
     ]
 }
