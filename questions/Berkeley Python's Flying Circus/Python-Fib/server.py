@@ -29,7 +29,9 @@ def generate(data):
     else: 
         word_multiplier_1 = 'four'
 
-    if multiplier_2 == 2:
+    if multiplier_2 == 1: 
+        word_multiplier_2 = 'one'
+    elif multiplier_2 == 2:
         word_multiplier_2 = 'two'
     elif multiplier_2 == 3: 
         word_multiplier_2 = 'three'

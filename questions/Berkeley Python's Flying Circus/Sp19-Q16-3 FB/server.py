@@ -48,5 +48,4 @@ def grade(data):
             data["partial_scores"]["score"] = 1
             data['score'] = 1
         else:
-            # data["partial_scores"]["solution"] = 0
             data["feedback"]["solution"] = "you got this wrong, sorry"
