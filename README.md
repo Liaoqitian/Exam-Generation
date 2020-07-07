@@ -4,12 +4,14 @@ PrairieLearn (PL) course setup for CS10
 
 
 ## Table of Contents
-  - [Table of Contents](#table-of-contents)
+  - [Interface Demonstration](#Interface-Demonstration)
   - [Basic Setup](#basic-setup)
   - [Basic Usage](#basic-usage)
   - [Examples](#examples)
   - [Contributing](#contributing)
 
+## Interface Demonstration 
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/Interface%20Demo.png "Interface Demo")
 ## Basic Setup
 
 For detailed instructions to set up PrairieLearn, please direct to [Installing and running PrairieLearn](https://prairielearn.readthedocs.io/en/latest/installing/)
