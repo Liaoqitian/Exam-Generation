@@ -12,7 +12,7 @@
         {"name": "Other", "color": "blue3", "description": "Other types of Questions"}
     ],
     "tags": [
-        {"name": "QL", "color": "purple3", "description": "Questions written by Qitian Liao"},
+        {"name": "QL", "color": "purple3", "description": "Questions written by Qitian Liao; email: liaoqitian1024@gmail.com"},
         {"name": "Hard", "color": "red3", "description": "Hard-Level Question"},
         {"name": "Medium", "color": "red2", "description": "Medium-Level Question"},
         {"name": "Easy", "color": "red1", "description": "Easy-Level Question"},
