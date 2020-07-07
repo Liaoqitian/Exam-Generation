@@ -4,7 +4,8 @@
     "title": "Beauty and Joy of Computing",
     "options": {
         "useNewQuestionRenderer": true
-    },
+    }
+    ,
     "assessmentSets": [],
     "topics": [
         {"name": "Python", "color": "red3", "description": "Python Questions"},
