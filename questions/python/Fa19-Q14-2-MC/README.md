@@ -1,24 +1,24 @@
-# Who wants a slice of Python List? Me! Me!! 
-> Tests for skills on list slicing (Fill In The Blank Version) 
+# Take the headache out of lists and strings!
+> Tests for skills on String Concatenation (Multiple Choice Version) 
 
 ## Table of Contents
 - [Variants](#variants)
-- [Notes](#Notes)
+- [Notes](#notes)
 - [Structure](#structure)
 - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
 - [Contact](#Contact)
 ​
 ## Variants
-- The starting number of R ranges in [0, 100]
-- The ending number of R ranges in [s + 10, s + 20], where s is the starting number of R
-- The starting query index ranges in [2, 4]
-- The ending query index ranges in [si + 2, si + 4], where si is the starting query index
+- The length of the list A ranges in [4, 6]
+- The numbers in the list range in [0, 1000] and are unique of one another. 
+- The index ranges in [1, len(A) - 2]
+- The adder ranges in [1, 5]
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="270"/>
+width="800" height="400"/>
 
-## Notes
-The question checks if the student knows what the correct output list is. Therefore, any redundant or lacking white spaces in the students solution will be ignored. The solution will be given full score as long as other parts are corrected. 
+## Notes 
+The question tests the student's ability to distinguish string concatenation from normal arithmetic addition. Whether the student includes quotation marks in the solution is not something the question intends to test on. Thereofore, there will only be one correct solution with quotation marks. Its counterpart without quotation marks is intentionally left out.
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
@@ -30,7 +30,7 @@ The question checks if the student knows what the correct output list is. Theref
 ​
 - [**question.html**](question.html)
   - Question panel element (question text) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-question-panel-element)
-  - String Input Element documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-string-input-element)
+  - Multiple Choice Element documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-multiple-choice-element)
 ​
 - [**server.py**](server.py)
   - Question generator file, with all of the randomization components.

@@ -3,10 +3,10 @@ import random, copy, math
 
 def generate(data):
 
-    # Sample a list of random length between 3 and 5. 
-    length = random.randint(3, 6)
+    # Sample a list of random length between 4 and 6. 
+    length = random.randint(4, 6)
 
-    # Sample random elements in (0, 1000) to fill the list. 
+    # Sample random elements in [0, 1000] to fill the list. 
     A = [0] * length
     copy = [0] * length
     copy = random.sample(range(0, 1000), length)
