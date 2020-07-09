@@ -1,5 +1,5 @@
 # Nibonacci Family
-> Tests for skills on recursion and string slicing 
+> Similar but different to the widely-known Fibonacci sequence, this question tests for skills on recursion and string slicing on slightly more difficult sequences. 
 ## Table of Contents
 - [Variants](#variants)
 - [Structure](#structure)
@@ -8,6 +8,8 @@
 ​
 
 ## Variants
+-[First number ranges from [-1, 1]; Second number ranges from [1, 3]]
+-[The two mulitipliers ranges from [1, 4] and are unique to one another]
 ​<img src="serverFilesQuestion/nibonacci.png"
 width="800" height="475"/>
 
