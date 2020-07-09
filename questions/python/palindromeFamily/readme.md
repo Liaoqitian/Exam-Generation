@@ -1,9 +1,6 @@
 # Palindrome Family
-​
 > Tests for skills on recursion and string slicing 
-​
 ## Table of Contents
-​
 - [Palindrome Family](#Palindrome-Family)
   - [Table of Contents](#table-of-contents)
   - [Variant](#examples)
@@ -20,9 +17,8 @@
   - [Contact](#Contact)
 ​
 ## Variants
-​
 ### Palindrome_All
-
+​
 ​<img src="serverFilesQuestion/palindromeAll.png"
 width="800" height="1000"/>
 ### Palindrome_Any
@@ -41,15 +37,13 @@ width="800" height="375"/>
 ​
 - [**info.json**](info.json)
   - "Title" is the name displayed on the blue [line](#part-1)
-  - "Topic" is based on course [concept map](https://docs.google.com/document/d/1B4QBVE2CvoQNXok986j8sVsMYb9662Nd8bFI9nIIj4g/edit) (must have access).
-  - For tag descriptions, go to infoCourse.json in main course directory
+  - "Topic" is based on course [concept map](https://docs.google.com/document/d/1B4QBVE2CvoQNXok986j8sVsMYb9662Nd8bFI9nIIj4g/edit) (access required)
+  - For tag descriptions, see infoCourse.json in main course directory
 ​
 - [**question.html**](question.html)
   - Question panel element (question text) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-question-panel-element)
-  - Figure element (images) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-figure-element)
-  - This question contains 2 sub-parts with different submission elements:
-    - Checkbox element (multiple-select multiple-choice) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-checkbox-element)
-    - Multiple choice element documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-multiple-choice-element)
+  - This Question contains dead python:
+    - File editor element (multiple-select multiple-choice) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-file-editor-element)
 ​
 - [**server.py**](server.py)
   - Question generator file, with all of the randomization components.
