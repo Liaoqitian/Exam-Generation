@@ -7,9 +7,9 @@
 - [Contact](#Contact)
 ​
 ## Variants
-- The first number ranges from [-1, 1] 
-- The second number ranges from [1, 3]
-- The two mulitipliers range from [1, 4] and are unique to one another
+- The first number ranges in [-1, 1] 
+- The second number ranges in [1, 3]
+- The two mulitipliers range in [1, 4] and are unique to one another
 - For each consecutive pairs, multiplier_one * number_one + multiplier_two * number_two = number_three
 
 ​<img src="serverFilesQuestion/nibonacci.png"

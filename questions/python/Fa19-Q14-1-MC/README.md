@@ -1,5 +1,6 @@
-# Tribonacci Family
-> Similar but different to the widely-known Fibonacci sequence, this question tests for skills on recursion and string slicing on slightly more difficult sequences. 
+# Who wants a slice of Python List? Me! Me!! 
+> Tests for skills on list slicing (Multiple Choice Version) 
+
 ## Table of Contents
 - [Variants](#variants)
 - [Structure](#structure)
@@ -7,13 +8,12 @@
 - [Contact](#Contact)
 ​
 ## Variants
-- The first number ranges in [-1, 1]
-- The second number ranges in [1, 3]
-- The third number ranges in [3, 5]
-- The three mulitipliers ranges in [1, 4] and are unique to one another
-- For each consecutive three numbers, multiplier_one * number_one + multiplier_two * number_two + multiplier_three * number_three = number_four
+- The starting number of R ranges in [0, 100]
+- The ending number of R ranges in [s + 10, s + 20], where s is the starting number of R
+- The starting query index ranges in [2, 4]
+- The ending query index ranges in [si + 2, si + 4], where si is the starting query index
 
-​<img src="serverFilesQuestion/tribonacci.png"
+<img src="serverFilesQuestion/demo.png"
 width="800" height="475"/>
 
 ## Structure
@@ -26,7 +26,7 @@ width="800" height="475"/>
 ​
 - [**question.html**](question.html)
   - Question panel element (question text) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-question-panel-element)
-  - This Question contains dead python: File editor element documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-file-editor-element)
+  - Multiple Choice Element documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-multiple-choice-element)
 ​
 - [**server.py**](server.py)
   - Question generator file, with all of the randomization components.
