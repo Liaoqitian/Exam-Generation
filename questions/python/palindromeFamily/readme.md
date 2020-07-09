@@ -16,16 +16,16 @@
   - [Contact](#Contact)
 ​
 ## Variants
-### Palindrome_All
+- ### Palindrome_All
 ​
 ​<img src="serverFilesQuestion/palindromeAll.png"
 width="800" height="1000"/>
-### Palindrome_Any
+- ### Palindrome_Any
 ​
 <img src="serverFilesQuestion/palindromeAny.png"
 width="800" height="400"/>
 ​
-### Palindrome_None
+- ### Palindrome_None
 ​
 <img src="serverFilesQuestion/palindromeNone.png"
 width="800" height="375"/>
