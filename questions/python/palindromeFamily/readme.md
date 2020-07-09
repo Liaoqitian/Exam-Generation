@@ -2,7 +2,6 @@
 > Tests for skills on recursion and string slicing 
 ## Table of Contents
 - [Palindrome Family](#Palindrome-Family)
-  - [Table of Contents](#table-of-contents)
   - [Variant](#examples)
     - [Palindrome_All](#Palindrome_All)
     - [Palindrome_Any](#Palindrome_Any)
@@ -52,7 +51,6 @@ width="800" height="375"/>
   - Not available to students
 
 ## How to run on PrairieLearn
-​
 1. Pull course onto local desktop
 2. Open local host, follow instructions on [PrairieLearn](https://prairielearn.readthedocs.io/en/latest/installing/) or on the main directory's README.md file.
 3. Load from disk, click PrairieLearn, and select CS10
