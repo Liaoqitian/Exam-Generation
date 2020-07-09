@@ -1,11 +1,8 @@
-# Palindrome Family
+# Nibonacci Family
 > Tests for skills on recursion and string slicing 
 ## Table of Contents
-- [Palindrome Family](#Palindrome-Family)
+- [Nibonacci Family](#Palindrome-Family)
   - [Variants](#variants)
-    - [Palindrome_All](#Palindrome_All)
-    - [Palindrome_Any](#Palindrome_Any)
-    - [Palindrome_None](#Palindrome_None)
   - [Structure](#structure)
   - [Solutions](#solutions)
     - [One solution](#one-solution)
@@ -15,21 +12,11 @@
   - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
   - [Contact](#Contact)
 ​
+
 ## Variants
-- ### Palindrome_All
-​
-​<img src="serverFilesQuestion/palindromeAll.png"
-width="800" height="1000"/>
-- ### Palindrome_Any
-​
-<img src="serverFilesQuestion/palindromeAny.png"
+​<img src="serverFilesQuestion/nibonacci.png"
 width="800" height="400"/>
-​
-- ### Palindrome_None
-​
-<img src="serverFilesQuestion/palindromeNone.png"
-width="800" height="375"/>
-​
+
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
 ​
@@ -58,6 +45,7 @@ width="800" height="375"/>
 5. Click "New variant" to see the other variants 
 NOTE: If changes to any .json file is made, Load from disk again
 ​
+
 ## Contact
 
 Contact via liaoqitian1024@gmail.com or find Qitian Liao on Slack channel. 
