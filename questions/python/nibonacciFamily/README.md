@@ -1,11 +1,10 @@
 # Nibonacci Family
 > Tests for skills on recursion and string slicing 
 ## Table of Contents
-- [Nibonacci Family](#Palindrome-Family)
-  - [Variants](#variants)
-  - [Structure](#structure)
-  - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
-  - [Contact](#Contact)
+- [Variants](#variants)
+- [Structure](#structure)
+- [How to run on PrairieLearn](#how-to-run-on-prairielearn)
+- [Contact](#Contact)
 ​
 
 ## Variants

@@ -1,14 +1,13 @@
 # Palindrome Family
 > Tests for skills on recursion and string slicing 
 ## Table of Contents
-- [Palindrome Family](#Palindrome-Family)
-  - [Variants](#variants)
-    - [Palindrome_All](#Palindrome_All)
-    - [Palindrome_Any](#Palindrome_Any)
-    - [Palindrome_None](#Palindrome_None)
-  - [Structure](#structure)
-  - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
-  - [Contact](#Contact)
+- [Variants](#variants)
+  - [Palindrome_All](#Palindrome_All)
+  - [Palindrome_Any](#Palindrome_Any)
+  - [Palindrome_None](#Palindrome_None)
+- [Structure](#structure)
+- [How to run on PrairieLearn](#how-to-run-on-prairielearn)
+- [Contact](#Contact)
 ​
 ## Variants
 - ### Palindrome_All
