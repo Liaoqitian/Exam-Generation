@@ -28,12 +28,12 @@ width="800" height="1000"/>
 ### Palindrome_Any
 ​
 <img src="serverFilesQuestion/palindromeAny.png"
-width="800" height="475"/>
+width="800" height="400"/>
 ​
 ### Palindrome_None
 ​
 <img src="serverFilesQuestion/palindromeNone.png"
-width="1000" height="475"/>
+width="800" height="400"/>
 ​
 ## Structure
 ​
