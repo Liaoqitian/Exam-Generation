@@ -34,7 +34,7 @@ width="800" height="375"/>
 ​
 - [**question.html**](question.html)
   - Question panel element (question text) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-question-panel-element)
-  - This Question contains dead python: File editor element (multiple-select multiple-choice) documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-file-editor-element)
+  - This Question contains dead python: File editor element documentation [documentation](https://prairielearn.readthedocs.io/en/latest/elements/#pl-file-editor-element)
 ​
 - [**server.py**](server.py)
   - Question generator file, with all of the randomization components.
