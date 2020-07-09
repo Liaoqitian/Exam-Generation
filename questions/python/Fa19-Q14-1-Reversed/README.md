@@ -14,7 +14,7 @@
 - The question expects the ending query index in [si + 2, si + 4], where si is the starting query index
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+width="800" height="375"/>
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read

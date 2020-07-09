@@ -15,7 +15,7 @@
 - The ending query index ranges in [si + 2, si + 4], where si is the starting query index
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="250"/>
+width="800" height="280"/>
 
 ## Notes
 The question checks if the student knows what the correct output list is. Therefore, any redundant or lacking white spaces in the students solution will be ignored. The solution will be given full score as long as other parts are corrected. 
