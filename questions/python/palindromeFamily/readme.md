@@ -33,7 +33,7 @@ width="800" height="400"/>
 ### Palindrome_None
 ​
 <img src="serverFilesQuestion/palindromeNone.png"
-width="800" height="400"/>
+width="800" height="375"/>
 ​
 ## Structure
 ​
