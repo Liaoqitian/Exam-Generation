@@ -15,7 +15,7 @@
 - The adder ranges in [1, 5]
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="300"/>
+width="800" height="280"/>
 
 ## Notes 
 The question tests the student's ability to distinguish string concatenation from normal arithmetic addition. Whether the student includes quotation marks in the solution is not something the question intends to test on. Thereofore, both solutions with and without quotation marks are accepted. However, a reminder will be shown to the student if quotation marks are not included. 
