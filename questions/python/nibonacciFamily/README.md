@@ -4,11 +4,6 @@
 - [Nibonacci Family](#Palindrome-Family)
   - [Variants](#variants)
   - [Structure](#structure)
-  - [Solutions](#solutions)
-    - [One solution](#one-solution)
-    - [Multiple solutions](#multiple-solutions)
-      - [Solution 1](#solution-1)
-      - [Solution 2](#solution-2)
   - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
   - [Contact](#Contact)
 ​
