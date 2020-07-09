@@ -24,16 +24,16 @@
 ### Palindrome_All
 
 ​<img src="serverFilesQuestion/palindromeAll.png"
-width="550" height="450"/>
+width="800" height="800"/>
 ### Palindrome_Any
 ​
 <img src="serverFilesQuestion/palindromeAny.png"
-width="550" height="450"/>
+width="800" height="450"/>
 ​
 ### Palindrome_None
 ​
 <img src="serverFilesQuestion/palindromeNone.png"
-width="550" height="450"/>
+width="800" height="450"/>
 ​
 ## Structure
 ​
