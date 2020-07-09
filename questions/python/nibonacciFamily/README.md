@@ -10,7 +10,7 @@
 
 ## Variants
 ​<img src="serverFilesQuestion/nibonacci.png"
-width="800" height="400"/>
+width="800" height="475"/>
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
