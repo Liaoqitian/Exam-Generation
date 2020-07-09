@@ -1,4 +1,4 @@
-# Nibonacci Family
+# Tribonacci Family
 > Similar but different to the widely-known Fibonacci sequence, this question tests for skills on recursion and string slicing on slightly more difficult sequences. 
 ## Table of Contents
 - [Variants](#variants)
@@ -7,12 +7,13 @@
 - [Contact](#Contact)
 ​
 ## Variants
-- The first number ranges from [-1, 1] 
+- The first number ranges from [-1, 1]
 - The second number ranges from [1, 3]
-- The two mulitipliers range from [1, 4] and are unique to one another
-- For each consecutive pairs, multiplier_one * number_one + multiplier_two * number_two = number_three
+- The third number ranges from [3, 5]
+- The three mulitipliers ranges from [1, 4] and are unique to one another
+- For each consecutive three numbers, multiplier_one * number_one + multiplier_two * number_two + multiplier_three * number_three = number_four
 
-​<img src="serverFilesQuestion/nibonacci.png"
+​<img src="serverFilesQuestion/tribonacci.png"
 width="800" height="475"/>
 
 ## Structure
