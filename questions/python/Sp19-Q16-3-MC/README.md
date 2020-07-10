@@ -18,7 +18,7 @@
 width="800" height="400"/>
 
 ## Notes
-"**None of these**" and "**error**" will always be among the choices. 
+"**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
