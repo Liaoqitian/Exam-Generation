@@ -17,7 +17,7 @@ width="800" height="950"/>
 - ### Palindrome_Any
 ​
 <img src="serverFilesQuestion/palindromeAny.png"
-width="800" height="400"/>
+width="800" height="390"/>
 ​
 - ### Palindrome_None
 ​
