@@ -17,12 +17,12 @@ width="800" height="950"/>
 - ### Palindrome_Any
 ​
 <img src="serverFilesQuestion/palindromeAny.png"
-width="800" height="410"/>
+width="800" height="415"/>
 ​
 - ### Palindrome_None
 ​
 <img src="serverFilesQuestion/palindromeNone.png"
-width="800" height="410"/>
+width="800" height="415"/>
 ​
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
