@@ -15,7 +15,7 @@
 - **function_three** is a "**plus**" function, randomly chosen from **plus1**, **plus4** and **plus5**.
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+width="800" height="405"/>
 
 ## Notes
 The input is provided and the student is asked to give the corresponding output. This is relatively easier than if the information given is swapped. For the plus function, the parameters 4 and 5 are intentionally chosen to avoid confusion with parameters in the other two functions. 
