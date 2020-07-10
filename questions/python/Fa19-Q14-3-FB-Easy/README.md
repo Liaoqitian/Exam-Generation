@@ -13,7 +13,7 @@
 - Randomly chooses between **times2** and **times3**
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="300"/>
+width="800" height="350"/>
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
