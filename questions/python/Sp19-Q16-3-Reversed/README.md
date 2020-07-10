@@ -1,5 +1,5 @@
 # Who wants a slice of Python String? Me! Me!
-> Tests for skills on string slicing (Fill In The Blank Version) 
+> Tests for skills on string slicing (Reversed Fill In The Blank Version) 
 
 ## Table of Contents
 - [Variants](#variants)
@@ -13,7 +13,7 @@
 - A string with five unique uppercase letters is initiated
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+width="800" height="330"/>
 
 ## Notes
 The student is expected to input the beginning and ending indices which let the program to run as shown. 
