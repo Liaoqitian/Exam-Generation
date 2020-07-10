@@ -10,13 +10,15 @@
 ​
 
 ## Variants
-- A string with five unique uppercase letters is initiated
+- A string with five unique uppercase letters is established
+- The starting index ranges in [1, 3]
+- The ending index is two plus the starting index 
 
 <img src="serverFilesQuestion/demo.png"
 width="800" height="400"/>
 
 ## Notes
-The student is expected to input the beginning and ending indices which let the program to run as shown. 
+"**None of these**" and "**error**" will always be among the choices. 
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
