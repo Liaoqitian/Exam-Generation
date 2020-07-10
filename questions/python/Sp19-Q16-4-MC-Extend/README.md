@@ -15,7 +15,7 @@
 - The keyword **appended** or **extended** is randomly chosen
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="350"/>
+width="800" height="380"/>
 
 ## Notes
 The question checks if the student knows what **append** and **extend** do, espescially when the element to be **appended** or **extended** is a list. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
