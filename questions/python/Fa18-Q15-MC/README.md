@@ -13,7 +13,7 @@
 - The elements in the array range in [1 ,20] and are unique to one another 
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="1000"/>
+width="800" height="975"/>
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
