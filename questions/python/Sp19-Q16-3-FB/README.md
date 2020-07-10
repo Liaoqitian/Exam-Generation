@@ -14,10 +14,10 @@
 - The ending index is two plus the starting index 
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="350"/>
+width="800" height="325"/>
 
 ## Notes
-The student is expected to input a string of five unique characters. If there are repeated characters or the student's solution has fewer or more than five characters, an "invalid warning" would be thrown. The warning would specify the first character which is repeated if there is any. 
+The student is expected to input a string of five unique characters. If there are repeated characters or the student's solution has fewer or more than five characters, an "**invalid warning**" would be thrown. The warning would specify the first character which is repeated if there is any. 
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
