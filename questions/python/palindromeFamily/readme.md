@@ -13,16 +13,16 @@
 - ### Palindrome_All
 ​
 ​<img src="serverFilesQuestion/palindromeAll.png"
-width="800" height="1000"/>
+width="800" height="950"/>
 - ### Palindrome_Any
 ​
 <img src="serverFilesQuestion/palindromeAny.png"
-width="800" height="400"/>
+width="800" height="410"/>
 ​
 - ### Palindrome_None
 ​
 <img src="serverFilesQuestion/palindromeNone.png"
-width="800" height="375"/>
+width="800" height="410"/>
 ​
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
