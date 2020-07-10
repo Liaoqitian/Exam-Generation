@@ -14,7 +14,7 @@
 - The ending index is two plus the starting index 
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+width="800" height="350"/>
 
 ## Notes
 The student is expected to input a string of five unique characters. If there are repeated characters or the student's solution has fewer or more than five characters, an "invalid warning" would be thrown. The warning would specify the first character which is repeated if there is any. 
