@@ -14,8 +14,11 @@ def triple(x):
 def plus1(x):
     return x + 1
 
-def plus2(x):
-    return x + 2
+def plus4(x):
+    return x + 4
+
+def plus5(x): 
+    return x + 5
 
 def times2(x):
     return x * 2
@@ -24,29 +27,25 @@ def times3(x):
     return x * 3
 
 def generate(data):
-    # The resulting function call would look like: reduce(compose, [multiplication_function, str, function_one, function_two, multiplication_function])
-    function_list = [double, triple, plus1, plus2, times2, times3]
-    multiplication_function = function_list[random.randint(0, 1)] 
-    if multiplication_function == double:
-        data['params']['multiplication_function'] = 'double'
-    else: 
-        data['params']['multiplication_function'] = 'triple'
-    selected_function_index = [random.randint(0, 1), random.randint(2, 3), random.randint(4, 5)]
-    random_index = random.sample(range(3), 3)
-    function_one = function_list[selected_function_index[random_index[0]]]
-    function_two = function_list[selected_function_index[random_index[1]]]
-    function_three = function_list[selected_function_index[random_index[2]]]
+    # The resulting function call would look like: reduce(compose, [function_one, str, function_two, function_three, function_one])
+    # function_one and function_two are always paired. The two possible pairs are [double, times3] and [triple, times2]
+    # function_three is a "plus" function
+    function_list = [[double, times3], [triple, times2], plus1, plus4, plus5]
 
-    if random_index[0] == 0: 
-        function_one = multiplication_function 
-    elif random_index[1] == 0:
-        function_two = multiplication_function
-    else: 
-        function_three = multiplication_function
+    # Randomizes the pair
+    multiplication_functions = function_list[random.randint(0, 1)]
+
+    # Determine which one is function_one and the other one would be function_two
+    random_index = random.randint(0 ,1)
+    function_one = multiplication_functions[random_index]
+    function_two = multiplication_functions[1 - random_index] 
+
+    # Randomizes the "plus" function
+    function_three = function_list[random.randint(2, 4)]
 
     # Randomize the correct solution and compute the returned value 
     input_value = random.randint(10, 20)
-    solution = int(reduce(compose, [multiplication_function, str, function_one, function_two, function_three])(input_value))
+    solution = int(reduce(compose, [function_one, str, function_two, function_three, function_one])(input_value))
 
     # Store the corresponding texts 
     if function_one == double: 
@@ -55,12 +54,6 @@ def generate(data):
     elif function_one == triple: 
         data['params']['text_one'] = "def triple(x): return x + x + x"
         data['params']['function_one'] = "triple"
-    elif function_one == plus1:
-        data['params']['text_one'] = "def plus1(x): return x + 1" 
-        data['params']['function_one'] = "plus1"
-    elif function_one == plus2:
-        data['params']['text_one'] = "def plus2(x): return x + 2"
-        data['params']['function_one'] = "plus2"
     elif function_one == times2:
         data['params']['text_one'] = "def times2(x): return x * 2"
         data['params']['function_one'] = "times2"
@@ -74,12 +67,6 @@ def generate(data):
     elif function_two == triple: 
         data['params']['text_two'] = "def triple(x): return x + x + x"
         data['params']['function_two'] = "triple"
-    elif function_two == plus1:
-        data['params']['text_two'] = "def plus1(x): return x + 1" 
-        data['params']['function_two'] = "plus1"
-    elif function_two == plus2:
-        data['params']['text_two'] = "def plus2(x): return x + 2"
-        data['params']['function_two'] = "plus2"
     elif function_two == times2:
         data['params']['text_two'] = "def times2(x): return x * 2"
         data['params']['function_two'] = "times2"
@@ -87,24 +74,15 @@ def generate(data):
         data['params']['text_two'] = "def times3(x): return x * 3"
         data['params']['function_two'] = "times3"
 
-    if function_three == double: 
-        data['params']['text_three'] = "def double(x): return x + x"
-        data['params']['function_three'] = "double"
-    elif function_three == triple: 
-        data['params']['text_three'] = "def triple(x): return x + x + x"
-        data['params']['function_three'] = "triple"
-    elif function_three == plus1:
+    if function_three == plus1:
         data['params']['text_three'] = "def plus1(x): return x + 1" 
         data['params']['function_three'] = "plus1"
-    elif function_three == plus2:
-        data['params']['text_three'] = "def plus2(x): return x + 2"
-        data['params']['function_three'] = "plus2"
-    elif function_three == times2:
-        data['params']['text_three'] = "def times2(x): return x * 2"
-        data['params']['function_three'] = "times2"
+    elif function_three == plus4:
+        data['params']['text_three'] = "def plus4(x): return x + 4"
+        data['params']['function_three'] = "plus4"
     else: 
-        data['params']['text_three'] = "def times3(x): return x * 3"
-        data['params']['function_three'] = "times3"
-
+        data['params']['text_three'] = "def plus5(x): return x + 5"
+        data['params']['function_three'] = "plus5"
+    
     data['correct_answers']['solution'] = solution
     data['params']['input_value'] = input_value

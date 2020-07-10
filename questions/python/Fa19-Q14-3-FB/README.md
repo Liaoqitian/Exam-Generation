@@ -8,16 +8,18 @@
 - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
 - [Contact](#Contact)
 ​
+
 ## Variants
-- Randomly chooses between **double** and **triple** 
-- Randomly chooses between **plus1** and **plus2** 
-- Randomly chooses between **times2** and **times3**
+> 1v132
+- The resulting function call looks like: **reduce(compose, [function_one, str, function_two, function_three, function_one])**  
+- **function_one** and **function_two** are always paired. The two possible pairs are **[double, times3]** and **[triple, times2]**
+- **function_three** is a "**plus**" function, randomly chosen from **plus1**, **plus4** and **plus5**.
 
 <img src="serverFilesQuestion/demo.png"
 width="800" height="400"/>
 
 ## Notes
-The output is provided and the student is asked to give the corresponding input. This is relatively harder than if the information given is swapped. 
+The output is provided and the student is asked to give the corresponding input. This is relatively harder than if the information given is swapped. For the plus function, the parameters 4 and 5 are intentionally chosen to avoid confusion with parameters in the other two functions. 
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
