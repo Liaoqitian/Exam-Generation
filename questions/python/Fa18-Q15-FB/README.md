@@ -14,7 +14,7 @@
 - The elements in the array range in [1 ,20] and are unique to one another 
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+width="800" height="800"/>
 
 ## Notes
 The question checks if the student understands deep copy and shallow copy, espescially the different cases with numbers and lists. White spaces in the student's answer will be ignored. 
