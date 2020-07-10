@@ -10,14 +10,14 @@
     </head>
 <body>
 <pl-question-panel>
-    <code>>>> <strong>def compose(f,g): return lambda x: f(g(x))</strong> ### Pregnant shark</code><br>
-    <code>>>> <strong>from functools import reduce</strong> ### reduce is like Snap!’s combine</code><br> 
+    <code>>>> <strong>def compose(f,g): return lambda x: f(g(x))</strong> <em>### Pregnant shark</em></code><br>
+    <code>>>> <strong>from functools import reduce</strong> <em>### reduce is like Snap!’s combine</em></code><br> 
     <code>>>> <strong>{{params.text_one}}</strong></code><br>
     <code>>>> <strong>{{params.text_two}}</strong></code><br>
     <code>>>> <strong>{{params.text_three}}</strong></code><br>
     <code>>>> 
         <strong>frankenstein = reduce(compose, [{{params.function_one}}, str, {{params.function_two}}, {{params.function_three}}, {{params.function_one}}])</strong><br>
-    ### What input causes {{params.returned_value}} to be printed?</code><br>
+    <em>### What input causes {{params.returned_value}} to be printed?</em></code><br>
     <br>
 </pl-question-panel>
 <code>>>> <strong>print(frankenstein(<pl-integer-input answers-name="solution" size = 7></pl-integer-input>))</strong></code><br>
