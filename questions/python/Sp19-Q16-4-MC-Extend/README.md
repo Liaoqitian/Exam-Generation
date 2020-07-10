@@ -12,7 +12,7 @@
 - The number inside the singleton list ranges in [1, 9]
 - The element to be **appended** or **extended** to the list is either a number or a singleton list with a number 
 - The number mentioned above ranges in [1, 9]
-- The keyword **appended** or **extended** is randomly chosen
+- The keyword **append** or **extend** is randomly chosen
 
 <img src="serverFilesQuestion/demo.png"
 width="800" height="440"/>
