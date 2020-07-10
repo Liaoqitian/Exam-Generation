@@ -13,7 +13,7 @@
 - A string with five unique uppercase letters is established
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="350"/>
+width="800" height="330"/>
 
 ## Notes
 The student is expected to input the beginning and ending indices which let the program to run as shown. 
