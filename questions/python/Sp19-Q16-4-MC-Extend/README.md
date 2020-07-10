@@ -1,5 +1,5 @@
 # Fear? Not if you use append list the right way!
-> Tests for skills on the **Append** operation of lists (Multiple Choice Version) 
+> Tests for skills on the **Append** and **Extend** operation of lists (Multiple Choice Version) 
 
 ## Table of Contents
 - [Variants](#variants)
@@ -10,14 +10,15 @@
 ​
 ## Variants
 - The number inside the singleton list ranges in [1, 9]
-- The element to be **appended** to the list is either a number or a singleton list with a number 
+- The element to be **appended** or **extended** to the list is either a number or a singleton list with a number 
 - The number mentioned above ranges in [1, 9]
+- The keyword **appended** or **extended** is randomly chosen
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+width="800" height="330"/>
 
 ## Notes
-The question checks if the student knows what **append** does, espescially when the element to be **appended** is a list. The **extend** operation will be included in the more difficult version. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
+The question checks if the student knows what **append** and **extend** do, espescially when the element to be **appended** or **extended** is a list. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
