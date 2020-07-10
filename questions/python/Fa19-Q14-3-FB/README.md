@@ -17,7 +17,7 @@
 width="800" height="400"/>
 
 ## Notes
-The input is provided and the student is asked to give the corresponding output. This is relatively easier than if the information given is swapped. 
+The output is provided and the student is asked to give the corresponding input. This is relatively harder than if the information given is swapped. 
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
