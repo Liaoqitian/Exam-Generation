@@ -45,5 +45,4 @@ NOTE: If changes to any .json file is made, Load from disk again
 ​
 
 ## Contact
-
 Contact via liaoqitian1024@gmail.com or find Qitian Liao on Slack channel. 

@@ -15,6 +15,7 @@
 - string concatenation
 - recursion
 - mutation
+- lambda function
 
 ## Question Formats
 - Multiple Choice Single Select
