@@ -14,7 +14,7 @@
 - The number mentioned above ranges in [1, 9]
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="270"/>
+width="800" height="275"/>
 
 ## Notes
 The question checks if the student knows what **append** and **extend** do, espescially when the element to be **appended** or **extended** is a list. If an error is expected to occur, the student should input "error". 
