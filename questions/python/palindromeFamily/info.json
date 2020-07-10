@@ -2,7 +2,7 @@
     "uuid": "09bb40c4-906a-4ad1-b065-296f6e0fc31a",
     "title": "Why aren’t palindromes named semordromes?",
     "topic": "Python",
-    "tags": ["QL", "recursion", "string slicing", "beta", "final", "deadPython", "hard"],
+    "tags": ["qliao", "recursion", "string slicing", "beta", "final", "deadPython", "hard"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
