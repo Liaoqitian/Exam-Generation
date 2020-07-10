@@ -7,14 +7,14 @@
 - [Contact](#contact)
 
 ## Topics 
-- [zero-indexing]
-- [list slicing]
-- [list comprehension]
-- [list operation]
-- [string slicing]
-- [string concatenation]
-- [recursion]
-- [mutation]
+- zero-indexing
+- list slicing
+- list comprehension
+- list operation
+- string slicing
+- string concatenation
+- recursion
+- mutation
 
 ## Question Formats
 - [Multiple Choice Single Select]
