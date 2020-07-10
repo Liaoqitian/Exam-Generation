@@ -7,6 +7,13 @@
 - [Contact](#Contact)
 ​
 ## Variants
+- Randomly chooses between **double** and **triple** 
+- Randomly chooses between **square** and **cube** 
+- Randomly chooses between **plus1** and **plus2** 
+- Randomly chooses between **times2** and **times3**
+
+<img src="serverFilesQuestion/demo.png"
+width="800" height="440"/>
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
