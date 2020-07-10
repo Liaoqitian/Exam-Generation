@@ -17,9 +17,9 @@
 - mutation
 
 ## Question Formats
-- [Multiple Choice Single Select]
-- [Fill in the blank]
-- [Dead Python]
+- Multiple Choice Single Select
+- Fill in the blank
+- Dead Python
 
 ## Contact 
 Contact via liaoqitian1024@gmail.com or find Qitian Liao on Slack channel. 
