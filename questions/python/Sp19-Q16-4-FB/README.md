@@ -14,7 +14,7 @@
 - The number mentioned above ranges in [1, 9]
 
 <img src="serverFilesQuestion/demo.png"
-width="800" height="270"/>
+width="800" height="285"/>
 
 ## Notes
 The question checks if the student knows what **append** does, espescially when the element to be **appended** is a list. The **extend** operation will be included in the more difficult version. 
