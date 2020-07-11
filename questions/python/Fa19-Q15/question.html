@@ -71,8 +71,8 @@ table.sd {
     <code>&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong></code><br>
 </pl-question-panel>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution" remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution" remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution_one" weight = 4 remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_two" weight = 2 remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
 <pl-question-panel>
     <br>
     <p>
@@ -91,7 +91,9 @@ table.sd {
     <code>&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong><em> ### simultaneous assignment</em></code><br>
 </pl-question-panel>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution" remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution_three" weight = 4 remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
+<pl-question-panel>    
     <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>print("ERROR: range overlaps!")</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong><em> ### Error, so just return and don't store anything</em></code><br>
     <code>&nbsp;&nbsp;<strong>SD[(low, high)] = value</strong><em> ### key is tuple</em></code><br>
+</pl-question-panel>

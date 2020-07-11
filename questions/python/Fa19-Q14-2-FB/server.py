@@ -54,12 +54,12 @@ def generate(data):
 def grade(data):
     if data['score'] == 0: 
         if data["submitted_answers"]["solution"] == data['correct_answers']['solution'].replace('"',"'"):
-            data["partial_scores"]["score"] = 1
-            data['score'] = 1
+            data["partial_scores"]["solution"]["score"] = 1
+            data["score"] = 1
             data["feedback"]["solution"] = "you got this correct!"
         elif data["submitted_answers"]["solution"] == data['params']['raw_solution']:
-            data["partial_scores"]["score"] = 1
-            data['score'] = 1
+            data["partial_scores"]["solution"]["score"] = 1
+            data["score"] = 1
             data["feedback"]["solution"] = "Remember the quotation marks next time!"
         else:
             data["feedback"]["solution"] = "you got this wrong, sorry"
