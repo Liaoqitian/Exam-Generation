@@ -45,7 +45,7 @@ def grade(data):
             return
     if data['score'] == 0: 
         if data["submitted_answers"]["solution"][data['params']['start_index']:data['params']['end_index']] == data['params']['output']:
-            data["partial_scores"]["score"] = 1
+            data["partial_scores"]["solution"]["score"] = 1
             data['score'] = 1
         else:
             data["feedback"]["solution"] = "you got this wrong, sorry"
