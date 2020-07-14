@@ -10,6 +10,7 @@
 - [Contact](#Contact)
 ​
 ## Variants
+> 1v3
 - ### Palindrome_All
 ​
 ​<img src="serverFilesQuestion/palindromeAll.png"
