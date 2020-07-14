@@ -1,6 +1,6 @@
 <html>
 <head>
-<style>
+<style type="text/css">
 code {
   color: black;
   padding: 2px;
@@ -22,16 +22,19 @@ table.sd {
   th, td {
     text-align: center;
   }
-  
 </style>
 </head>
 <body>
 
+  <style type="text/css">
+
+  </style>
+
 <pl-question-panel>
     <p> 
         Boy, dictionaries sure are great! They allow us to make a connection between keys and values. We want our smart thermostat AXELA to answer us (in English) 
-        how the temperature feels. You assume the coldest it will ever be is -460 &#8457;F (absolute 0) and the warmest it will ever be is 212 &#8457;F (boiling point of 
-        water). Then you'll need to store a connection between temperatures ranges to English words for how you would fee in that range: 
+        how the temperature feels. You assume the coldest it will ever be is -460 &#8457; (absolute 0) and the warmest it will ever be is 212 &#8457; (boiling point of 
+        water). Then you will need to store a connection between temperatures ranges to English words for how you would feel in that range: 
     </p>
     <table class="sd" style="width:700px">
         <tr>
@@ -49,8 +52,8 @@ table.sd {
     </table>
     <br>
     <p>
-        What we want is a soft dictionary, where we specify numeric ranges as the keys (as a tuple), and my value between the left edge (and up to but not including the right
-        edge) should "match" the key. If we asked, "how does it feel", if it were 45&#8457;, it would say "Cool". If it were 99&#8457;, it would say "Hot". Let's build this! 
+        What we want is a <em>soft</em> dictionary, where we specify numeric ranges as the keys (as a tuple), and any value between the left edge (and up to but not including the right
+        edge) should "match" the key. If we asked, "how does it feel?", if it were 45&#8457;, it would say "Cool". If it were 99&#8457;, it would say "Hot". Let's build this! 
     </p>
     <code>>>> <strong>def SD_create(): return {}</strong><em> ### empty soft dictionary (SD)</em></code><br>
     <code>>>> <strong>def SD_add(SD, low, high, value): SD[(low, high)] = value</strong><em> ### key is tuple</em></code><br>
@@ -59,27 +62,44 @@ table.sd {
     <code>>>> <strong>SD_add(sd, 40, 60, "Cool")</strong><em>&nbsp;&nbsp; ### left edge value is smaller than the</em></code><br>
     <code>>>> <strong>SD_add(sd, 60, 80, "Nice")</strong><em>&nbsp;&nbsp; ### right edge value. No need to error check it</em></code><br>
     <code>>>> <strong>SD_add(sd, 80, 212, "Hot")</strong></code><br>
-    <code>>>> <strong>SD_get(sd, 45) &#10132;</strong> "Cool"</code><br>
-    <code>>>> <strong>SD_get(sd, 99) &#10132;</strong> "Hot"</code><br>
+    <code>>>> <strong>SD_get(sd, 45)</strong></code><br>
+    <code>"Cool"</code><br>
+    <code>>>> <strong>SD_get(sd, 99)</strong></code><br>
+    <code>"Hot"</code><br>
     <br>
     <p>
         (a) Compute the definition of <code><strong>SD_get</strong></code> so that it works as shown above. Assume the key falls in <em>some</em> range that you have stored.
-        Also assume that <code><strong>SD_add</strong></code> never had ranges overlap - the ranges in the example above don't because they are <em>inclusive</em> of the left 
+        Also assume that <code><strong>SD_add</strong></code> never had ranges overlap - the ranges in the example above do not because they are <em>inclusive</em> of the left 
         edge but <em>exclusive</em> of the right edge, i.e., [left, right). 
     </p>
     <code><strong>def SD_get(SD, key):</strong></code><br>
-    <code>&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong></code><br>
 </pl-question-panel>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution_one" weight = 4 remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_two" weight = 2 remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution_one" weight = 20 remove-leading-trailing = True remove-spaces = True allow-blank = True size = 40></pl-string-input>:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_two" weight = 20 remove-leading-trailing = True remove-spaces = True allow-blank = True size = 40></pl-string-input></strong></code><br>
 <pl-question-panel>
     <br>
+
     <p>
         (b) Those are some big assumptions. Let's fix the first one. If the user calls <code><strong>SD_get</strong></code> with a key not in some range, it should not return
-        anything and print an error message, as shown below. <em>Modify the code above by adding a print statement</em> (in-betwen, above or below the lines, <em> indented 
-        correctly)</em>) to do this.
+        anything and print an error message, as shown below. <em>Modify the code above by adding a print statement</em> (in-betwen, above or below the lines, <em> indented correctly </em>) to do this. 
+        The print statement should be: <br>
+        <code>print('ERROR: no range contains key!')</code><br>
+        Make sure the print statement is <em>exactly</em> as it is and contains no extra blank spaces. 
     </p>
+    <p style="text-indent: 21px;"><code><strong>def SD_get(SD, key):</strong></code><br></p>
+    <code><strong><pl-string-input answers-name="solution_three_one" weight = 1 remove-spaces = True allow-blank = True size = 50></pl-string-input></strong></code><br>
+    <p style="text-indent: 21px;"><code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br></p>
+    <code><strong><pl-string-input answers-name="solution_three_two" weight = 1 remove-spaces = True allow-blank = True size = 50></pl-string-input></strong></code><br>
+    <p style="text-indent: 21px;"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong></code><br></p>
+    <code><strong><pl-string-input answers-name="solution_three_three" weight = 1 remove-spaces = True allow-blank = True size = 50></pl-string-input></strong></code><br>
+    <p style="text-indent: 21px;"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if _____________________________________ </strong></code><br></p>
+    <code><strong><pl-string-input answers-name="solution_three_four" weight = 1 remove-spaces = True allow-blank = True size = 50></pl-string-input></strong></code><br>
+</pl-question-panel>
+    <p style="text-indent: 21px;"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return _____________________________________</strong></code><br></p>
+    <code><strong><pl-string-input answers-name="solution_three_five" weight = 16 allow-blank = True size = 50></pl-string-input></strong></code><br>
+<pl-question-panel>
     <p>
         (c) Now let's fix the last assumption. Fill in the blank of a new <code><strong>SD_add</strong></code> with code so that adding a range that overlaps with another 
         range causes it to print an error, and does not modify the soft dictionary. 
@@ -88,12 +108,12 @@ table.sd {
     <code>ERROR: range overlaps!</code><br>
     <br>
     <code><strong>def SD_get(SD, key):</strong><em> ### also assume low < high</em></code><br>
-    <code>&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong><em> ### simultaneous assignment</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>for low_high_range in SD:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>key_low, key_high = low_high_range</strong><em> ### simultaneous assignment</em></code><br>
 </pl-question-panel>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution_three" weight = 4 remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if <pl-string-input answers-name="solution_four" weight = 40 remove-leading-trailing = True remove-spaces = True allow-blank = True size = 40></pl-string-input>:</strong></code><br>
 <pl-question-panel>    
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>print("ERROR: range overlaps!")</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong><em> ### Error, so just return and don't store anything</em></code><br>
-    <code>&nbsp;&nbsp;<strong>SD[(low, high)] = value</strong><em> ### key is tuple</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>print("ERROR: range overlaps!")</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong><em> ### Error, so just return and don't store anything</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>SD[(low, high)] = value</strong><em> ### key is tuple</em></code><br>
 </pl-question-panel>
