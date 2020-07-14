@@ -13,8 +13,7 @@
 - The question expects the starting query index in [2, 4]
 - The question expects the ending query index in [si + 2, si + 4], where si is the starting query index
 
-<img src="serverFilesQuestion/demo.png"
-width="800" height="375"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-string-range-FB-reversed/serverFilesQuestion/demo.png "Question Demo")
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
