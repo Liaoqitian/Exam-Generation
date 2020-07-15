@@ -14,8 +14,7 @@
 - The starting index ranges in [1, 3]
 - The ending index is two plus the starting index 
 
-<img src="serverFilesQuestion/demo.png"
-width="800" height="400"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-string-range-MC/serverFilesQuestion/demo.png "Question Demo")
 
 ## Notes
 "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
