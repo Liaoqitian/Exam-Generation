@@ -14,7 +14,7 @@
 - The starting query index ranges in [2, 4]
 - The ending query index ranges in [si + 2, si + 4], where si is the starting query index
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-list-range-FB/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 The question checks if the student knows what the correct output list is. Therefore, any redundant or lacking white spaces in the students solution will be ignored. The solution will be given full score as long as other parts are corrected. 
