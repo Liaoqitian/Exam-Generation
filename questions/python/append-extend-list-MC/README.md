@@ -14,7 +14,7 @@
 - The number mentioned above ranges in [1, 9]
 - The keyword **append** or **extend** is randomly chosen
 
-<img src="serverFilesQuestion/example1.png">
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 The question checks if the student knows what **append** and **extend** do, espescially when the element to be **appended** or **extended** is a list. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
