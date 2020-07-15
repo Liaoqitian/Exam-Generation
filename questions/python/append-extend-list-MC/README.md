@@ -1,4 +1,4 @@
-# Fear? Not if you use append list the right way!
+# You can solve this with a pen or append!
 > Tests for skills on the **Append** and **Extend** operation of lists (Multiple Choice Version) 
 
 ## Table of Contents
@@ -14,7 +14,7 @@
 - The number mentioned above ranges in [1, 9]
 - The keyword **append** or **extend** is randomly chosen
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/Sp19-Q16-4-MC-Extend/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/example1.png">
 
 ## Notes
 The question checks if the student knows what **append** and **extend** do, espescially when the element to be **appended** or **extended** is a list. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
