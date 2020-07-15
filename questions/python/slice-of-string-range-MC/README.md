@@ -1,5 +1,5 @@
 # Who wants a slice of Python String? Me! Me!
-> Tests for skills on string slicing (Fill In The Blank Version) 
+> Tests for skills on string slicing (Multiple Choice Version) 
 
 ## Table of Contents
 - [Variants](#variants)
@@ -14,7 +14,7 @@
 - The starting index ranges in [1, 3]
 - The ending index is two plus the starting index 
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-string-range-MC/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
