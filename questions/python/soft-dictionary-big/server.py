@@ -12,6 +12,12 @@ def generate(data):
     data["correct_answers"]["solution_three_five"] = "    print('ERROR: no range contains key!')"
     data["correct_answers"]["solution_four"] = "not(high <= key_low or key_high <= low):"
 
+def contains(list_of_strings, answer):
+    for string in list_of_strings:
+        if string in answer:
+            return True 
+    return False 
+
 def grade(data):
     solution_one = ["key_low <= key < key_high:", 
                     "key_high > key >= key_low:",
@@ -34,8 +40,11 @@ def grade(data):
                     "key < key_high and key >= key_low", 
                     "key_high > key and key >= key_low"]
 
+    solution_one_low_key_condition = ["key_low <= key", "key >= key_low"]
+    solution_one_high_key_condition = ["key < key_high", "key_high > key"]
+
     solution_three = ['    print("ERROR: no range contains key!")']
-    
+
     solution_four = ["not(high <= key_low or key_high <= low):", 
                       "key_low < high and low < key_high:", 
                       "high > key_low and low < key_high:",
@@ -55,13 +64,30 @@ def grade(data):
                       "low < key_high and high > key_low",
                       "key_high > low and high > key_low"]
 
+    solution_four_low_key_condition = ["key_low < high", "high > key_low"] 
+    solution_four_high_key_condition = ["low < key_high", "key_high > low"] 
+
     if data["score"] != 1: 
         if data['submitted_answers']["solution_one"] in solution_one:
             data["partial_scores"]["solution_one"]["score"] = 1
             data["score"] += 0.2
+        else: 
+            if contains(solution_one_low_key_condition, data['submitted_answers']['solution_one']):
+                data['partial_scores']["solution_one"]["score"] = 0.4
+                data["score"] += 0.08
+            if contains(solution_one_high_key_condition, data['submitted_answers']['solution_one']):
+                data['partial_scores']["solution_one"]["score"] = 0.4
+                data["score"] += 0.08
         if data['submitted_answers']['solution_three_five'] in solution_three:
             data['partial_scores']["solution_three_five"]["score"] = 1
             data["score"] += 0.16
         if data['submitted_answers']["solution_four"] in solution_four: 
             data["partial_scores"]["solution_four"]["score"] = 1
             data["score"] += 0.4
+        else:
+            if contains(solution_four_low_key_condition, data['submitted_answers']['solution_four']):
+                data['partial_scores']["solution_four"]["score"] = 0.4
+                data["score"] += 0.16
+            if contains(solution_four_high_key_condition, data['submitted_answers']['solution_four']):
+                data['partial_scores']["solution_four"]["score"] = 0.4
+                data["score"] += 0.16
