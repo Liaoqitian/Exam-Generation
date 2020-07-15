@@ -9,7 +9,7 @@
   - [How to run on PrairieLearn](#how-to-run-on-prairielearn)
 
 ## Examples
-<img src="demo/Question.png">
+<img src="Demo/Question.png">
 	
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
