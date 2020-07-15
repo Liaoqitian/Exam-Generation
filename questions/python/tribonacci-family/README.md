@@ -7,13 +7,14 @@
 - [Contact](#Contact)
 ​
 ## Variants
+> 1v648
 - The first number ranges in [-1, 1]
 - The second number ranges in [1, 3]
 - The third number ranges in [3, 5]
 - The three mulitipliers ranges in [1, 4] and are unique to one another
 - For each consecutive three numbers, multiplier_one * number_one + multiplier_two * number_two + multiplier_three * number_three = number_four
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/tribonacci-family/serverFilesQuestion/tribonacci.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
