@@ -13,8 +13,7 @@
 - The starting query index ranges in [2, 4]
 - The ending query index ranges in [si + 2, si + 4], where si is the starting query index
 
-<img src="serverFilesQuestion/demo.png"
-width="800" height="475"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-list-range-MC/serverFilesQuestion/demo.png "Question Demo")
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read

@@ -13,8 +13,7 @@
 - The starting index ranges in [1, 3]
 - The ending index is two plus the starting index 
 
-<img src="serverFilesQuestion/demo.png"
-width="800" height="325"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-string-range-FB/serverFilesQuestion/demo.png "Question Demo")
 
 ## Notes
 The student is expected to input a string of five unique characters. If there are repeated characters or the student's solution has fewer or more than five characters, an "**invalid warning**" would be thrown. The warning would specify the first character which is repeated if there is any. 

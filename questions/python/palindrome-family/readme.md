@@ -10,19 +10,17 @@
 - [Contact](#Contact)
 ​
 ## Variants
+> 1v3
 - ### Palindrome_All
 ​
-​<img src="serverFilesQuestion/palindromeAll.png"
-width="800" height="950"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/palindrome-family/serverFilesQuestion/palindromeAll.png "Question Demo")
 - ### Palindrome_Any
 ​
-<img src="serverFilesQuestion/palindromeAny.png"
-width="800" height="390"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/palindrome-family/serverFilesQuestion/palindromeAny.png "Question Demo")
 ​
 - ### Palindrome_None
 ​
-<img src="serverFilesQuestion/palindromeNone.png"
-width="800" height="415"/>
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/palindrome-family/serverFilesQuestion/palindromeNone.png "Question Demo")
 ​
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
