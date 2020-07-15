@@ -14,7 +14,7 @@
 - The index ranges in [1, len(A) - 2]
 - The adder ranges in [1, 5]
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/Fa19-Q14-2-FB/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes 
 The question tests the student's ability to distinguish string concatenation from normal arithmetic addition. Whether the student includes quotation marks in the solution is not something the question intends to test on. Thereofore, both solutions with and without quotation marks are accepted. However, a reminder will be shown to the student if quotation marks are not included. 
