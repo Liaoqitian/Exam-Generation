@@ -8,6 +8,7 @@
 - [Contact](#Contact)
 ​
 ## Variants
+> 1v101*11*3 = 1v3333
 - The starting number of R ranges in [0, 100]
 - The ending number of R ranges in [s + 10, s + 20], where s is the starting number of R
 - The question expects the starting query index in [2, 4]
