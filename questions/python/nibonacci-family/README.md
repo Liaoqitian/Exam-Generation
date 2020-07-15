@@ -12,7 +12,7 @@
 - The two mulitipliers range in [1, 4] and are unique to one another
 - For each consecutive pairs, multiplier_one * number_one + multiplier_two * number_two = number_three
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/nibonacci-family/serverFilesQuestion/nibonacci.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
