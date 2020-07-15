@@ -1,4 +1,4 @@
-# Fear? Not if you use append list the right way!
+# You can solve this with a pen or append!
 > Tests for skills on the **Append** and **Extend** operation of lists (Fill In The Blank Version) 
 
 ## Table of Contents
