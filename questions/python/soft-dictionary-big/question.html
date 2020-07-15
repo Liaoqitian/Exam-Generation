@@ -84,8 +84,6 @@ table.sd {
     <p>
         (b) Those are some big assumptions. Let's fix the first one. If the user calls <code><strong>SD_get</strong></code> with a key not in some range, it should not return
         anything and print an error message, as shown below. <em>Modify the code above by adding a print statement</em> (in-betwen, above or below the lines, <em> indented correctly </em>) to do this. 
-        The print statement should be: <br>
-        <code>print('ERROR: no range contains key!')</code><br>
         Make sure the print statement is <em>exactly</em> as it is and contains no extra blank spaces. 
     </p>
     <p style="text-indent: 21px;"><code><strong>def SD_get(SD, key):</strong></code><br></p>
@@ -100,6 +98,9 @@ table.sd {
     <p style="text-indent: 21px;"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return _____________________________________</strong></code><br></p>
     <code><strong><pl-string-input answers-name="solution_three_five" weight = 16 allow-blank = True size = 50></pl-string-input></strong></code><br>
 <pl-question-panel>
+    <p style="text-indent: 21px;"><code>>>> <strong>SD_get(sd, 1000)</strong></code><br></p>
+    <p style="text-indent: 21px;"><code>ERROR: no range contains key!</code><br></p>
+    <br>
     <p>
         (c) Now let's fix the last assumption. Fill in the blank of a new <code><strong>SD_add</strong></code> with code so that adding a range that overlaps with another 
         range causes it to print an error, and does not modify the soft dictionary. 

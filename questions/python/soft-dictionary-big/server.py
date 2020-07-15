@@ -34,6 +34,8 @@ def grade(data):
                     "key < key_high and key >= key_low", 
                     "key_high > key and key >= key_low"]
 
+    solution_three = ['    print("ERROR: no range contains key!")']
+    
     solution_four = ["not(high <= key_low or key_high <= low):", 
                       "key_low < high and low < key_high:", 
                       "high > key_low and low < key_high:",
@@ -54,9 +56,12 @@ def grade(data):
                       "key_high > low and high > key_low"]
 
     if data["score"] != 1: 
-        if data['raw_submitted_answers']["solution_one"] in solution_one:
+        if data['submitted_answers']["solution_one"] in solution_one:
             data["partial_scores"]["solution_one"]["score"] = 1
             data["score"] += 0.2
+        if data['submitted_answers']['solution_three_five'] in solution_three:
+            data['partial_scores']["solution_three_five"]["score"] = 1
+            data["score"] += 0.16
         if data['submitted_answers']["solution_four"] in solution_four: 
             data["partial_scores"]["solution_four"]["score"] = 1
             data["score"] += 0.4
