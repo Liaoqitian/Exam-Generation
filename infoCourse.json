@@ -33,8 +33,10 @@
         {"name": "zero-indexing", "color": "blue1", "description": "Zero Indexing Type question"},
         {"name": "binaryDecimalHex", "color": "blue2", "description": "BinaryDecimalHex Type question"},
         {"name": "concurrency", "color": "blue3", "description": "Concurrency Type question"},
-        {"name": "append", "color": "orange1", "description": "Append/Extend Type question"},
+        {"name": "list operation", "color": "orange1", "description": "Append/Extend/Reduce question"},
         {"name": "sharing", "color": "orange2", "description": "Sharing/Non-Sharing Type question"},
-        {"name": "reduce", "color": "orange3", "description": "Reduce Type question"}
+        {"name": "dictionary", "color": "orange3", "description": "dictionary Type question"},
+        {"name": "formative", "color": "gray2", "description": "dictionary Type question"},
+        {"name": "summative", "color": "gray3", "description": "dictionary Type question"}
     ]
 }
