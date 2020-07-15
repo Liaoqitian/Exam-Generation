@@ -10,6 +10,7 @@
 ​
 
 ## Variants
+> 1v2028
 - The starting index ranges in [1, 3]
 - The ending index is two plus the starting index 
 
