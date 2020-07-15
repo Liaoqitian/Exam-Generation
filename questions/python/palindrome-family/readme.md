@@ -13,14 +13,14 @@
 > 1v3
 - ### Palindrome_All
 ​
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/palindrome-family/serverFilesQuestion/palindromeAll.png "Question Demo")
+<img src="serverFilesQuestion/palindromeAll.png">
 - ### Palindrome_Any
 ​
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/palindrome-family/serverFilesQuestion/palindromeAny.png "Question Demo")
+<img src="serverFilesQuestion/palindromeAny.png">
 ​
 - ### Palindrome_None
 ​
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/palindrome-family/serverFilesQuestion/palindromeNone.png "Question Demo")
+<img src="serverFilesQuestion/palindromeNone.png">
 ​
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
