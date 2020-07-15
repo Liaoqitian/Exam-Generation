@@ -12,8 +12,7 @@
 - The "big" number ranges in [40, 60]
 - The elements in the array range in [1 ,20] and are unique to one another 
 
-<img src="serverFilesQuestion/demo.png"
-width="800" height="950"/>
+<img src="serverFilesQuestion/demo.png">
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
