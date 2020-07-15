@@ -14,7 +14,7 @@
 - **function_one** and **function_two** are always paired. The two possible pairs are **[double, times3]** and **[triple, times2]**
 - **function_three** is a "**plus**" function, randomly chosen from **plus1**, **plus4** and **plus5**.
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/frankenstein-reversed/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 The input is provided and the student is asked to give the corresponding output. This is relatively easier than if the information given is swapped. For the plus function, the parameters 4 and 5 are intentionally chosen to avoid confusion with parameters in the other two functions. 
