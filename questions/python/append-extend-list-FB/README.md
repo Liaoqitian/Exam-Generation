@@ -14,7 +14,7 @@
 - The number mentioned above ranges in [1, 9]
 - The keyword **append** or **extend** is randomly chosen
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/Sp19-Q16-4-FB-Extend/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 The question checks if the student knows what **append** and **extend** do, espescially when the element to be **appended** or **extended** is a list. If an error is expected to occur, the student should input "error". 
