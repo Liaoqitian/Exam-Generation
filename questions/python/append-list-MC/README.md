@@ -1,4 +1,4 @@
-# Fear? Not if you use append list the right way!
+# You can solve this with a pen or append!
 > Tests for skills on the **Append** operation of lists (Multiple Choice Version) 
 
 ## Table of Contents
@@ -13,7 +13,7 @@
 - The element to be **appended** to the list is either a number or a singleton list with a number 
 - The number mentioned above ranges in [1, 9]
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/Sp19-Q16-4-MC/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/example1.png">
 
 ## Notes
 The question checks if the student knows what **append** does, espescially when the element to be **appended** is a list. The **extend** operation will be included in the more difficult version. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
