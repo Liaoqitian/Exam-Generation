@@ -7,6 +7,7 @@
 - [Contact](#Contact)
 ​
 ## Variants
+> 1v108
 - The first number ranges in [-1, 1] 
 - The second number ranges in [1, 3]
 - The two mulitipliers range in [1, 4] and are unique to one another
