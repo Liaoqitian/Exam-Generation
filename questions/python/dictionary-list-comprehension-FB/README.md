@@ -11,8 +11,8 @@
 - Randomly chooses between **square** and **cube** 
 - Randomly chooses between **plus1** and **plus2** 
 - Randomly chooses between **times2** and **times3**
+
 <img src="serverFilesQuestion/demo.png">
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/dictionary-list-comprehension-FB/serverFilesQuestion/demo.png "Question Demo")
 
 ## Structure
 > Names of directories and files (except for png files) a required to remain the same for PL to read
