@@ -10,9 +10,10 @@
 ​
 
 ## Variants
+> 1v26^5
 - A string with five unique uppercase letters is initiated
 
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/python/slice-of-string-range-FB-reversed/serverFilesQuestion/demo.png "Question Demo")
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 The student is expected to input the beginning and ending indices which let the program to run as shown. 
