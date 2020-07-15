@@ -13,7 +13,7 @@
 - The element to be **appended** to the list is either a number or a singleton list with a number 
 - The number mentioned above ranges in [1, 9]
 
-<img src="serverFilesQuestion/example1.png">
+<img src="serverFilesQuestion/demo.png">
 
 ## Notes
 The question checks if the student knows what **append** does, espescially when the element to be **appended** is a list. The **extend** operation will be included in the more difficult version. "**None of these**" and "**error**" will always be among the choices, the other choices are changing dynamically depending on the question
