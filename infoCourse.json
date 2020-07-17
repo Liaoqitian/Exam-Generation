@@ -15,17 +15,23 @@
         {"name": "qliao", "color": "purple3", "description": "Questions written by Qitian Liao; email: liaoqitian1024@gmail.com"},
         {"name": "formative", "color": "gray2", "description": "dictionary Type question"},
         {"name": "summative", "color": "gray3", "description": "dictionary Type question"},
-        {"name": "final", "color": "turquoise1", "description": "Final Question"},
+
+        {"name": "final", "color": "turquoise3", "description": "Final Question"},
         {"name": "midterm", "color": "turquoise2", "description": "Midterm Question"},
+        {"name": "quest", "color": "turquoise1", "description": "Quest Question"},
+
         {"name": "hard", "color": "red3", "description": "Hard-Level Question"},
         {"name": "medium", "color": "red2", "description": "Medium-Level Question"},
         {"name": "easy", "color": "red1", "description": "Easy-Level Question"},
+
         {"name": "alpha", "color": "green1", "description": "Question in Alpha State"},
         {"name": "beta", "color": "green2", "description": "Question in Beta State"},
         {"name": "release", "color": "green3", "description": "Question ready to be released"},
+
         {"name": "deadPython", "color": "brown3", "description": "Deadpython Question"},
         {"name": "blank", "color": "brown2", "description": "Fill in the blank question"},
         {"name": "radio", "color": "brown1", "description": "Multiple Choice Single Select question"},
+        
         {"name": "recursion", "color": "pink1", "description": "Recursion Type question"},
         {"name": "list comprehension", "color": "pink2", "description": "List Comprehension Type question"},
         {"name": "mutation", "color": "pink3", "description": "Mutation Type question"}, 
