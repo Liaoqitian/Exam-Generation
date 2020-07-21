@@ -78,9 +78,17 @@ def grade(data):
             if contains(solution_one_high_key_condition, data['submitted_answers']['solution_one']):
                 data['partial_scores']["solution_one"]["score"] = 0.4
                 data["score"] += 0.08
-        if data['submitted_answers']['solution_three_five'] in solution_three:
-            data['partial_scores']["solution_three_five"]["score"] = 1
-            data["score"] += 0.16
+
+        number_blanks = countBlankSpaces(data['submitted_answers']['solution_three_five'])
+        if (number_blanks % 4 != 0):
+            data['format_errors']['solution_three_five'] = "You have " + str(number_blanks) + " indentations. Please make it a multiple of four!"
+        else: 
+            if number_blanks != 4: 
+                data["partial_scores"]["solution_three_five"]["score"] = 0
+            elif data['submitted_answers']['solution_three_five'][4] == 'p': 
+                data['partial_scores']["solution_three_five"]["score"] = 1
+                data["score"] += 0.16
+        
         if data['submitted_answers']["solution_four"] in solution_four: 
             data["partial_scores"]["solution_four"]["score"] = 1
             data["score"] += 0.4
@@ -91,3 +99,13 @@ def grade(data):
             if contains(solution_four_high_key_condition, data['submitted_answers']['solution_four']):
                 data['partial_scores']["solution_four"]["score"] = 0.4
                 data["score"] += 0.16
+
+def countBlankSpaces(submitted_answer): 
+    count = 0
+    for char in submitted_answer: 
+        if char == ' ':
+            count += 1
+        else: 
+            break 
+    return count 
+    
