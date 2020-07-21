@@ -81,7 +81,7 @@ def grade(data):
 
         number_blanks = countBlankSpaces(data['submitted_answers']['solution_three_five'])
         if (number_blanks % 4 != 0):
-            data['format_errors']['solution_three_five'] = "You have " + str(number_blanks) + " indentations. Please make it a multiple of four!"
+            data['format_errors']['solution_three_five'] = "You have " + str(number_blanks) + " indents. Please make the number of indents a multiple of 4!"
         else: 
             if number_blanks != 4: 
                 data["partial_scores"]["solution_three_five"]["score"] = 0
