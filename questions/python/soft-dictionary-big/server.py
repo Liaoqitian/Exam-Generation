@@ -68,6 +68,7 @@ def grade(data):
     solution_four_high_key_condition = ["low < key_high", "key_high > low"] 
 
     if data["score"] != 1: 
+        ### Grades the first blank
         if data['submitted_answers']["solution_one"] in solution_one:
             data["partial_scores"]["solution_one"]["score"] = 1
             data["score"] += 0.2
@@ -79,15 +80,42 @@ def grade(data):
                 data['partial_scores']["solution_one"]["score"] = 0.4
                 data["score"] += 0.08
 
-        number_blanks = countBlankSpaces(data['submitted_answers']['solution_three_five'])
-        if (number_blanks % 4 != 0):
-            data['format_errors']['solution_three_five'] = "You have " + str(number_blanks) + " indents. Please make the number of indents a multiple of 4!"
+        ### Grades the third blank
+        ### Checks the number of blanks
+        count_blanks = 0
+        if data["submitted_answers"]["solution_three_one"] == "": 
+            count_blanks += 1
+        if data["submitted_answers"]["solution_three_two"] == "": 
+            count_blanks += 1
+        if data["submitted_answers"]["solution_three_three"] == "": 
+            count_blanks += 1
+        if data["submitted_answers"]["solution_three_four"] == "": 
+            count_blanks += 1
+        if data["submitted_answers"]["solution_three_five"] == "": 
+            count_blanks += 1
+        if count_blanks != 4: 
+            error_msg = "Invalid solution! You should at least and only fill in one of the blanks! You currenly have " + str(count_blanks) + " blanks."
+
+            data["format_errors"]['solution_three_one'] = error_msg
+            data["format_errors"]['solution_three_two'] = error_msg
+            data["format_errors"]['solution_three_three'] = error_msg
+            data["format_errors"]['solution_three_four'] = error_msg
+            data["format_errors"]['solution_three_five'] = error_msg
+
+        ### Checks the number of spaces 
+        number_spaces = countBlankSpaces(data['submitted_answers']['solution_three_five'])
+        if (number_spaces % 4 != 0):
+            data['format_errors']['solution_three_five'] = "You have " + str(number_spaces) + " spaces. Please make the number of spaces a multiple of 4!"
         else: 
-            if number_blanks != 4: 
+            if number_spaces != 4: 
+                data["partial_scores"]["solution_three_one"]["score"] = 0
+                data["partial_scores"]["solution_three_two"]["score"] = 0
+                data["partial_scores"]["solution_three_three"]["score"] = 0
+                data["partial_scores"]["solution_three_four"]["score"] = 0
                 data["partial_scores"]["solution_three_five"]["score"] = 0
             elif data['submitted_answers']['solution_three_five'][4] == 'p': 
                 data['partial_scores']["solution_three_five"]["score"] = 1
-                data["score"] += 0.16
+                data["score"] += 0.2
         
         if data['submitted_answers']["solution_four"] in solution_four: 
             data["partial_scores"]["solution_four"]["score"] = 1
