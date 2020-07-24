@@ -94,8 +94,8 @@ def grade(data):
         if data["submitted_answers"]["solution_three_five"] == "": 
             count_blanks += 1
         if count_blanks != 4: 
-            error_msg = "Invalid solution! You should at least and only fill in one of the blanks! You currenly have " + str(count_blanks) + " blanks."
-
+            non_blank = 5 - count_blanks
+            error_msg = "Invalid solution! You should at least and only fill in one of the blanks! You currently filled in " + str(non_blank) + " blanks."
             data["format_errors"]['solution_three_one'] = error_msg
             data["format_errors"]['solution_three_two'] = error_msg
             data["format_errors"]['solution_three_three'] = error_msg
@@ -103,6 +103,22 @@ def grade(data):
             data["format_errors"]['solution_three_five'] = error_msg
 
         ### Checks the number of spaces 
+        number_spaces_one = countBlankSpaces(data['submitted_answers']['solution_three_one'])
+        if (number_spaces_one % 4 != 0):
+            data['format_errors']['solution_three_one'] = "You have " + str(number_spaces_one) + " spaces. Please make the number of spaces a multiple of 4!"
+            
+        number_spaces_two = countBlankSpaces(data['submitted_answers']['solution_three_two'])
+        if (number_spaces_two % 4 != 0):
+            data['format_errors']['solution_three_two'] = "You have " + str(number_spaces_two) + " spaces. Please make the number of spaces a multiple of 4!"
+
+        number_spaces_three = countBlankSpaces(data['submitted_answers']['solution_three_three'])
+        if (number_spaces_three % 4 != 0):
+            data['format_errors']['solution_three_three'] = "You have " + str(number_spaces_three) + " spaces. Please make the number of spaces a multiple of 4!"
+
+        number_spaces_four = countBlankSpaces(data['submitted_answers']['solution_three_four'])
+        if (number_spaces_four % 4 != 0):
+            data['format_errors']['solution_three_four'] = "You have " + str(number_spaces_four) + " spaces. Please make the number of spaces a multiple of 4!"
+
         number_spaces = countBlankSpaces(data['submitted_answers']['solution_three_five'])
         if (number_spaces % 4 != 0):
             data['format_errors']['solution_three_five'] = "You have " + str(number_spaces) + " spaces. Please make the number of spaces a multiple of 4!"
