@@ -1,18 +1,13 @@
-def all_but_first_of(s):
-    return s[1:]
+number_one = data['params']['number_one']
+number_two = data['params']['number_two']
+number_three = data['params']['number_three']
+multiplier_one = data['params']['multiplier_one']
+multiplier_two = data['params']['multiplier_two']
+multiplier_three = data['params']['multiplier_three']
 
-def all_but_last_of(s):
-    return s[:-1]
-
-params = data['params']
-
-ans = {}
-if data['params']['variant'] == 'all': 
-    ans = {'': True, 'a': True, 'peak': False, 'abc': False, 'aabb': False, 'berkeley': False,'palindrome': False, 
-    'abccba': True, 'abcba': True, 'refer': True, 'abcdedcba': True}
-elif data['params']['variant'] == 'any':
-    ans = {'': False, 'a': False, 'peak': False, 'c al': False, 'aabb': False, 'abcdefghi': False, 'palindrome': False, 
-    'abcba': True, 'abca': True, 'refer': True, 'berkeley': True}
-else:
-    ans = {'': False, 'a': False, 'peak': True, 'c al': True, 'aabb': True, 'abcdefghi': True, 'palindrome': True, 
-    'abcba': False, 'abca': False, 'refer': False, 'berkeley': False}
+ans = [0] * 22
+ans[0] = number_one 
+ans[1] = number_two
+ans[2] = number_three
+for i in range(3, 22):
+    ans[i] = ans[i - 1] * multiplier_three + ans[i - 2] * multiplier_two + ans[i - 3] * multiplier_one # index is intended to count from left to right

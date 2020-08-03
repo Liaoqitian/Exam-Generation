@@ -7,47 +7,42 @@ import numpy.random
 
 
 class Test(PLTestCase):
-    @points(2)
-    # Basic Test Suites
-    @name('Basic Tests')
+    @points(0.5)
+    @name('Check trib(0)')
     def test_0(self):
-        points = 0
-        num_tests = 3
-        test_strings = ['', 'a', 'peak'] 
-        for s in test_strings:
-            correct_val = self.ref.checkPalindrome(s)
-            user_val = True
-            if self.ref.function == 'is_palindrome_all':
-                user_val = Feedback.call_user(self.st.is_palindrome_all, s)
-            elif self.ref.function == 'is_palindrome_any':
-                user_val = Feedback.call_user(self.st.is_palindrome_any, s)
-            else: 
-                user_val = Feedback.call_user(self.st.is_palindrome_none, s)
-            if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
-                points += 1
-        if points < 3: 
-            points = 0
-        Feedback.set_score(points / num_tests)
+        user_val = Feedback.call_user(self.st.trib, 0)
+        if Feedback.check_scalar("trib(0)", self.ref.trib(0), user_val):
+            Feedback.set_score(1)
+        else:
+            Feedback.set_score(0)
+
+    @points(0.5)
+    @name('Check trib(1)')
+    def test_1(self):
+        user_val = Feedback.call_user(self.st.trib, 1)
+        if Feedback.check_scalar("trib(1)", self.ref.trib(1), user_val):
+            Feedback.set_score(1)
+        else:
+            Feedback.set_score(0)
+
+    @points(1)
+    @name('Check trib(7)')
+    def test_2(self):
+        user_val = Feedback.call_user(self.st.trib, 7)
+        if Feedback.check_scalar("trib(7)", self.ref.trib(7), user_val):
+            Feedback.set_score(1)
+        else:
+            Feedback.set_score(0)
 
     @points(8)
-    # Advanced Test Suites
-    @name('Advanced Tests')
+    @name('Check random values')
     def test_3(self):
         points = 0
         num_tests = 8
-        test_strings = ['abc', 'c al', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca', 'refer', 'berkeley', 'abccba', 'abcdedcba']
-        for s in test_strings:
-            correct_val = self.ref.checkPalindrome(s)
-            if isinstance(correct_val, bool):
-                user_val = True
-                if self.ref.function == 'is_palindrome_all':
-                    user_val = Feedback.call_user(self.st.is_palindrome_all, s)
-                elif self.ref.function == 'is_palindrome_any':
-                    user_val = Feedback.call_user(self.st.is_palindrome_any, s)
-                else: 
-                    user_val = Feedback.call_user(self.st.is_palindrome_none, s)
-                if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
-                    points += 1
-        if points <= 5:
-            points = 0 
+        test_values = np.random.choice(np.arange(6, 20), size=num_tests, replace=False)
+        for in_val in test_values:
+            correct_val = self.ref.trib(in_val)
+            user_val = Feedback.call_user(self.st.trib, in_val)
+            if Feedback.check_scalar(f"trib({in_val})", correct_val, user_val):
+                points += 1
         Feedback.set_score(points / num_tests)

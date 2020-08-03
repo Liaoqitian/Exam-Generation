@@ -1,2 +1,2 @@
-def is_palindrome_none(s):
-    pass
+def trib(n):
+    return -1 
