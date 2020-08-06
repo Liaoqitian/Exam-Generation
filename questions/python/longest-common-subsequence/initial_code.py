@@ -1,1 +1,1 @@
-def lcs(x, y): 
+def lcs(A, B): 
