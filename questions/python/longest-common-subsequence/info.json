@@ -3,5 +3,13 @@
     "title": "longest common subsequence",
     "topic": "Python",
     "tags": ["qliao", "recursion", "alpha", "final", "dead python", "medium", "FA15Q14", "formative"],
-    "type": "v3"
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "timeout": 20
+    }
 }
