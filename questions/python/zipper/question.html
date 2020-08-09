@@ -1,0 +1,69 @@
+<html>
+<head>
+<style type="text/css">
+code {
+  color: black;
+  padding: 2px;
+  font-size: 100%;
+}
+table.sd {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.sd, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <style type="text/css">
+
+  </style>
+
+<pl-question-panel>
+    <p> 
+        (a) Fill in the blanks to complete the following recursive function, <code><strong>zipper</strong></code>, which takes two strings whose
+        letters are in sorted order (letters closest to <strong>"a"</strong> always in front of letters closest to <strong>"z"</strong>) and “zips” them
+        together into a single string whose letters are in sorted order. There may be duplicates in the input and
+        output.
+    </p>
+    <code>>>> <strong>"UC Berkeley" > "Stanford"</strong> <em>## Did you know you can compare words with > </em></code><br>
+    <code>True &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <em>## to test alphabetical ordering?</em> </code><br>
+    <code>>>> <strong>zipper("abc", "cde")</strong></code><br>
+    <code>"abccde"</code><br>
+    <code>>>> <strong>zipper("acce", "bd")</strong></code><br>
+    <code>"abccde"</code><br>
+    <br>
+    <code><strong>def zipper(a, b):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if a == "":</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return b</strong></code><br>
+</pl-question-panel>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>elif <pl-string-input answers-name="solution_one" weight = 1 remove-spaces = True allow-blank = True size = 25></pl-string-input>:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_two" weight = 1 remove-spaces = True allow-blank = True size = 25></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>elif <pl-string-input answers-name="solution_three" weight = 1 remove-spaces = True allow-blank = True size = 25></pl-string-input>:</strong> <em>## 1st letter of a before 1st of b</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_four" weight = 1 remove-spaces = True allow-blank = True size = 25></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_five" weight = 1 remove-spaces = True allow-blank = True size = 25></pl-string-input></strong></code><br>
+    <br>
+<pl-question-panel>
+    <p>
+        (b) If <code><strong>words</strong></code> is a list of strings whose letters are in sorted order, write a single expression that boils them down to a single string with all the aggregate
+            letters in sorted order. 
+    </p>
+    <code>>>> <strong>from functools import reduce</strong> <em>## reduce is the Python equivalent of combine</em></code><br>
+    <code>>>> <strong>words = ["ace", "d", "bc"]</strong></code><br>
+    <br>
+<pl-question-panel>
+    <code>>>> <strong><pl-string-input answers-name="solution_six" weight = 1 remove-spaces = True allow-blank = True size = 25></pl-string-input></strong></code><br>
+    <code><strong>"abccde"</strong></code>
