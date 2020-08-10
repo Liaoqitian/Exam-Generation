@@ -1,0 +1,54 @@
+<html>
+<head>
+<style type="text/css">
+code {
+  color: black;
+  padding: 2px;
+  font-size: 100%;
+}
+table.sd {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.sd, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <style type="text/css">
+
+  </style>
+<pl-question-panel>
+  <p>
+    Write a function <code><strong>find_GC</strong></code> that takes in two dictionaries (<code><strong>GP</strong></code> capturing grandparents <strong>&rarr;</strong>  
+    parents, and <code><strong>PC</strong></code> capturing parents <strong>&rarr;</strong> children) and <em>returns a new dictionary of all grandparents</em> <strong>&rarr;</strong> 
+    <em>children it finds.</em> As an example, we have three grandparents: 1, 2 and 3; three parents: 10, 11 and 12; and two children: 100 and 200 with <strong>&rarr;</strong>
+    connections as shown below. Your function would return the two grandparents <strong>&rarr;</strong> children: 1 <strong>&rarr;</strong> 100 and 2 
+    <strong>&rarr;</strong> 100. By the way, more than 2 grandparents can <strong>&rarr;</strong> to the same parent; similarly for parents 
+    <strong>&rarr;</strong> children (sometimes family records get corrupted, it's not your job to worry about that). 
+  </p>
+  <code>>>> <strong>GP = {1:10, 2:10, 3:11}</strong></code><br>
+  <code>>>> <strong>PC = {10:100, 12:200}</strong></code><br>
+  <code>>>> <strong>find_GC(GP, PC)</strong></code><br>
+  <code><strong>{1:100, 2:100}</strong></code><br>
+  <br>
+  <img src = "clientFilesQuestion/find-grandparent.png" style="width:300px;height:300px;">
+</pl-question-panel>
+<pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
+</pl-file-editor>
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+  </pl-submission-panel>
+

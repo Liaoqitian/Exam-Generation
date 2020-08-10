@@ -1,0 +1,15 @@
+{
+    "uuid": "71014236-2000-4419-b339-d451b0bd51b4",
+    "title": "Find Grandparent",
+    "topic": "Python",
+    "tags": ["qliao", "dictionary", "alpha", "final", "deadPython", "hard", "formative"],
+    "type": "v3", 
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "timeout": 20
+    }
+}
