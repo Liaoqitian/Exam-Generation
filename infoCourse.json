@@ -8,41 +8,206 @@
     ,
     "assessmentSets": [],
     "topics": [
-        {"name": "Python", "color": "red3", "description": "Python Questions"},
-        {"name": "Other", "color": "blue3", "description": "Other types of Questions"}
+        {"name": "Lecture", "color": "gray3", "description": "Lecture video questions"},
+        {"name": "Squishy Lecture", "color": "blue1", "description": "Squishy lectures material"},
+        {"name": "Programming Paradigms", "color": "blue2", "description": "Programming Paradigms, OOP in Python"},
+        {"name": "Binary-hex-dec", "color": "blue3", "description": "Binary, Hexadecimal, decimal material"},
+        {"name": "Amdahl Calculation", "color": "purple1", "description": "Amdahl's Law: Speedup"},
+        {"name": "Concurrency", "color": "purple2", "description": "Parallel and Distributed computation."},
+        {"name": "Random Values", "color": "purple3", "description": "Pick Random Functionality: Inclusive of both endpoints"},
+        {"name": "Function Ordering", "color": "green1", "description": "Function Composition Ordering"},
+        {"name": "Domain/Range", "color": "green2", "description": "Functions: Domain Range."},
+        {"name": "Algorithmic Complexity", "color": "green3", "description": "Functions."},
+        {"name": "Abstraction", "color": "turquoise1", "description": "Computational Thinking."},
+        {"name": "Logical Procedures", "color": "turquoise2", "description": "Set and Report Evaluation, Use a table to trace assignments, Roboto Tracing."},
+        {"name": "Booleans", "color": "brown1", "description": "Easy Snap!, Boolean Operators (And Or Not), if else evaluation, Control to Boolean, Boolean with Iteration, Writing Boolean Operators"},
+        {"name": "Iteration", "color": "yellow1", "description": "Easy Snap!"},
+        {"name": "Scoping", "color": "orange1", "description": "Easy Snap!, Mutability/ Call by Value."},
+        {"name": "Miscellaneous", "color": "red1", "description": "Easy Snap!, ex: Linear Mapping, List Tracing."},
+        {"name": "Snap HOFs", "color": "yellow2", "description": "HOF's, Nested HOF's, Advanced HOF's, Iteration to HOF's"},
+        {"name": "Recursion", "color": "orange2", "description": "Recursive Reporters"},
+        {"name": "Fractal", "color": "brown2", "description": "Double Recursive Call, Single Recursive call"},
+        {"name": "List Comprehension", "color": "pink1", "description": "Easy Python."},
+        {"name": "List-String concat", "color": "red2", "description": "List Concatination, String Concatination."},
+        {"name": "Slicing", "color": "pink2", "description": "List Slicing, String Slicing."},
+        {"name": "Lambda & Compose", "color": "pink3", "description": "Lambda Function Evaluation."},
+        {"name": "Dictionaries", "color": "red3", "description": "Dictionaries: Write a Function"},
+        {"name": "Python HOFs", "color": "brown3", "description": "Hard Python."},
+        {"name": "OOPs", "color": "yellow3", "description": "OOP in Python."},
+        {"name": "Iterables", "color": "orange3", "description": "Hard Python."}
     ],
+
     "tags": [
-        {"name": "qliao", "color": "purple3", "description": "Questions written by Qitian Liao; email: liaoqitian1024@gmail.com"},
-        {"name": "formative", "color": "gray2", "description": "dictionary Type question"},
-        {"name": "summative", "color": "gray3", "description": "dictionary Type question"},
-
-        {"name": "final", "color": "turquoise3", "description": "Final Question"},
-        {"name": "midterm", "color": "turquoise2", "description": "Midterm Question"},
-        {"name": "quest", "color": "turquoise1", "description": "Quest Question"},
-
-        {"name": "hard", "color": "red3", "description": "Hard-Level Question"},
-        {"name": "medium", "color": "red2", "description": "Medium-Level Question"},
-        {"name": "easy", "color": "red1", "description": "Easy-Level Question"},
-
-        {"name": "alpha", "color": "green1", "description": "Question in Alpha State"},
-        {"name": "beta", "color": "green2", "description": "Question in Beta State"},
-        {"name": "release", "color": "green3", "description": "Question ready to be released"},
-
-        {"name": "deadPython", "color": "brown3", "description": "Deadpython Question"},
-        {"name": "blank", "color": "brown2", "description": "Fill in the blank question"},
-        {"name": "radio", "color": "brown1", "description": "Multiple Choice Single Select question"},
+        {"name": "formative", "color": "brown2", "description": "HW and lab questions, public"},
+        {"name": "summative", "color": "brown3", "description": "Quest, Midterm, and Final Questions, secret"},
         
-        {"name": "recursion", "color": "pink1", "description": "Recursion Type question"},
-        {"name": "list comprehension", "color": "pink2", "description": "List Comprehension Type question"},
-        {"name": "mutation", "color": "pink3", "description": "Mutation Type question"}, 
-        {"name": "string slicing", "color": "yellow1", "description": "String Slicing Type question"},
-        {"name": "list slicing", "color": "yellow2", "description": "List Slicing Type question"},
-        {"name": "string concatenation", "color": "yellow3", "description": "String Concatenation Type question"},
-        {"name": "zero-indexing", "color": "blue1", "description": "Zero Indexing Type question"},
-        {"name": "binaryDecimalHex", "color": "blue2", "description": "BinaryDecimalHex Type question"},
-        {"name": "concurrency", "color": "blue3", "description": "Concurrency Type question"},
-        {"name": "list operation", "color": "orange1", "description": "Append/Extend/Reduce question"},
-        {"name": "sharing", "color": "orange2", "description": "Sharing/Non-Sharing Type question"},
-        {"name": "dictionary", "color": "orange3", "description": "dictionary Type question"}
+        {"name": "quest", "color": "pink1", "description": "Exam level."},
+        {"name": "midterm", "color": "pink2", "description": "Exam level."},
+        {"name": "final", "color": "pink3", "description": "Exam level."},
+        
+        {"name": "easy", "color": "blue1", "description": "Difficulty."},
+        {"name": "medium", "color": "blue2", "description": "Difficulty."},
+        {"name": "hard", "color": "blue3", "description": "Difficulty."},
+        
+        {"name": "blank", "color": "orange2", "description": "Element: input for number, integer, string, symbol, ect."},
+        {"name": "dead python", "color": "orange3", "description": "Element: Dead python."},
+        {"name": "radio", "color": "purple2", "description": "Element: Single select multiple choice."},
+        {"name": "checkbox", "color": "purple3", "description": "Element: Multiple select multiple choice."},
+        {"name": "matrix", "color": "orange1", "description": "Element: Matrix component or matrix input."},
+        {"name": "dropdown", "color": "purple1", "description": "Element: Drop-down select menu list."},
+
+        {"name": "alpha", "color": "green1", "description": "Question is ready for TA review."},
+        {"name": "beta", "color": "green2", "description": "Question is ready for instructor to review."},
+        {"name": "release", "color": "green3", "description": "Instructor has blessed the question and can now be released to students."},
+        
+        {"name": "abstraction", "color": "gray2", "description": "Quest Lecture Content, Squishy Questions"},
+
+        {"name": "false finder", "color": "gray2", "description": "And"},
+        {"name": "truth finder", "color": "gray2", "description": "Or"},
+        {"name": "negation", "color": "gray2", "description": "Not"},
+        {"name": "and", "color": "gray2", "description": "Boolean Operators"},
+        {"name": "or", "color": "gray2", "description": "Boolean Operators"},
+        {"name": "not", "color": "gray2", "description": "Boolean Operators"},
+
+        {"name": "numeric operators functionality", "color": "gray2", "description": "Operators Functionality"},
+        {"name": "sentence operators functionality", "color": "gray2", "description": "Operators Functionality"},
+        {"name": "operators functionality", "color": "gray2", 
+            "description": "Set and Report Evaluation, Boolean Evaluation Fluency, Domain Range, Fill in the Blank Functions, Functions: In to Out Evaluation"},
+
+        {"name": "list range", "color": "gray2", "description": "Domain Range"},
+        {"name": "list domain", "color": "gray2", "description": "Domain Range"},
+        {"name": "letter range", "color": "gray2", "description": "Domain Range"},
+        {"name": "letter domain", "color": "gray2", "description": "Domain Range"},
+        {"name": "number range", "color": "gray2", "description": "Domain Range"},
+        {"name": "number domain", "color": "gray2", "description": "Domain Range"},
+        {"name": "sentence range", "color": "gray2", "description": "Domain Range"},
+        {"name": "sentence domain", "color": "gray2", "description": "Domain Range"},
+        {"name": "word range", "color": "gray2", "description": "Domain Range"},
+        {"name": "word domain", "color": "gray2", "description": "Domain Range"},
+        {"name": "character range", "color": "gray2", "description": "Domain Range"},
+        {"name": "character domain", "color": "gray2", "description": "Domain Range"},
+        {"name": "boolean range", "color": "gray2", "description": "Domain Range"},
+        {"name": "boolean domain", "color": "gray2", "description": "Domain Range"},
+        
+        {"name": "set procedure", "color": "gray2", "description": "Set and Report Evaluation"},
+
+        {"name": "assignment tables", "color": "gray2", "description": "Use a table to trace assignments"},
+        {"name": "using tables", "color": "gray2", "description": "Use a table to trace assignments"},
+        
+        {"name": "global variable", "color": "gray2", "description": "Scoping"},
+        {"name": "script variable", "color": "gray2", "description": "Scoping"},
+        {"name": "lists", "color": "gray2", "description": "Scoping; Procedure CAN change list in caller"},
+        {"name": "value", "color": "gray2", "description": "Scoping; Procedure CAN'T change value in caller"},
+        
+        {"name": "reports leave procedure", "color": "gray2", "description": "Control Fluency"},
+        {"name": "control", "color": "gray2", "description": "If else evaluation, Control to Boolean, Boolean Evaluation, Recursive Reporters"},
+        
+        {"name": "binary to hex", "color": "gray2", "description": "Binary Decimal Hex"},
+        {"name": "decimal to hex", "color": "gray2", "description": "Binary Decimal Hex"},
+        {"name": "hex to decimal", "color": "gray2", "description": "Binary Decimal Hex"},
+        {"name": "hex to binary", "color": "gray2", "description": "Binary Decimal Hex"},
+        {"name": "decimal to binary", "color": "gray2", "description": "Binary Decimal Hex"},
+        {"name": "binary to decimal", "color": "gray2", "description": "Binary Decimal Hex"},
+        {"name": "N bits is 2^N things", "color": "gray2", "description": "Binary Decimal Hex"},
+        
+        {"name": "repeat", "color": "gray2", "description": "Iteration"},
+        {"name": "FB loop code for IO behavior", "color": "gray2", "description": "Iteration"},
+        {"name": "for each", "color": "gray2", "description": "Iteration"},
+        {"name": "for i", "color": "gray2", "description": "Iteration"},
+        {"name": "trace simple loop", "color": "gray2", "description": "Iteration, Roboto Tracing Fluency"},
+        
+        {"name": "map domain", "color": "gray2", "description": "HOF's"},
+        {"name": "map range", "color": "gray2", "description": "HOF's"},
+        {"name": "map", "color": "gray2", "description": "HOF's"},
+        {"name": "keep domain", "color": "gray2", "description": "HOF's"},
+        {"name": "keep range", "color": "gray2", "description": "HOF's"},
+        {"name": "keep", "color": "gray2", "description": "HOF's"},
+        {"name": "combine domain", "color": "gray2", "description": "HOF's"},
+        {"name": "combine range", "color": "gray2", "description": "HOF's"},
+        {"name": "combine", "color": "gray2", "description": "HOF's"},
+        
+        {"name": "nested HOFs", "color": "gray2", "description": "Advanced HOF's"},
+
+        {"name": "motion functionality", "color": "gray2", "description": "Roboto Tracing"},
+        {"name": "turning functionality", "color": "gray2", "description": "Roboto Tracing"},
+
+        {"name": "linear runtime", "color": "gray2", "description": "Algorithmic Complexity"},
+        {"name": "logarithmic runtime", "color": "gray2", "description": "Algorithmic Complexity"},
+        {"name": "constant runtime", "color": "gray2", "description": "Algorithmic Complexity"},
+        {"name": "exponential runtime", "color": "gray2", "description": "Algorithmic Complexity"},
+        {"name": "cubic runtime", "color": "gray2", "description": "Algorithmic Complexity"},
+        {"name": "quadratic runtime", "color": "gray2", "description": "Algorithmic Complexity"},
+
+        {"name": "passing in arguments", "color": "gray2", "description": "Functions"},
+        {"name": "what would snap! display", "color": "gray2", "description": "HOF's, FB Function Fluency, Function Composition Ordering"},
+        {"name": "what would python display", "color": "gray2", "description": "HOF's, FB Function Fluency, Function Composition Ordering"},
+        {"name": "basic ideas", "color": "gray2", "description": "Functions: composition ordering, FB, Programming Paradigms"},
+
+        {"name": "imperative programming", "color": "gray2", "description": "Programming Paradigms"},
+        {"name": "functional programming", "color": "gray2", "description": "Programming Paradigms"},
+        {"name": "object-oriented programming", "color": "gray2", "description": "Programming Paradigms"},
+        {"name": "declarative programming", "color": "gray2", "description": "Programming Paradigms"},
+
+        {"name": "OOP object", "color": "gray2", "description": "Object-Oriented Programming"},
+        {"name": "OOP method", "color": "gray2", "description": "Object-Oriented Programming"},
+        {"name": "OOP attribute", "color": "gray2", "description": "Object-Oriented Programming"},
+        {"name": "OOP class", "color": "gray2", "description": "Object-Oriented Programming"},
+        {"name": "OOP constructor", "color": "gray2", "description": "Object-Oriented Programming"},
+        {"name": "OOP instance", "color": "gray2", "description": "Object-Oriented Programming"},
+        {"name": "OOP instantiantion", "color": "gray2", "description": "Object-Oriented Programming"},
+
+        {"name": "privacy", "color": "gray2", "description": "Midterm Lecture Content, Squishy Questions"},
+        {"name": "testing & HW3", "color": "gray2", "description": "Midterm Lecture Content, Squishy Questions"},
+        {"name": "computing & the environment", "color": "gray2", "description": "Midterm Lecture Content, Squishy Questions"},
+        
+        {"name": "how many different", "color": "gray2", "description": "Race Conditions"},
+        {"name": "list all outputs", "color": "gray2", "description": "Race Conditions"},
+        {"name": "race condition", "color": "gray2", "description": "Concurrency"},
+        {"name": "deadlock", "color": "gray2", "description": "Concurrency"},
+        {"name": "livelock", "color": "gray2", "description": "Concurrency"},
+
+        {"name": "speedup", "color": "gray2", "description": "Amdahl's Law: Speedup"},
+
+        {"name": "base case test", "color": "gray2", "description": "Recursion"},
+        {"name": "base case return val", "color": "gray2", "description": "Recursion"},
+        {"name": "recursive case divide", "color": "gray2", "description": "Recursion"},
+        {"name": "recursive case invoke", "color": "gray2", "description": "Recursion"},
+        {"name": "recursive case combine", "color": "gray2", "description": "Recursion"},
+
+        {"name": "list syntax: Snap!", "color": "gray2", "description": "list range, Domain Range, lists"},
+
+        {"name": "pen up-down", "color": "gray2", "description": "Fractals"},
+        {"name": "start-stop in same place", "color": "gray2", "description": "Fractals"},
+        {"name": "line segment-recursive call", "color": "gray2", "description": "Fractals"},
+
+        {"name": "AI", "color": "gray2", "description": "Final lecture content, Squishy Questions"},
+        {"name": "HCI", "color": "gray2", "description": "Final lecture content, Squishy Questions"},
+        {"name": "saving the world with computing", "color": "gray2", "description": "Final lecture content, Squishy Questions"},
+        {"name": "limits of computing", "color": "gray2", "description": "Final lecture content, Squishy Questions"},
+        {"name": "alumni panel", "color": "gray2", "description": "Final lecture content, Squishy Questions"},
+
+        {"name": "string syntax", "color": "gray2", "description": "Python String Slicing"},
+
+        {"name": "plus", "color": "gray2", "description": "Python iterables, + on string, string concatenation"},
+        {"name": "join", "color": "gray2", "description": "join() for string concatenation"},
+        
+        {"name": "inclusive-exclusive", "color": "gray2", "description": "python indexing, List Slicing, String Slicing"},
+        {"name": "0 indexed", "color": "gray2", "description": "python indexing, List Slicing, String Slicing"},
+        {"name": "python indexing", "color": "gray2", "description": "List Slicing, String Slicing"},
+
+        {"name": "list syntax: python", "color": "gray2", "description": "List Slicing, List Comprehension"},
+        {"name": "python map", "color": "gray2", "description": "List Comprehension"},
+        {"name": "python map & filter", "color": "gray2", "description": "List Comprehension"},
+        {"name": "python filter", "color": "gray2", "description": "List Comprehension"},
+
+        {"name": "key-value pairs", "color": "gray2", "description": "Dictionaries"},
+        {"name": "no order", "color": "gray2", "description": "Dictionaries"},
+        
+        {"name": "ireneog", "color": "brown1", "description": "QG originally written by Irene Ortega (ireneog@berkeley.edu, ireneortega743@gmail.com); Github: ireneog"},
+        {"name": "byao", "color": "brown1", "description": "QG originally written by Bojin (Max) Yao (bojinyao@berkeley.edu); Github: bojinyao"},
+        {"name": "Liaoqitian", "color": "brown1", "description": "QG originally written by Qitian Liao (liao1024@berkeley.edu); Github: Liaoqitian"},
+
+        {"name": "berkeley", "color": "blue3", "description": "Intellectual property owned by the University of California, Berkeley"}
+        
     ]
 }

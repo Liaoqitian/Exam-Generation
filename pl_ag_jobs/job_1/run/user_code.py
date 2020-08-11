@@ -1,2 +1,2 @@
-def trib(n):
-    return n 
+def lcs(A, B): 
+    pass
