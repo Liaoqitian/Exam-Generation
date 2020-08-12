@@ -1,1 +1,0 @@
-{"tests": [{"name": "Basic Tests", "max_points": 2, "filename": "test_0", "points": 2.0, "files": [], "message": "'checkPalindrome()' looks good\n'checkPalindrome(a)' looks good\n'checkPalindrome(peak)' looks good\n"}], "score": 1.0, "succeeded": true, "gradable": true, "max_points": 2, "images": []}
