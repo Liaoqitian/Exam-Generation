@@ -5,11 +5,12 @@ from functools import wraps
 import numpy as np
 import numpy.random
 
+
 class Test(PLTestCase):
     @points(1)
-    @name("Base case provided by the question")
+    @name("Base case (provided by the question)")
     def test_0(self):
-        if self.ref.function == "find_GC":
+        if self.ref.function == "find_GC": 
             GP = {1:10, 2:10, 3:11}
             PC = {10:100, 12:200}
             user_val = Feedback.call_user(self.st.find_GC, GP, PC)
@@ -36,7 +37,7 @@ class Test(PLTestCase):
             else:
                 Feedback.set_score(0)
 
-    @points(2)
+    @points(1)
     @name("No match")
     def test_1(self):
         if self.ref.function == "find_GC": 
@@ -65,6 +66,7 @@ class Test(PLTestCase):
             else:
                 Feedback.set_score(0)
         
+
     @points(2)
     @name("Two matches")
     def test_2(self):
@@ -125,7 +127,7 @@ class Test(PLTestCase):
             else:
                 Feedback.set_score(0)
             
-    @points(3)
+    @points(2)
     @name("Most complicated case")
     def test_4(self):
         if self.ref.function == "find_GC": 

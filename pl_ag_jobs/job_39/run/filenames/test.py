@@ -5,11 +5,12 @@ from functools import wraps
 import numpy as np
 import numpy.random
 
+
 class Test(PLTestCase):
     @points(1)
-    @name("Base case provided by the question")
+    @name('Base case (provided by the question)')
     def test_0(self):
-        if self.ref.function == "find_GC":
+        if self.ref.function == "find_GC": 
             GP = {1:10, 2:10, 3:11}
             PC = {10:100, 12:200}
             user_val = Feedback.call_user(self.st.find_GC, GP, PC)
@@ -36,8 +37,8 @@ class Test(PLTestCase):
             else:
                 Feedback.set_score(0)
 
-    @points(2)
-    @name("No match")
+    @points(1)
+    @name('No match')
     def test_1(self):
         if self.ref.function == "find_GC": 
             GP = {12:140, 19:199, 21:192}
@@ -65,8 +66,9 @@ class Test(PLTestCase):
             else:
                 Feedback.set_score(0)
         
+
     @points(2)
-    @name("Two matches")
+    @name('Two matches')
     def test_2(self):
         if self.ref.function == "find_GC": 
             GP = {1:10, 2:20, 3:30}
@@ -96,7 +98,7 @@ class Test(PLTestCase):
                 Feedback.set_score(0)
 
     @points(2)
-    @name("More than two matches")
+    @name('More than two matches')
     def test_3(self):
         if self.ref.function == "find_GC": 
             GP = {1:10, 2:10, 3:11, 4:11, 5:12, 6:12}
@@ -125,8 +127,8 @@ class Test(PLTestCase):
             else:
                 Feedback.set_score(0)
             
-    @points(3)
-    @name("Most complicated case")
+    @points(2)
+    @name('Most complicated case')
     def test_4(self):
         if self.ref.function == "find_GC": 
             GP = {1:10, 2:10, 3:20, 4:20, 5:30, 6:30, 7:30, 8:40, 9:40, 10:50, 11:60}
