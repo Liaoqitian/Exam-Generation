@@ -1,0 +1,56 @@
+<html>
+<head>
+<style type="text/css">
+code {
+  color: black;
+  padding: 2px;
+  font-size: 100%;
+}
+table.sd {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.sd, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <style type="text/css">
+
+  </style>
+<pl-question-panel>
+  <p>
+    {{params.text_one}} <code><strong>{{params.function}}</strong></code> {{params.text_two}}<code><strong>{{params.variable_one}}</strong></code> {{params.text_three}}
+    <code><strong>{{params.variable_two}}</strong></code>{{params.text_four}} 
+    <em>{{params.description}}</em><strong><code>{{params.bold_one}}</code></strong>{{params.connector}}<code><strong>{{params.bold_two}}</strong></code><em>{{params.description_two}}</em>
+    {{params.text_five}} <strong><code>{{params.bold_three}}</code></strong> 
+    {{params.text_six}} <code><strong>{{params.bold_four}}</strong></code> {{params.text_seven}}
+  </p>
+
+  <code>>>> <strong>{{params.function_line_one}}</strong></code><br>
+  <code>>>> <strong>{{params.function_line_two}}</strong></code><br>
+  <code>>>> <strong>{{params.function_line_three}}</strong></code><br>
+  <code><strong>{{params.function_line_four}}</strong></code><br>
+  <br>
+  <pl-figure file-name= "{{params.file_name}}" directory="clientFilesQuestion"></pl-figure>
+</pl-question-panel>
+<pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python">
+  def {{params.function}}({{params.variable_one}}, {{params.variable_two}}): 
+    pass
+</pl-file-editor>
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+  </pl-submission-panel>
+
