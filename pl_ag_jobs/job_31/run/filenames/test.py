@@ -7,41 +7,47 @@ import numpy.random
 
 
 class Test(PLTestCase):
-    @points(1)
-    @name('Check lcs("crows eat yay", "ows eat ")')
+    @points(2)
+    # Basic Test Suites
+    @name('Basic Tests')
     def test_0(self):
-        if self.ref.lcs("crows eat yay", "ows eat ") == self.st.lcs("crows eat yay", "ows eat "):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
+        points = 0
+        test_strings = ['', 'a', 'peak', 'abc', 'c al', 'aabb', 'abcdefghi', 'palindrome'] 
+        num_tests = len(test_strings)
+        for s in test_strings:
+            correct_val = self.ref.checkPalindrome(s)
+            user_val = True
+            if self.ref.function == 'is_palindrome_all':
+                user_val = Feedback.call_user(self.st.is_palindrome_all, s)
+            elif self.ref.function == 'is_palindrome_any':
+                user_val = Feedback.call_user(self.st.is_palindrome_any, s)
+            else: 
+                user_val = Feedback.call_user(self.st.is_palindrome_none, s)
+            if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
+                points += 1
+        if points < 3: 
+            points = 0
+        Feedback.set_score(points / num_tests)
 
-    @points(1)
-    @name('Check lcs("pickle", "orcs")')
-    def test_1(self):
-        if self.ref.lcs("pickle", "orcs") == self.st.lcs("pickle", "orcs"):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
-
-    @points(1)
-    @name('Check lcs("leetcode", "beet")')
-    def test_2(self):
-        if self.ref.lcs("leetcode", "beet") == self.st.lcs("leetcode", "beet"):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
-
-    @points(1)
-    @name('Check lcs("abcd", "efgh")')
-    def test_2(self):
-        if self.ref.lcs("abcd", "efgh") == self.st.lcs("abcd", "efgh"):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
-
-    @name('Check lcs("computer science", "computer biology")')
-    def test_2(self):
-        if self.ref.lcs("computer science", "computer biology") == self.st.lcs("computer science", "computer biology"):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
+    @points(8)
+    # Advanced Test Suites
+    @name('Advanced Tests')
+    def test_3(self):
+        points = 0
+        num_tests = 8
+        test_strings = ['abc', 'c al', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca', 'refer', 'berkeley', 'abccba', 'abcdedcba']
+        for s in test_strings:
+            correct_val = self.ref.checkPalindrome(s)
+            if isinstance(correct_val, bool):
+                user_val = True
+                if self.ref.function == 'is_palindrome_all':
+                    user_val = Feedback.call_user(self.st.is_palindrome_all, s)
+                elif self.ref.function == 'is_palindrome_any':
+                    user_val = Feedback.call_user(self.st.is_palindrome_any, s)
+                else: 
+                    user_val = Feedback.call_user(self.st.is_palindrome_none, s)
+                if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
+                    points += 1
+        if points <= 5:
+            points = 0 
+        Feedback.set_score(points / num_tests)

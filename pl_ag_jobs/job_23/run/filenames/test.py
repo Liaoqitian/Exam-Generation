@@ -7,42 +7,47 @@ import numpy.random
 
 
 class Test(PLTestCase):
-    @points(0.5)
-    @name('Check nib(0)')
+    @points(10)
+    # Basic Test Suites
+    @name('Basic Tests')
     def test_0(self):
-        user_val = self.st.nib(0)
-        if Feedback.check_scalar("nib(0)", self.ref.nib(0), user_val):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
-
-    @points(0.5)
-    @name('Check nib(1)')
-    def test_1(self):
-        user_val = Feedback.call_user(self.st.nib, 1)
-        if Feedback.check_scalar("nib(1)", self.ref.nib(1), user_val):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
-
-    @points(1)
-    @name('Check nib(7)')
-    def test_2(self):
-        user_val = Feedback.call_user(self.st.nib, 7)
-        if Feedback.check_scalar("nib(7)", self.ref.nib(7), user_val):
-            Feedback.set_score(1)
-        else:
-            Feedback.set_score(0)
-
-    @points(8)
-    @name('Check random values')
-    def test_3(self):
         points = 0
-        num_tests = 8
-        test_values = np.random.choice(np.arange(6, 20), size=num_tests, replace=False)
-        for in_val in test_values:
-            correct_val = self.ref.nib(in_val)
-            user_val = Feedback.call_user(self.st.nib, in_val)
-            if Feedback.check_scalar(f"nib({in_val})", correct_val, user_val):
+        test_strings = ['', 'a', 'peak', 'abc', 'c al', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca'] 
+        num_tests = len(test_strings)
+        for s in test_strings:
+            correct_val = self.ref.checkPalindrome(s)
+            user_val = True
+            if self.ref.function == 'is_palindrome_all':
+                user_val = Feedback.call_user(self.st.is_palindrome_all, s)
+            elif self.ref.function == 'is_palindrome_any':
+                user_val = Feedback.call_user(self.st.is_palindrome_any, s)
+            else: 
+                user_val = Feedback.call_user(self.st.is_palindrome_none, s)
+            if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
                 points += 1
+        if points < 3: 
+            points = 0
         Feedback.set_score(points / num_tests)
+
+    # @points(8)
+    # # Advanced Test Suites
+    # @name('Advanced Tests')
+    # def test_3(self):
+    #     points = 0
+    #     num_tests = 8
+    #     test_strings = ['abc', 'c al', 'aabb', 'abcdefghi', 'palindrome', 'abbba', 'abcba', 'abca', 'refer', 'berkeley', 'abccba', 'abcdedcba']
+    #     for s in test_strings:
+    #         correct_val = self.ref.checkPalindrome(s)
+    #         # if isinstance(correct_val, bool):
+    #         user_val = True
+    #         if self.ref.function == 'is_palindrome_all':
+    #             user_val = Feedback.call_user(self.st.is_palindrome_all, s)
+    #         elif self.ref.function == 'is_palindrome_any':
+    #             user_val = Feedback.call_user(self.st.is_palindrome_any, s)
+    #         else: 
+    #             user_val = Feedback.call_user(self.st.is_palindrome_none, s)
+    #         if Feedback.check_scalar(f"checkPalindrome({s})", correct_val, user_val):
+    #             points += 1
+    #     if points <= 5:
+    #         points = 0 
+    #     Feedback.set_score(points / num_tests)
