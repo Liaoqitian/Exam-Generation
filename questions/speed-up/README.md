@@ -2,7 +2,7 @@
 > Concurrency
 
 ## Table of Contents
-- [Sign and Magnitude (Summer 2019, Question 5)](#Sign-and-Magnitude-Summer-2019-Question-5)
+- [Sign and Magnitude (Spring 2019, Question 5)](#Sign-and-Magnitude-Spring-2019-Question-5)
   - [Examples](#examples)
   - [Structure](#structure)
   - [Solutions](#solutions)
