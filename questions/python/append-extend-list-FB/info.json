@@ -1,7 +1,7 @@
 {
     "uuid": "eeeb3aa0-e55c-4d4c-ac2f-9ab2e6a123cd",
     "title": "Fear? Not if you use append and extend list the right way!",
-    "topic": "Python",
-    "tags": ["qliao", "sharing", "mutation", "list operation", "beta", "final", "blank", "medium", "SP19Q16-4", "formative"],
+    "topic": "Mutation",
+    "tags": ["Liaoqitian", "beta", "final", "blank", "medium", "Sp19Q16-4", "formative"],
     "type": "v3"
 }

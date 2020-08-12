@@ -34,7 +34,8 @@
         {"name": "Dictionaries", "color": "red3", "description": "Dictionaries: Write a Function"},
         {"name": "Python HOFs", "color": "brown3", "description": "Hard Python."},
         {"name": "OOPs", "color": "yellow3", "description": "OOP in Python."},
-        {"name": "Iterables", "color": "orange3", "description": "Hard Python."}
+        {"name": "Iterables", "color": "orange3", "description": "Hard Python."}, 
+        {"name": "Mutation", "color": "turquoise3", "description": "List Mutation."}
     ],
 
     "tags": [
@@ -188,7 +189,7 @@
 
         {"name": "string syntax", "color": "gray2", "description": "Python String Slicing"},
 
-        {"name": "plus", "color": "gray2", "description": "Python iterables, + on string, string concatenation"},
+        {"name": "string concat plus", "color": "gray2", "description": "Python iterables, + on string, string concatenation"},
         {"name": "join", "color": "gray2", "description": "join() for string concatenation"},
         
         {"name": "inclusive-exclusive", "color": "gray2", "description": "python indexing, List Slicing, String Slicing"},
@@ -199,6 +200,7 @@
         {"name": "python map", "color": "gray2", "description": "List Comprehension"},
         {"name": "python map & filter", "color": "gray2", "description": "List Comprehension"},
         {"name": "python filter", "color": "gray2", "description": "List Comprehension"},
+        {"name": "mutation", "color": "gray2", "description": "Mutation"}, 
 
         {"name": "key-value pairs", "color": "gray2", "description": "Dictionaries"},
         {"name": "no order", "color": "gray2", "description": "Dictionaries"},

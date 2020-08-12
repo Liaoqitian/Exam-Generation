@@ -1,8 +1,8 @@
 {
     "uuid": "ecf1a5e5-da00-4b94-a40a-02eed0fec649",
     "title": "Sign and Magnitude",
-    "topic": "Other",
-    "tags": ["qliao", "binaryDecimalHex", "beta", "midterm", "blank", "medium", "summative"],
+    "topic": "Binary-hex-dec",
+    "tags": ["Liaoqitian", "binary to decimal", "beta", "midterm", "blank", "medium", "summative"],
     "type": "v3"
 }
 

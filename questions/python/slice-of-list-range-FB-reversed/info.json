@@ -1,7 +1,7 @@
 {
     "uuid": "798ceeca-77ad-4199-8353-7e05b170e00c",
     "title": "R is a dying language",
-    "topic": "Python",
-    "tags": ["qliao", "list slicing", "release", "final", "blank", "easy", "Fa19Q14-1", "formative"],
+    "topic": "Slicing",
+    "tags": ["Liaoqitian", "python indexing", "release", "final", "blank", "easy", "Fa19Q14-1", "formative"],
     "type": "v3"
 }

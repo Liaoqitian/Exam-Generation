@@ -1,8 +1,8 @@
 {
     "uuid": "987386ab-af2f-472b-af1b-65d27600764d",
     "title": "Tribonacci!",
-    "topic": "Python",
-    "tags": ["qliao", "recursion", "beta", "final", "deadPython", "hard", "summative"],
+    "topic": "Recursion",
+    "tags": ["Liaoqitian", "release", "final", "dead python", "hard", "summative"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
