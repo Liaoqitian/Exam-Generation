@@ -96,7 +96,7 @@ def grade(data):
         solution_four = ["non_twin_counter(A[1:], B[1:])", "non_twin_counter(B[1:], A[1:])"]
         solution_five = ["1 + non_twin_counter(A[1:], B[1:])", "1 + non_twin_counter(B[1:], A[1:])", 
                          "non_twin_counter(A[1:], B[1:]) + 1", "non_twin_counter(B[1:], A[1:]) + 1"]
-
+    
     if data["partial_scores"]["solution_one"]["score"] != 1: 
         if data['submitted_answers']["solution_one"] in solution_one:
             data["partial_scores"]["solution_one"]["score"] = 1
