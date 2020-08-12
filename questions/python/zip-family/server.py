@@ -16,7 +16,7 @@ def generate(data):
         be the same as the characters in the input strings. The input strings may be of different length. The function should return a list of tuples. """
 
         data["params"]["ex_one"] = 'twin_remover("abc", "dbe")'
-        data["params"]["ex_comments"] = '### The second character in "abc" and "dbe" are both "b", so we skip it.'
+        data["params"]["ex_comments"] = '## The second character in "abc" and "dbe" are both "b", so we skip it.'
         data["params"]["ex_res"] = "[('a', 'd'), ('c', 'e')]" 
 
         data["params"]["code_line_three"] = "return []"
@@ -32,7 +32,7 @@ def generate(data):
         be the same as the characters in the input strings. The input strings may be of different length. The function should return a list of tuples. """
 
         data["params"]["ex_one"] = 'twin_keeper("abc", "dbe")'
-        data["params"]["ex_comments"] = '### The second character in "abc" and "dbe" are both "b", so we keep it.'
+        data["params"]["ex_comments"] = '## The second character in "abc" and "dbe" are both "b", so we keep it.'
         data["params"]["ex_res"] = "[('b', 'b')]" 
 
         data["params"]["code_line_three"] = "return []"
@@ -48,7 +48,7 @@ def generate(data):
         a list of tuples. A matching-character pair is definded as a tuple whose two elements are the same."""
 
         data["params"]["ex_one"] = 'twin_counter("abc", "dbe")'
-        data["params"]["ex_comments"] = '### The second character in "abc" and "dbe" are both "b", it is a character-matching pair.'
+        data["params"]["ex_comments"] = '## The second character in "abc" and "dbe" are both "b", it is a character-matching pair.'
         data["params"]["ex_res"] = "1"
 
         data["params"]["code_line_three"] = "return 0"
@@ -64,7 +64,7 @@ def generate(data):
         a list of tuples. A non-matching-character pair is definded as a tuple whose two elements are different. """
 
         data["params"]["ex_one"] = 'non_twin_counter("abc", "dbe")'
-        data["params"]["ex_comments"] = '### Except the second character in "abc" and "dbe" are both "b", the other two pairs are all non-matching-character pairs.'
+        data["params"]["ex_comments"] = '## Except the second character in "abc" and "dbe" are both "b", the other two pairs are all non-matching-character pairs.'
         data["params"]["ex_res"] = "2"
 
         data["params"]["code_line_three"] = "return 0"
