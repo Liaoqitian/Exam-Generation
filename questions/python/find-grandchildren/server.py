@@ -85,7 +85,7 @@ def generate(data):
 
     data['params']['names_for_user'] = []
     data['params']['names_from_user'] = [
-        {'name':'find_GC','description':'Returns a dictionary of grandparents','type': 'python function'}, 
+        {'name':'find_GC','description':'Returns a dictionary of grandparents','type':'python function'}, 
         {'name':'same_keys','description':'Returns a list of tuples','type':'python function'}, 
         {'name':'same_values','description':'Returns a list of tuples','type':'python function'}, 
         ]
