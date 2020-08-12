@@ -2,7 +2,7 @@
 > Concurrency
 
 ## Table of Contents
-- [Sign and Magnitude (Summer 2019, Question 5)](#Sign-and-Magnitude-Summer-2019-Question-5)
+- [Sign and Magnitude (Spring 2019, Question 5)](#Sign-and-Magnitude-Spring-2019-Question-5)
   - [Examples](#examples)
   - [Structure](#structure)
   - [Solutions](#solutions)
@@ -27,7 +27,7 @@
   * The percentage of program which is serial is randomized in the list [5, 10, 20, 25, 50, 100]. Then the corresponding solution is computed by taking its reciprical.
 
 ## Solutions
-![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/Speed%20Up/Demo/Solution.png "Question Demo")
+![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/questions/speed-up/Demo/Solution.png "Question Demo")
 
 ## How to run on PrairieLearn
 
