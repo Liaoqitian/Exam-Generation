@@ -1,0 +1,50 @@
+<html>
+<head>
+<style type="text/css">
+code {
+  color: black;
+  padding: 2px;
+  font-size: 100%;
+}
+table.sd {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.sd, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <style type="text/css">
+
+  </style>
+
+<pl-question-panel>
+    <p>
+        {{params.introduction}} <code><strong>{{params.function}}</strong></code> {{params.description_one}} <strong>{{params.keyword}}</strong>{{params.description_two}}
+    </p>
+    <code>>>> <strong>{{params.ex_one}}</strong></code><br>
+    <code><em>{{params.ex_comments}}</em></code><br>
+    <code>{{params.ex_res}}</code><br>
+    <br>
+    <code><strong>def {{params.function}}(A, B):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if A == "":</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{params.code_line_three}}</strong></code><br>
+</pl-question-panel>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>elif <pl-string-input answers-name="solution_one" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input>:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_two" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>elif <pl-string-input answers-name="solution_three" weight = 2 remove-spaces = True allow-blank = True size = 40></pl-string-input>:</strong> <em>## 1st letter of A is equal to 1st of B</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_four" weight = 3 remove-spaces = True allow-blank = True size = 40></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return <pl-string-input answers-name="solution_five" weight = 3 remove-spaces = True allow-blank = True size = 40></pl-string-input></strong></code><br>

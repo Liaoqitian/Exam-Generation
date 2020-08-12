@@ -48,16 +48,17 @@ def generate(data):
         data["correct_answers"]["solution_five"] = "a[0] + zipper(a[1:],b)"
 
 def grade(data):
-    solution_one = ['b == ""', "b == ''"]
-    solution_two = ["a"]
-    solution_three = ["a[0] < b[0]", "b[0] > a[0]", "a[0] <= b[0]", "b[0] >= a[0]"]
+    solution_one = ['B == ""', "B == ''", "B == '':", 'B == "":']
+    solution_two = ["A"]
+    solution_three = ["A[0] < B[0]", "B[0] > A[0]", "A[0] <= B[0]", "B[0] >= A[0]", 
+                      "A[0] < B[0]:", "B[0] > A[0]:", "A[0] <= B[0]:", "B[0] >= A[0]:"]
     solution_six = ["reduce(zipper, words)"]
     if data["params"]["variant"] == 0: 
-        solution_four = ["a[0] + zipper(a[1:],b)", "a[0] + zipper(b,a[1:])"]
-        solution_five = ["b[0] + zipper(a,b[1:])", "b[0] + zipper(b[1:],a)"]
+        solution_four = ["A[0] + zipper(A[1:],B)", "A[0] + zipper(B,A[1:])"]
+        solution_five = ["B[0] + zipper(A,B[1:])", "B[0] + zipper(B[1:],A)"]
     else: 
-        solution_four = ["b[0] + zipper(a,b[1:])", "b[0] + zipper(b[1:],a)"]
-        solution_five = ["a[0] + zipper(a[1:],b)", "a[0] + zipper(b,a[1:])"]
+        solution_four = ["B[0] + zipper(A,B[1:])", "B[0] + zipper(B[1:],A)"]
+        solution_five = ["A[0] + zipper(A[1:],B)", "A[0] + zipper(B,A[1:])"]
 
     if data["partial_scores"]["solution_one"]["score"] != 1: 
         if data['submitted_answers']["solution_one"] in solution_one:
