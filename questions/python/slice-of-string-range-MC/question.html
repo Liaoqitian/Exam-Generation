@@ -14,7 +14,7 @@ code {
     <p><code>>>> <strong>'{{params.elem}}'[{{params.start_index}}: {{params.end_index}}] </strong></code></p>
 </pl-question-panel>
 
-<pl-multiple-choice answers-name="c" weight="1">
+<pl-multiple-choice answers-name="c" none-of-the-above = "true" weight="1">
     <pl-answer correct="true"> 
         <code>"{{params.solution}}"</code>
     </pl-answer>
@@ -22,7 +22,7 @@ code {
         <code>"{{params.i0}}"</code>
     </pl-answer>
     <pl-answer correct="false">
-        {{params.i1}}
+        <code>"{{params.i1}}"</code>
     </pl-answer>
     <pl-answer correct="false">
         <code>"{{params.i2}}"</code>
@@ -31,6 +31,6 @@ code {
         <code>"{{params.i3}}"</code>
     </pl-answer>
     <pl-answer correct="false">
-        {{params.i4}}
+        <code>"{{params.i4}}"</code>
     </pl-answer>
 </pl-multiple-choice>

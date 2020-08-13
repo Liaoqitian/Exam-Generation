@@ -15,34 +15,22 @@ code {
     <p> <code>>>> <strong> A[{{params.index}}] + "{{params.adder}}" </strong></code></p>
 </pl-question-panel>
 
-<pl-multiple-choice answers-name="b" weight="1" number-answers = 8>
+<pl-multiple-choice answers-name="b" weight="1" none-of-the-above = "true">
     <pl-answer correct="true"> 
         <code><strong> "{{params.solution}}"</strong> </code>
     </pl-answer>
     <pl-answer correct="false">
-        {{params.i0}}
-    </pl-answer>
-    <pl-answer correct="false">
         <code><strong>{{params.i1}}</strong></code>
     </pl-answer>
-    <!--<pl-answer correct="false">-->
-    <!--    <code><strong>{{params.i2}}</strong></code>-->
-    <!--</pl-answer>-->
-    <!--<pl-answer correct="false">-->
-    <!--    <code><strong>{{params.i3}}</strong></code>-->
-    <!--</pl-answer>-->
     <pl-answer correct="false">
-        {{params.i4}}
+        <code><strong>{{params.i2}}</strong></code>
     </pl-answer>
-    <!--<pl-answer correct="false">-->
-    <!--    <code><strong>[{{params.solution}}]</strong></code>-->
-    <!--</pl-answer>-->
+    <pl-answer correct="false">
+        <code><strong>{{params.i3}}</strong></code>
+    </pl-answer>
     <pl-answer correct="false">
         <code><strong>"{{params.i1}}"</strong></code>
     </pl-answer>
-    <!--<pl-answer correct="false">-->
-    <!--    <code><strong>"{{params.i2}}"</strong></code>-->
-    <!--</pl-answer>-->
     <pl-answer correct="false">
         <code><strong>"{{params.i3}}"</strong></code>
     </pl-answer>

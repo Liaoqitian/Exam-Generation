@@ -18,7 +18,7 @@ code {
 <br>
 >>> <code><strong>B</strong></code>
 <br>
-<pl-multiple-choice answers-name="b" weight="1">
+<pl-multiple-choice answers-name="b" none-of-the-above = "true" weight="1">
   <pl-answer correct="true"> 
   <code>{{params.solution}}</code>
   </pl-answer>
@@ -33,8 +33,5 @@ code {
   </pl-answer>
   <pl-answer correct="false">
   <code>{{params.i3}}</code>
-  </pl-answer>
-  <pl-answer correct="false">
-  {{params.i4}}
   </pl-answer>
 </pl-multiple-choice>

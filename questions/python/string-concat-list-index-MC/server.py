@@ -20,11 +20,9 @@ def generate(data):
     # Compute the correct solution.
     solution = A[index] + adder
 
-    i0 = 'Error'
     i1 = int(A[index]) + int(adder)
     i2 = int(A[index - 1]) + int(adder)
     i3 = str(A[index - 1]) + str(adder)
-    i4 = 'None of these'
 
     # Store the parameters.
     A = str(A).replace("'", '"')
@@ -32,8 +30,6 @@ def generate(data):
     data['params']['index'] = index
     data['params']['adder'] = adder 
     data['params']['solution'] = solution
-    data['params']['i0'] = i0 
     data['params']['i1'] = i1
     data['params']['i2'] = i2 
     data['params']['i3'] = i3 
-    data['params']['i4'] = i4

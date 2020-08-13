@@ -35,25 +35,22 @@ def generate(data):
         data['params']['i1'] = str([number_one, [raw_number_two]])
         data['params']['i2'] = str([number_one])
         data['params']['i3'] = str([int(str(number_one) + str(raw_number_two))])
-        data['params']['i4'] = "None of these"
     elif keyword == 'append' and has_bracket: 
-        data['params']['i0'] = "None of these"
+        data['params']['i0'] = "Error"
         data['params']['i1'] = str([number_one, raw_number_two])
         data['params']['i2'] = str([number_one])
         data['params']['i3'] = str([int(str(number_one) + str(raw_number_two))])
-        data['params']['i4'] = "Error"
+
     elif keyword == 'append' and not has_bracket: 
-        data['params']['i0'] = "None of these"
+        data['params']['i0'] = "Error"
         data['params']['i1'] = str([number_one, [raw_number_two]])
         data['params']['i2'] = str([number_one])
         data['params']['i3'] = str([int(str(number_one) + str(raw_number_two))])
-        data['params']['i4'] = "Error"
     else: 
-        data['params']['i0'] = "None of these"
+        data['params']['i0'] = "Error"
         data['params']['i1'] = str([number_one, [raw_number_two]])
         data['params']['i2'] = str([number_one])
         data['params']['i3'] = str([int(str(number_one) + str(raw_number_two))])
-        data['params']['i4'] = "Error"
 
     # Store the parameters
     data['params']['number_one'] = number_one 
