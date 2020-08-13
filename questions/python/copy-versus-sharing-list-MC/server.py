@@ -16,8 +16,6 @@ def generate(data):
     v_i1 = [little, little]
     v_i2 = [big, big]
     v_i3 = [big, little]
-    v_i4 = "Error"
-    v_i5 = "None of these"
 
     # Sample a random array of five numbers.
     array = random.sample(range(1, 20), 5)
@@ -27,9 +25,7 @@ def generate(data):
     e_i1 = [array[0], array[2], array[1], array[3], array[4]]
     e_i2 = [array[0], array[1], array[1], array[3], array[4]]
     e_i3 = [array[1], array[0], array[2], array[3], array[4]]
-    e_i4 = "Error"
-    e_i5 = "None of these"
-
+    
     solution_swap_elements = swap_elements(array)
 
     # Store the parameters into data['params']
@@ -38,15 +34,11 @@ def generate(data):
     data['params']['v_i1'] = str(v_i1)
     data['params']['v_i2'] = str(v_i2)
     data['params']['v_i3'] = str(v_i3)
-    data['params']['v_i4'] = v_i4
-    data['params']['v_i5'] = v_i5
 
     data['params']['e_i1'] = str(e_i1)
     data['params']['e_i2'] = str(e_i2)
     data['params']['e_i3'] = str(e_i3)
-    data['params']['e_i4'] = e_i4
-    data['params']['e_i5'] = e_i5
-
+    
     data['params']['solution_swap_values'] = str(solution_swap_values)
     data['params']['solution_swap_elements'] = str(solution_swap_elements)
 

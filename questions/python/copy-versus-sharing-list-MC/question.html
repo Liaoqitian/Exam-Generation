@@ -25,7 +25,7 @@ code {
     <code>>>> <strong>swap_values(little, big)</strong></code><br>
     <code>>>> <strong>[little, big]</strong></code><br>
 </pl-question-panel>
-<pl-multiple-choice answers-name="input_1" weight="1">
+<pl-multiple-choice answers-name="input_1" none-of-the-above = 'true' weight="1">
     <pl-answer correct="true"> 
     <code><strong>{{params.solution_swap_values}}</strong></code>
     </pl-answer>
@@ -38,12 +38,6 @@ code {
     <pl-answer correct="false">
     <code><strong>{{params.v_i3}}</strong></code>
     </pl-answer>
-    <pl-answer correct="false">
-    {{params.v_i4}}
-    </pl-answer>
-    <pl-answer correct="false">
-    {{params.v_i5}}
-    </pl-answer>
 </pl-multiple-choice>
 
 <pl-submission-panel>
@@ -53,7 +47,7 @@ code {
 <pl-question-panel>
     <code>>>> <strong>swap_elements({{params.array}})</strong></code>
 </pl-question-panel>
-<pl-multiple-choice answers-name="input_2" weight="1">
+<pl-multiple-choice answers-name="input_2" none-of-the-above = "true" weight="1">
     <pl-answer correct="true"> 
     <code><strong>{{params.solution_swap_elements}}</strong></code>
     </pl-answer>
@@ -65,12 +59,6 @@ code {
     </pl-answer>
     <pl-answer correct="false">
     <code><strong>{{params.e_i3}}</strong></code>
-    </pl-answer>
-    <pl-answer correct="false">
-    {{params.e_i4}}
-    </pl-answer>
-    <pl-answer correct="false">
-    {{params.e_i5}}
     </pl-answer>
 </pl-multiple-choice>
 <pl-submission-panel>
