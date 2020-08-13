@@ -1,0 +1,43 @@
+<head><style>
+    code {
+      color: black;
+      padding: 2px;
+      font-size: 105%;
+    }
+    table.nib {
+      margin-left: auto; 
+      margin-right: auto;
+      table-layout: fixed;
+      width: 100%;  
+    }
+    
+    th, td {
+      height: 50px;
+    }
+    table.nib, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      text-align: center;
+    }
+    
+</style></head>
+<pl-question-panel>
+    <p>
+        Write a function that returns a list of the <em>{{params.keyword}} common elements in a sequence.</em> If there is a tie, return all the elements that satisfy. 
+        You must use a dicionary in your solution. You may find <code><strong>min</strong></code> and <code><strong>max</strong></code> functions helpful. 
+    </p>
+    <code>>>> <strong>{{params.function}}([1, 2, 3, 3, 4, 4, 6, 4, 4, 5, 5, 5, 5])</strong></code><br>
+    <code>{{params.example_one}}</code><br>
+    <code>>>> <strong>{{params.function}}("uc berkeley also cal")</strong></code><br>
+    <code>{{params.example_two}}</code><br>
+</pl-question-panel>
+</pl-question-panel>
+<pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python">
+def {{params.function}}(sequence):
+    pass
+</pl-file-editor>
+<pl-submission-panel>
+  <pl-external-grader-results></pl-external-grader-results>
+  <pl-file-preview></pl-file-preview>
+</pl-submission-panel>
