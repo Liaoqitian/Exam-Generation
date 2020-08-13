@@ -49,9 +49,9 @@ table.palindrome {
         Assume we had <strong>10</strong> discussions. Write the function <code><strong>TAs_with_at_least_half_discussions_full</strong></code>, that returns a list of the names
         of GAs who had at least half of their discussions full. (We underline the full discussions for each TA, and the TAs with at least half of them full below.)
     </p>
-    <code>>>> <strong>sp19_enrollment = {"MS": 10, "IO": 20, "SH":20, "MY":15, "QL": 10}</strong></code><br>
+    <code>>>> <strong>fa20_enrollment = {"MS": 10, "IO": 20, "SH":20, "MY":15, "QL": 10}</strong></code><br>
     <code>>>> <strong>
-        sp19_attendance = {"<u>MS</u>": [<u>10</u>, 9, <u>10</u>, <u>10</u>, <u>10</u>, 2, 9, <u>10</u>, 9, 1],<br>
+        fa20_attendance = {"<u>MS</u>": [<u>10</u>, 9, <u>10</u>, <u>10</u>, <u>10</u>, 2, 9, <u>10</u>, 9, 1],<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         "IO": [19, 18, 16, 14, 12, 11, 10, 5, 5, 5],<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -59,14 +59,14 @@ table.palindrome {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         "<u>MY</u>": [<u>20</u>, <u>15</u>, <u>15</u>, 12, <u>17</u>, <u>17</u>, <u>17</u>, <u>16</u>, <u>18</u>, <u>20</u>],<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        "QL": [ 5, 5, 4, 2, 3, <u>10</u>, <u>11</u>, <u>12</u>, 4, 2]}
+        "QL": [5, 5, 4, 2, 3, <u>10</u>, <u>11</u>, <u>12</u>, 4, 2]}
     </strong></code><br>
     <br>
-    <code>>>> <strong>sp19_enrollment["IO"]</strong> <em># get the enrollment for Lara’s discussion</em></code><br>
+    <code>>>> <strong>fa20_enrollment["IO"]</strong> <em># get the enrollment for Lara’s discussion</em></code><br>
     <code>20</code><br>
-    <code>>>> <strong>sp19_attendance["IO"][0]</strong> <em># get the attendance for Lara’s first discussion</em></code><br>
+    <code>>>> <strong>fa20_attendance["IO"][0]</strong> <em># get the attendance for Lara’s first discussion</em></code><br>
     <code>19</code><br>
-    <code>>>> <strong>TAs_with_at_least_half_discussions_full(sp19_enrollment, sp19_attendance)</strong></code><br>
+    <code>>>> <strong>TAs_with_at_least_half_discussions_full(fa20_enrollment, fa20_attendance)</strong></code><br>
     <code>['MS', 'SH', 'MY']</code><br>
 </pl-question-panel>
 
