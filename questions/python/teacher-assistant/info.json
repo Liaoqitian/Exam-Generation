@@ -1,0 +1,15 @@
+{
+    "uuid": "6cb8d8be-09fe-471a-9c6c-b4a19e83b60e",
+    "title": "Teacher Assistants of CS10",
+    "topic": "Dictionaries",
+    "tags": ["Liaoqitian", "key-value pairs", "beta", "final", "dead python", "hard", "summative"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "timeout": 20
+    }
+}
