@@ -1,0 +1,79 @@
+<html>
+<head>
+<style type="text/css">
+code {
+  color: black;
+  padding: 2px;
+  font-size: 100%;
+}
+table.sd {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.sd, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <style type="text/css">
+
+  </style>
+
+<pl-question-panel>
+    <p>
+        Finish the code for this Bank Account class that will allow us to simulate the idea of a bank account, then fill in the three missing blanks in the interface to show how you interact 
+        with it. 
+    </p>
+    <ul>
+        <li>All bank accounts have the same fee associated with them, ${{params.fee}}</li>
+        <li>This fee is assessed with all transactions (<code><strong>deposit</strong></code> and <code><strong>withdraw</strong></code>) - so however much money you want to add
+        or take from your account, the bank is going to charge you that fee every time! </li>
+        <li>On withdrawals, if taking out the amount of money you want (plus the fee) would pur your account negative, print "I'm sorry, you don't have enough in your account" 
+            and do nothing (and don’t charge a fee for that message). If you do have enough money, take out what they want and charge a fee</li>
+        <li>If you become friends with bank manager, you can get the fee lowered to only ${{params.friend_fee}}</li>
+        <li>In the case of COVID-19, the bank is going to (try to) set the fee for all accounts to $0</li>
+      </ul>
+</pl-question-panel>
+    <code><strong>class Account:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>fee = <pl-string-input answers-name="solution_one" weight = 2 remove-spaces = True allow-blank = True size = 10></pl-string-input></strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, balance):</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pl-string-input answers-name="solution_two" weight = 3 remove-spaces = True allow-blank = True size = 30></pl-string-input></strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;def deposit(self, amount):</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pl-string-input answers-name="solution_three" weight = 3 remove-spaces = True allow-blank = True size = 50></pl-string-input></strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.balance</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;def withdraw(self, amount):</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new_balance = <pl-string-input answers-name="solution_four" weight = 3 remove-spaces = True allow-blank = True size = 40></pl-string-input></strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if new_balance < 0:</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("I'm sorry, you don't have enough in your account")</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<pl-string-input answers-name="solution_five" weight = 3 remove-spaces = True allow-blank = True size = 40></pl-string-input></strong></code><br>
+    <code><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.balance</strong></code><br>
+    <br>
+    <code>>>> <strong>a = Account({{params.initial_balance}})</strong></code><br>
+    <code>>>> <strong>b = Account({{params.initial_balance}})</strong></code><br>
+    <code>>>> <strong>a.withdraw(1000000)</strong>  <em>## Can we get bank to give us a million bucks?</em></code><br>
+    <code>I'm sorry, you don't have enough in your account</code><br>
+    <code>{{params.initial_balance}}</code><br>
+    <code>>>> <strong>a.deposit({{params.a_deposit}})</strong> <em># ${{params.initial_balance}} + amount (${{params.a_deposit}}) - fee (${{params.fee}}) = ${{params.balance_one}}</em></code><br>
+    <code>{{params.balance_one}}</code><br>
+    <code>>>> <strong>a.withdraw({{params.a_withdrawal}})</strong> <em># ${{params.balance_one}} – amount (${{params.a_withdrawal}}) – fee (${{params.fee}}) = ${{params.balance_two}}</em></code><br>
+    <code>1{{params.balance_two}}</code><br>
+    <code>>>> <strong><pl-string-input answers-name="solution_six" weight = 3 remove-spaces = True allow-blank = True size = 15></pl-string-input></strong> <em># a becomes friends with manager, fee set to ${{params.friend_fee}}</em></code><br>
+    <code>>>> <strong>a.withdraw({{params.a_withdrawal}})</strong> <em># ${{params.balance_two}} – amount (${{params.a_withdrawal}}) – lower fee (${{params.friend_fee}}) = ${{params.balance_three}}</em></code><br>
+    <code>{{params.balance_three}}</code><br>
+    <code>>>> <strong><pl-string-input answers-name="solution_seven" weight = 3 remove-spaces = True allow-blank = True size = 15></pl-string-input></strong><em># Bank sets fee for all to $0 because of COVID-19</em></code><br>
+    <code>>>> <strong>b.deposit({{params.b_deposit}})</strong> <em># ${{params.initial_balance}} + amount (${{params.b_deposit}}) = ${{params.balance_four}} ... No Fee, yay!</em></code><br>
+    <code>{params.balance_four}}</code><br>
+    <code>>>> <strong>a.deposit(1000)</strong> <em># How much does a have after this transaction?</em></code><br>
+    <code><strong><pl-string-input answers-name="solution_eight" weight = 5 remove-spaces = True allow-blank = True size = 15></pl-string-input></strong></code>
