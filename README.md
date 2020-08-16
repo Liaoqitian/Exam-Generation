@@ -1,6 +1,6 @@
 # Exam Generation
 
-PrairieLearn (PL) course setup for CS10
+PrairieLearn (PL) course setup for CS10 at Berkeley (Beauty and Joy of Computing)
 
 
 ## Table of Contents
