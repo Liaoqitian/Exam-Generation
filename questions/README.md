@@ -87,4 +87,4 @@ NOTE: Symbols are NOT allowed on tags, they will make the search bar on PL quest
    - If every conceptual variant has 5 numerical variants and we have 4 conceptual variants, we get "4v5"
    - These should not be defined in `infoCourse.json` and only tagged in `info.json`.
 
-NOTE: Any tags not defined in `infoCourse.json` but tagged in `info.json` will default to the gray1 color.
+NOTE: Any tags not defined in `infoCourse.json` but tagged in `info.json` will default to the `gray1` color.
