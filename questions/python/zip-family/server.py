@@ -87,6 +87,7 @@ def generate(data):
 
 
 def grade(data):
+    # Accept missing one parentheses as correct
     parameter_one = data["params"]["parameter_one"]
     parameter_two = data["params"]["parameter_two"]
 
@@ -94,35 +95,62 @@ def grade(data):
     solution_three = [parameter_one + "[0] == " + parameter_two + "[0]", parameter_two + "[0] == " + parameter_one + "[0]", 
                       parameter_one + "[0] == " + parameter_two + "[0]:", parameter_two + "[0] == " + parameter_one + "[0]:"]
     if data["params"]["function"] == "twin_remover":
-        solution_four = ["twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:])", "twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:])"]
+        
+        solution_four = ["twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
+                         "twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
+                         "twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:]",
+                         "twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:]"]
+
         solution_five = ["[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
                          "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
                          "[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
-                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:])"]
+                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
+                         "[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_remover(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:]", 
+                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_remover(" + parameter_two + "[1:], " + parameter_one + "[1:]"]
 
     elif data["params"]["function"] == "twin_keeper":
         solution_four = ["[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_keeper(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
                          "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_keeper(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
                          "[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
-                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:])"]
+                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
+                         "[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_keeper(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_keeper(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "[(" + parameter_one + "[0], " + parameter_two + "[0])] + twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:]", 
+                         "[(" + parameter_two + "[0], " + parameter_one + "[0])] + twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:]"]
         solution_five = ["twin_keeper(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
-                         "twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:])"]
+                         "twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
+                         "twin_keeper(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "twin_keeper(" + parameter_two + "[1:], " + parameter_one + "[1:]"]
     
     elif data["params"]["function"] == "twin_counter":
         solution_four = ["1 + twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
                          "1 + twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:])",
                          "twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:]) + 1",
-                         "twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]) + 1"]
+                         "twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]) + 1",
+                         "1 + twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "1 + twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]",
+                         "twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:] + 1",
+                         "twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:] + 1"]
         solution_five = ["twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
-                         "twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:])"]
+                         "twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
+                         "twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]"]
     
     elif data["params"]["function"] == "non_twin_counter":
         solution_four = ["non_twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
-                         "non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:])"]
+                         "non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
+                         "non_twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]"]
         solution_five = ["1 + non_twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:])", 
                          "1 + non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:])", 
                          "non_twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:]) + 1", 
-                         "non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]) + 1"]
+                         "non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]) + 1", 
+                         "1 + non_twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:]", 
+                         "1 + non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:]", 
+                         "non_twin_counter(" + parameter_one + "[1:], " + parameter_two + "[1:] + 1", 
+                         "non_twin_counter(" + parameter_two + "[1:], " + parameter_one + "[1:] + 1"]
     
     if data["partial_scores"]["solution_one"]["score"] != 1: 
         if data['submitted_answers']["solution_one"] in solution_one:
