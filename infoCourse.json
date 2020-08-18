@@ -52,6 +52,7 @@
         
         {"name": "blank", "color": "orange2", "description": "Element: input for number, integer, string, symbol, ect."},
         {"name": "dead python", "color": "orange3", "description": "Element: Dead python."},
+        {"name": "live python", "color": "purple3", "description": "Element: Live python."},
         {"name": "radio", "color": "purple2", "description": "Element: Single select multiple choice."},
         {"name": "checkbox", "color": "purple3", "description": "Element: Multiple select multiple choice."},
         {"name": "matrix", "color": "orange1", "description": "Element: Matrix component or matrix input."},
