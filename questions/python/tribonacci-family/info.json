@@ -4,6 +4,12 @@
     "topic": "Recursion",
     "tags": ["liaoqitian", "release", "final", "dead python", "hard", "summative", "berkeley", "1v648"],
     "type": "v3",
+    "workspaceOptions": {
+        "image": "prairielearn/workspace-xtermjs",
+        "port": 8080,
+        "home": "/home/prairie",
+        "gradedFiles": []
+    },
     "singleVariant": true,
     "gradingMethod": "External",
     "externalGradingOptions": {

@@ -1,0 +1,2 @@
+def nib(n):
+    pass

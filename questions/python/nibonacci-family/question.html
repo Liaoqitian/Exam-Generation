@@ -1,67 +1,64 @@
-<html><head><style>
-  code {
-    color: black;
-    padding: 2px;
-    font-size: 105%;
-  }
-  table.nib {
-    margin-left: auto; 
-    margin-right: auto;
-    table-layout: fixed;
-    width: 100%;  
-  }
-  
-  th, td {
-    height: 50px;
-  }
-  table.nib, th, td {
-    border: 1px solid black;
-  }
-  th, td {
-    text-align: center;
-  }
-  
-  </style></head><body>
-  
+<html>
+  <head><style>
+    code {
+      color: black;
+      padding: 2px;
+      font-size: 105%;
+    }
+    table.nib {
+      margin-left: auto; 
+      margin-right: auto;
+      table-layout: fixed;
+      width: 100%;  
+    }
+    
+    th, td {
+      height: 50px;
+    }
+    table.nib, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      text-align: center;
+    }
+  </style></head>
+<body>
   <pl-question-panel>
-      <p>
-        Let us define a <strong>new</strong> Fibonacci-like sequence, <strong>Nibonacci</strong>, by the following two rules. 
-      <br>
-        1. The sequence starts with <strong>{{params.number_one}}</strong> and <strong>{{params.number_two}}</strong>. 
-      <br>
-        2. Each number is the sum of <strong>{{params.word_multiplier_two}}</strong> times the previous number and <strong>{{params.word_multiplier_one}}</strong> times the number before that.
-      </p>
-
-       <table class="nib" style="width:600px">
-          <tr>
-              <th><code>n</code></th>
-              <th>0</th>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              <th>4</th>
-              <th>5</th>
-          </tr>
-          <tr>
-              <td><code>nib(n)</code></td>
-              <td>{{params.number_one}}</td>
-              <td>{{params.number_two}}</td>
-              <td>{{params.number_three}}</td>
-              <td>{{params.number_four}}</td>
-              <td>{{params.number_five}}</td>
-              <td>{{params.number_six}}</td>
-          </tr>
-      </table>
-  
-        <br>
-        Write a Python function <code>nib</code> that takes a number <code>n</code> and returns the <code>n<sup>th</sup></code> number in the <strong>Nibonacci</strong> sequence.  
-        
-      <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py">
-      </pl-file-editor>
+    <p>
+      Let us define a <strong>new</strong> Fibonacci-like sequence, <strong>Nibonacci</strong>, by the following two rules. <br>
+      1. The sequence starts with <strong>{{params.number_one}}</strong> and <strong>{{params.number_two}}</strong>. <br>
+      2. Each number is the sum of <strong>{{params.word_multiplier_two}}</strong> times the previous number and <strong>{{params.word_multiplier_one}}</strong> times the number before that.
+    </p>
+    <table class="nib" style="width:600px">
+      <tr>
+        <th><code>n</code></th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+      </tr>
+      <tr>
+        <td><code>nib(n)</code></td>
+        <td>{{params.number_one}}</td>
+        <td>{{params.number_two}}</td>
+        <td>{{params.number_three}}</td>
+        <td>{{params.number_four}}</td>
+        <td>{{params.number_five}}</td>
+        <td>{{params.number_six}}</td>
+      </tr>
+    </table>
+    <br>
+    <p>
+      Write a Python function <code>nib</code> that takes a number <code>n</code> and returns the <code>n<sup>th</sup></code> number in the <strong>Nibonacci</strong> sequence.  
+    </p>
+    <pl-file-editor file-name="user_code.py" ace-mode="ace/mode/python" source-file-name="initial_code.py"></pl-file-editor>
+    <br>
+    <pl-workspace></pl-workspace> 
+  </pl-question-panel>
     
-    </pl-question-panel>
-    
-    <pl-submission-panel>
-      <pl-external-grader-results></pl-external-grader-results>
-      <pl-file-preview></pl-file-preview>
-    </pl-submission-panel>
+  <pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+  </pl-submission-panel>
