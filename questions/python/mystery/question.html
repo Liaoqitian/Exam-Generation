@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            code {
+            color: black;
+            padding: 2px;
+            font-size: 105%;
+            }
+        </style>
+    </head>
+<body>
+<pl-question-panel>
+    <code><strong>def mystery(L):</strong> <em>## L is a list</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>DB = {}</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>for word in L:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if word in DB:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>DB[word] = DB[word] + 1</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>DB[word] = 1</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return DB</strong></code><br>
+    <br>
+    <code><em>## f is a function, L is a list</em></code><br>
+    <code><strong>def mystery2(f, L):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if len(L) == 0:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return []</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>first_elt = L[0]</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>rest_elts = L[1:]</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if f(first_elt):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return [first_elt] + mystery2(f, rest_elts)</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return mystery2(f, rest_elts)</strong></code><br>
+    <br>
+    <code><strong>def isEven(n):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return n % 2 == 0</strong></code><br>
+    <br>
+    <code><strong>def compose(f, g):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"""Given functions f(x) and g(x), returns<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;the function equivalent to f(g(x))"""</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return lambda x: f(g(x))</strong></code><br>
+    <br>
+    <code><strong>def mystery3(f, L):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if (len(L) == 1):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return L[0]</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return f(L[0], mystery3(f, L[1:]))</strong></code><br>
+    <br>
+    <code><strong>def add(x, y):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return x + y</strong></code><br>
+    <br>
+    <code><strong>def oneplus(n):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return n + 1</strong></code><br>
+    <br>
+    <code><strong>def tentimes(n):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return n * 10</strong></code><br>
+    <br>
+    <code><em>### import the square root function,</em></code><br>
+    <code><em>### which gets called just like any function</em></code><br>
+    <code><em>### E.g., sqrt(4) &rarr; 2.0</em></code><br>
+    <code><strong>from math import sqrt</strong></code><br>
+    <br>
+    <p>
+        The contents of <strong>exam.py</strong> are shown above. Fill in the blanks to complete our python3 interactive session:<br>
+    </p>
+    (a) Fill in the list input to <strong>mystery1</strong> that results in the return value specified.<br>
+    <code>>>> <strong>mystery1(<pl-string-input answers-name="solution_one" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input>)</strong></code><br>
+    <code><strong>{"BGJ": 1, "love":3, "I":1}</strong></code><br>
+    <br>
+    (b) What is a better name for <code><strong>mystery1</strong></code>?<br>
+    <pl-string-input answers-name="solution_two" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input><br>
+    <br>
+    (c) What is the return value of the following?<br>
+    <code>>>> <strong>mystery2(isEven, [3, 1, 4, 1, 5, 9, 2])</strong></code><br>
+    <pl-string-input answers-name="solution_three" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input><br>
+    <br>
+    (d) Fill in <em>three different</em> elements of list <code><strong>L</strong></code> so that the return value of the call to <code><strong>mystery3</strong></code> is <code>10</code><br>
+    <code>>>> <strong>L = [<pl-string-input answers-name="solution_four" weight = 1 remove-spaces = True allow-blank = True size = 10></pl-string-input>, 
+        <pl-string-input answers-name="solution_five" weight = 1 remove-spaces = True allow-blank = True size = 10></pl-string-input>,
+        <pl-string-input answers-name="solution_six" weight = 1 remove-spaces = True allow-blank = True size = 10></pl-string-input>]</strong></code><br>
+    <code>>>> <strong>mystery3(add, L)</strong></code><br>
+    <code><strong>10</strong></code><br>
+    <br>
+    (e) Fill in the blanks to complete the interactive session <br>
+    <code>>>> <strong>funList = [oneplus, tentimes, sqrt]</strong></code><br>
+    <code>>>> <strong>newFun = mystery3(compose, funList)</strong></code><br>
+    <code>>>> <strong>newFun(4)</strong></code><br>
+    <code><pl-string-input answers-name="solution_seven" weight = 1 remove-spaces = True allow-blank = True size = 10></pl-string-input></code>
+
+    
+    
+</pl-question-panel>

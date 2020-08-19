@@ -168,4 +168,9 @@ def grade(data):
         if data['submitted_answers']["solution_five"] in solution_five:
             data["partial_scores"]["solution_five"]["score"] = 1
             data["score"] += 0.4
+    if data["partial_scores"]["solution_four"]["score"] != 1 and data["partial_scores"]["solution_five"]["score"] != 1: 
+        if data['submitted_answers']["solution_four"] in solution_five and data['submitted_answers']["solution_five"] in solution_four:
+            data["partial_scores"]["solution_four"]["score"] = 0.875
+            data["partial_scores"]["solution_five"]["score"] = 0.875
+            data["score"] += 0.7
 

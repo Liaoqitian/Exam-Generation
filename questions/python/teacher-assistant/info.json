@@ -6,6 +6,15 @@
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
+    "workspaceOptions": {
+        "image": "prairielearn/workspace-jupyterlab",
+        "port": 8080,
+        "home": "/home/jovyan",
+        "rewriteUrl": false,
+        "gradedFiles": [
+            "Workbook.ipynb"
+        ]
+    },
     "externalGradingOptions": {
         "enabled": true,
         "image": "prairielearn/grader-python",

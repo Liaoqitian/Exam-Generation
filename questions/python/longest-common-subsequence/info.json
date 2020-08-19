@@ -4,6 +4,18 @@
     "topic": "Recursion",
     "tags": ["liaoqitian", "alpha", "final", "dead python", "hard", "Fa15Q14", "formative", "berkeley", "1v1"],
     "type": "v3",
+    "workspaceOptions": {
+        "image": "codercom/code-server",
+        "port": 8080,
+        "args": "--auth none",
+        "home": "/home/coder",
+        "gradedFiles": [
+            "lcs.py"
+        ],
+        "syncIgnore": [
+            ".local/share/code-server/"
+        ]
+    },
     "singleVariant": true,
     "gradingMethod": "External",
     "externalGradingOptions": {
