@@ -66,5 +66,20 @@ table.sd {
     </p>
     <code>>>> <strong>for position in range(0, 6):</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>print(position, games(position))</strong></code><br>
-    <code>0 1 <em>## game starts over. (1 total)</em></code>
+    <code>0 1 <em>## game starts over. (1 total)</em></code><br>
+    <code>1 1 <em>## 1&rarr;0 (1 total)</em></code><br>
+    <code>2 2 <em>## 2&rarr;0, and 2&rarr;1&rarr;0 (2 total)</em></code><br>
+    <code>3 3 <em>## 3&rarr;2&rarr;1&rarr;0, 3&rarr;2&rarr;0, and 3&rarr;1&rarr;0 (3 total)</em></code><br>
+    <code>4 5 <em>## 4&rarr;2&rarr;0, 4&rarr;2&rarr;1&rarr;0, 4&rarr;3&rarr;2&rarr;1&rarr;0, 4&rarr;3&rarr;2&rarr;0, 4&rarr;3&rarr;1&rarr;0 (5 total)</em></code><br>
+    <code>5 8 <em>## 5&rarr;4... "all five 4 cases above" + 5&rarr;3... "all three 3 cases above" (8 total)</em></code><br>
+    <br>
+    <code><strong>def game(position):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if primitive(position) != UNDECIDED:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return primitive(position)</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_one" weight = 1 remove-spaces = True allow-blank = True size = 60></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>temp = [games(do_move(position, move)) for move in generate_moves(position)]</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_two" weight = 1 remove-spaces = True allow-blank = True size = 60></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return WIN if LOSE in values else (TIE if TIE in values else LOSE)</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_three" weight = 1 remove-spaces = True allow-blank = True size = 60></pl-string-input></strong></code>
 </pl-question-panel>
