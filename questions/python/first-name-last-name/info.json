@@ -1,0 +1,21 @@
+{
+    "uuid": "9977a204-9214-4e6b-ab78-c2a0df31ccaf",
+    "title": "First Name Last Name",
+    "topic": "Recursion",
+    "tags": ["liaoqitian", "alpha", "final", "live python", "hard", "summative", "berkeley", "Sp20Q4", "1v648"],
+    "type": "v3",
+    "workspaceOptions": {
+        "image": "prairielearn/workspace-xtermjs",
+        "port": 8080,
+        "home": "/home/prairie",
+        "gradedFiles": []
+    },
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "timeout": 20
+    }
+}
