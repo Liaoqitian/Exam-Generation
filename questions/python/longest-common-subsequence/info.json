@@ -2,7 +2,7 @@
     "uuid": "00a1023d-b9d6-4cd1-9243-ee2bb57860b5",
     "title": "longest common subsequence",
     "topic": "Recursion",
-    "tags": ["liaoqitian", "alpha", "final", "dead python", "hard", "Fa15Q14", "formative", "berkeley", "1v1"],
+    "tags": ["liaoqitian", "alpha", "final", "live python", "hard", "Fa15Q14", "formative", "berkeley", "1v1"],
     "type": "v3",
     "workspaceOptions": {
         "image": "codercom/code-server",
