@@ -1,0 +1,70 @@
+<html>
+<head>
+<style type="text/css">
+code {
+  color: black;
+  padding: 2px;
+  font-size: 90%;
+}
+table.sd {
+    margin-left: auto; 
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;  
+  }
+  
+  th, td {
+    height: 50px;
+  }
+  table.sd, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <style type="text/css">
+
+  </style>
+
+<pl-question-panel>
+    <p>
+        The following is our code that completely solves the 10-to-0-by-1-or-2 game, in which two people play a game that starts at 10 with each person taking 1 or 2 on their turn; 
+        the winner is the one that gets the total to 0 first: 
+    </p>
+    <code><strong>LOSE, WIN, TIE, UNDECIDED = "Lose", "Win", "Tie", "Undecided"</strong></code><br>
+    <br>
+    <code><strong>def primitive(position):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Return (WIN, LOSE, TIE) if POSITION is a primitive (game over), otherwise UNDECIDED"</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return LOSE if position == 0 else UNDECIDED</strong></code><br>
+    <br>
+    <code><strong>def generate_moves(position):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Return all the moves available from POSITION"</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return (1,) if position == 1 else (1, 2)</strong></code><br>
+    <br>
+    <code><strong>def do_move(position, move):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Return the child position resulting from doing the MOVE from the POSITION</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return position - move</strong></code><br>
+    <br>
+    <code><strong>def solve(position):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Solve the game (walk the tree starting from POSITION), return (WIN, LOSE, TIE)"</em></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if primitive(position) != UNDECIDED:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return primitive(position)</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>values = [solve(do_move(position, move)) for move in generate_moves(position)]</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return WIN if LOSE in values else (TIE if TIE in values else LOSE)</strong></code><br>
+    <br>
+    <p>
+        You realize you can count the <em>number of different games</em> with very minor changes to <code><strong>solve</strong></code>! We have copied 
+        <code><strong>solve</strong></code> below and changed its name to <code><strong>games</strong></code> (also changed <code><strong>values</strong></code> to 
+        <code><strong>temp</strong></code>). Make whatever minor changes you need by crossing off the line to change and <em>writing the replacement below it</em>. 
+        Note that your solution should work for ANY game - so if you encoded TicTacToe or Chess or Connect Four by rewriting <code><strong>primitive</strong></code>, 
+        <code><strong>generate_move</strong></code>, and <code><strong>do_move</strong></code> appropriately, <code><strong>games</strong></code> would still work.
+    </p>
+    <code>>>> <strong>for position in range(0, 6):</strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>print(position, games(position))</strong></code><br>
+    <code>0 1 <em>## game starts over. (1 total)</em></code>
+</pl-question-panel>
