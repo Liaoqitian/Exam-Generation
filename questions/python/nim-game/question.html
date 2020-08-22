@@ -35,28 +35,29 @@ table.sd {
         The following is our code that completely solves the 10-to-0-by-1-or-2 game, in which two people play a game that starts at 10 with each person taking 1 or 2 on their turn; 
         the winner is the one that gets the total to 0 first: 
     </p>
-    <code><strong>LOSE, WIN, TIE, UNDECIDED = "Lose", "Win", "Tie", "Undecided"</strong></code><br>
-    <br>
-    <code><strong>def primitive(position):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Return (WIN, LOSE, TIE) if POSITION is a primitive (game over), otherwise UNDECIDED"</em></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return LOSE if position == 0 else UNDECIDED</strong></code><br>
-    <br>
-    <code><strong>def generate_moves(position):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Return all the moves available from POSITION"</em></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return (1,) if position == 1 else (1, 2)</strong></code><br>
-    <br>
-    <code><strong>def do_move(position, move):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Return the child position resulting from doing the MOVE from the POSITION</em></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return position - move</strong></code><br>
-    <br>
-    <code><strong>def solve(position):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Solve the game (walk the tree starting from POSITION), return (WIN, LOSE, TIE)"</em></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if primitive(position) != UNDECIDED:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return primitive(position)</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>values = [solve(do_move(position, move)) for move in generate_moves(position)]</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return WIN if LOSE in values else (TIE if TIE in values else LOSE)</strong></code><br>
-    <br>
+<pre>
+<strong>LOSE, WIN, TIE, UNDECIDED = "Lose", "Win", "Tie", "Undecided"</strong>
+
+<strong>def primitive(position):</strong>
+    <em>"Return (WIN, LOSE, TIE) if POSITION is a primitive (game over), otherwise UNDECIDED"</em>
+    <strong>return LOSE if position == 0 else UNDECIDED</strong>
+
+<strong>def generate_moves(position):</strong>
+    <em>"Return all the moves available from POSITION"</em>
+    <strong>return (1,) if position == 1 else (1, 2)</strong>
+    
+<strong>def do_move(position, move):</strong>
+    <em>"Return the child position resulting from doing the MOVE from the POSITION</em>
+    <strong>return position - move</strong>
+
+<strong>def solve(position):</strong>
+    <em>"Solve the game (walk the tree starting from POSITION), return (WIN, LOSE, TIE)"</em>
+    <strong>if primitive(position) != UNDECIDED:</strong>
+        <strong>return primitive(position)</strong>
+    <strong>else:</strong>
+        <strong>values = [solve(do_move(position, move)) for move in generate_moves(position)]</strong>
+        <strong>return WIN if LOSE in values else (TIE if TIE in values else LOSE)</strong>
+</pre>
     <p>
         You realize you can count the <em>number of different games</em> with very minor changes to <code><strong>solve</strong></code>! We have copied 
         <code><strong>solve</strong></code> below and changed its name to <code><strong>games</strong></code> (also changed <code><strong>values</strong></code> to 
@@ -64,22 +65,23 @@ table.sd {
         Note that your solution should work for ANY game - so if you encoded TicTacToe or Chess or Connect Four by rewriting <code><strong>primitive</strong></code>, 
         <code><strong>generate_move</strong></code>, and <code><strong>do_move</strong></code> appropriately, <code><strong>games</strong></code> would still work.
     </p>
-    <code>>>> <strong>for position in range(0, 6):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>print(position, games(position))</strong></code><br>
-    <code>0 1 <em>## game starts over. (1 total)</em></code><br>
-    <code>1 1 <em>## 1&rarr;0 (1 total)</em></code><br>
-    <code>2 2 <em>## 2&rarr;0, and 2&rarr;1&rarr;0 (2 total)</em></code><br>
-    <code>3 3 <em>## 3&rarr;2&rarr;1&rarr;0, 3&rarr;2&rarr;0, and 3&rarr;1&rarr;0 (3 total)</em></code><br>
-    <code>4 5 <em>## 4&rarr;2&rarr;0, 4&rarr;2&rarr;1&rarr;0, 4&rarr;3&rarr;2&rarr;1&rarr;0, 4&rarr;3&rarr;2&rarr;0, 4&rarr;3&rarr;1&rarr;0 (5 total)</em></code><br>
-    <code>5 8 <em>## 5&rarr;4... "all five 4 cases above" + 5&rarr;3... "all three 3 cases above" (8 total)</em></code><br>
-    <br>
+<pre>
+>>> <strong>for position in range(0, 6):</strong>
+        <strong>print(position, games(position))</strong>
+0 1 <em>## game starts over. (1 total)</em>
+1 1 <em>## 1&rarr;0 (1 total)</em>
+2 2 <em>## 2&rarr;0, and 2&rarr;1&rarr;0 (2 total)</em>
+3 3 <em>## 3&rarr;2&rarr;1&rarr;0, 3&rarr;2&rarr;0, and 3&rarr;1&rarr;0 (3 total)</em>
+4 5 <em>## 4&rarr;2&rarr;0, 4&rarr;2&rarr;1&rarr;0, 4&rarr;3&rarr;2&rarr;1&rarr;0, 4&rarr;3&rarr;2&rarr;0, 4&rarr;3&rarr;1&rarr;0 (5 total)</em>
+5 8 <em>## 5&rarr;4... "all five 4 cases above" + 5&rarr;3... "all three 3 cases above" (8 total)</em>
+</pre>
+</pl-question-panel>
     <code><strong>def game(position):</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if primitive(position) != UNDECIDED:</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return primitive(position)</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_one" weight = 1 remove-spaces = True allow-blank = True size = 60></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_one" weight = 1 remove-spaces = True allow-blank = True size = 30></pl-string-input></strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>temp = [games(do_move(position, move)) for move in generate_moves(position)]</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_two" weight = 1 remove-spaces = True allow-blank = True size = 60></pl-string-input></strong></code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_two" weight = 1 remove-spaces = True allow-blank = True size = 30></pl-string-input></strong></code><br>
     <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return WIN if LOSE in values else (TIE if TIE in values else LOSE)</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_three" weight = 1 remove-spaces = True allow-blank = True size = 60></pl-string-input></strong></code>
-</pl-question-panel>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><pl-string-input answers-name="solution_three" weight = 1 remove-spaces = True allow-blank = True size = 30></pl-string-input></strong></code>

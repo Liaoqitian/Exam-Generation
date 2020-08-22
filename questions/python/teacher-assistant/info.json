@@ -4,17 +4,17 @@
     "topic": "Dictionaries",
     "tags": ["liaoqitian", "key-value pairs", "beta", "final", "live python", "hard", "summative", "Sp19Q2", "berkeley", "1v1"],
     "type": "v3",
-    "singleVariant": true,
-    "gradingMethod": "External",
     "workspaceOptions": {
         "image": "prairielearn/workspace-jupyterlab",
         "port": 8080,
         "home": "/home/jovyan",
         "rewriteUrl": false,
         "gradedFiles": [
-            "Workbook.ipynb"
+            "teacher-assistants.ipynb"
         ]
     },
+    "singleVariant": true,
+    "gradingMethod": "External",
     "externalGradingOptions": {
         "enabled": true,
         "image": "prairielearn/grader-python",

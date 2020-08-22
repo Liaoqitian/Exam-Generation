@@ -5,10 +5,13 @@
     "tags": ["liaoqitian", "release", "final", "live python", "hard", "formative", "berkeley", "1v324"], 
     "type": "v3",
     "workspaceOptions": {
-        "image": "prairielearn/workspace-xtermjs",
+        "image": "prairielearn/workspace-jupyterlab",
         "port": 8080,
-        "home": "/home/prairie",
-        "gradedFiles": []
+        "home": "/home/jovyan",
+        "rewriteUrl": false,
+        "gradedFiles": [
+            "nibonacci.ipynb"
+        ]
     },
     "singleVariant": true,
     "gradingMethod": "External",
