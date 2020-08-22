@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+            pre {
+                font-size: 110%;
+            }
+            code {
+                color: black;
+                padding: 2px;
+                font-size: 110%;
+            }
+        </style>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+<body>
+<pl-question-panel>
+    <code>>>> <strong>d = {{params.d}}</strong></code><br>
+    <code>>>> <strong>d.keys()</strong></code><br>
+    <code><pl-string-input answers-name="key_solution" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input></code><br>
+    <code>>>> <strong>d.values()</strong></code><br>
+    <code><pl-string-input answers-name="value_solution" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input></code><br>
+</pl-question-panel>
