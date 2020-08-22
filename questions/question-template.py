@@ -62,4 +62,4 @@ def generate(data):
 ## Contact liaoqitian1024@gmail.com or find Qitian Liao on Slack for questions
 """)
 
-question_template('dictionary-key-value-pair')
+question_template('negative-list-slicing')

@@ -13,6 +13,7 @@ def generate(data):
     string_one = adjectives[random.randint(0, 7)]
     string_two = nowns[random.randint(0, 7)]
     string_solution = string_one + string_two
+    data["correct_answers"]["raw_string_solution"] = string_solution
     string_solution = str([string_solution]).replace("[","").replace("]","")
     data["params"]["string_one"] = string_one
     data["params"]["string_two"] = string_two
@@ -22,5 +23,7 @@ def grade(data):
     if data["submitted_answers"]["string_solution"] == data['correct_answers']['string_solution'].replace('"',"'"):
         data["partial_scores"]["string_solution"]["score"] = 1
         data["score"] += 0.5
-
+    elif data["submitted_answers"]["string_solution"] == data["correct_answers"]["raw_string_solution"]:
+        data["partial_scores"]["string_solution"]["score"] = 1
+        data["score"] += 0.5
     
