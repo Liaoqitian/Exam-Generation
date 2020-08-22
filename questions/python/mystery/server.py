@@ -10,6 +10,17 @@ def mystery1(L):
             DB[word] = 1 
     return DB
 
+def digit_count(N):
+    DB = {}
+    while N > 0:
+        digit = N % 10
+        if digit in DB:
+            DB[digit] = DB[digit] + 1
+        else:
+            DB[digit] = 1
+        N = N // 10 # Floor division
+    return DB
+
 def mystery2(f, L): 
     if len(L) == 0:
         return []
@@ -66,6 +77,11 @@ def tentimes(n):
 
 def generate(data): 
     # part(a)
+    # Two different cases: either word count (0) or integer count (1)
+    variant = random.randint(0, 1)
+    if variant == 0: # word count 
+        pass 
+
     count_one = random.randint(1, 3)
     count_two = random.randint(1, 3)
     count_three = random.randint(1, 3)
