@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            pre {
+                font-size: 110%;
+            }
+            code {
+                color: black;
+                padding: 2px;
+                font-size: 110%;
+            }
+        </style>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+<body>
+
+<pl-question-panel>
+    <code>&nbsp;>>> <strong>{{params.list_one}} + {{params.list_two}}</strong></code><br>
+</pl-question-panel>
+<code><pl-string-input answers-name="list_solution" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input></code>
+<br><br>
+<pl-question-panel>
+    <code>&nbsp;>>> <strong>"{{params.string_one}}" + "{{params.string_two}}"</strong></code><br>
+</pl-question-panel>
+<code><pl-string-input answers-name="string_solution" weight = 1 remove-spaces = True allow-blank = True size = 40></pl-string-input></code>
