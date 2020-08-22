@@ -1,0 +1,10 @@
+pre {
+    font-size: 300px;
+    /* font-family: "Times New Roman", Times, serif;
+    font-style: italic; */
+}
+code {
+    color: black;
+    padding: 2px;
+    font-size: 90%;
+}

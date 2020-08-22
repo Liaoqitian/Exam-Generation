@@ -1,6 +1,15 @@
 import random 
 from math import sqrt 
 
+def mystery1(L): 
+    DB = {}
+    for word in L:
+        if word in DB:
+            DB[word] = DB[word] + 1
+        else:
+            DB[word] = 1 
+    return DB
+
 def mystery2(f, L): 
     if len(L) == 0:
         return []
@@ -57,8 +66,16 @@ def tentimes(n):
 
 def generate(data): 
     # part(a)
-    count_one = random.randint(0, 2)
-    data["correct_answers"]["solution_one"] = ""
+    count_one = random.randint(1, 3)
+    count_two = random.randint(1, 3)
+    count_three = random.randint(1, 3)
+    d = {}
+    d["BJC"] = count_one
+    d["love"] = count_two 
+    d["I"] = count_three 
+    data["params"]["d"] = d
+    data["params"]["d_str"] = str(d)
+    data["correct_answers"]["solution_one"] = "this will be graded explicitly"
 
     # part(b)
     data["correct_answers"]["solution_two"] = ""
@@ -132,7 +149,30 @@ def generate(data):
         data["params"]["mul_function"] = "tentimes"
         data["params"]["mul_function_line_two"] = "return n * 10"        
 
+# Helper function to grade (a)
+def check(user_output, d): 
+    if len(user_output) != len(d):
+        return False
+    for key in user_output:
+        if user_output[key] != d[key]: 
+            return False
+    return True
+
 def grade(data):
+    # part(a) grading
+    user_input = data["submitted_answers"]["solution_one"]
+    if isinstance(user_input, str) and user_input != "":
+        user_input = eval(user_input)
+    if not isinstance(user_input, list): 
+        data["partial_scores"]["solution_one"]["score"] = 0
+    else: 
+        user_output = mystery1(user_input)
+        if check(user_output, data["params"]["d"]): 
+            data["partial_scores"]["solution_one"]["score"] = 1
+            data["score"] += 0.2
+        else:
+            data["partial_scores"]["solution_one"]["score"] = 0
+
     # part(d) grading
     if data["partial_scores"]["solution_four"]["score"] == 1:
         data["partial_scores"]["solution_four"]["score"] = 0

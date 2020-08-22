@@ -1,73 +1,86 @@
 <html>
     <head>
         <style>
+            pre {
+                font-size: 110%;
+            }
             code {
-            color: black;
-            padding: 2px;
-            font-size: 105%;
+                color: black;
+                padding: 2px;
+                font-size: 110%;
             }
         </style>
+        <link rel="stylesheet" href="./styles.css">
     </head>
 <body>
 <pl-question-panel>
-    <code><strong>def mystery(L):</strong> <em>## L is a list</em></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>DB = {}</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>for word in L:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if word in DB:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>DB[word] = DB[word] + 1</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>DB[word] = 1</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return DB</strong></code><br>
-    <br>
-    <code><em>## f is a function, L is a list</em></code><br>
-    <code><strong>def mystery2(f, L):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if len(L) == 0:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return []</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>first_elt = L[0]</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>rest_elts = L[1:]</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if f(first_elt):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return [first_elt] + mystery2(f, rest_elts)</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return mystery2(f, rest_elts)</strong></code><br>
-    <br>
-    <code><strong>def {{params.odd_even_function}}(n):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{params.odd_even_function_line_two}}</strong></code><br>
-    <br>
-    <code><strong>def compose(f, g):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<em>"""Given functions f(x) and g(x), returns<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;the function equivalent to f(g(x))"""</em></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return lambda x: f(g(x))</strong></code><br>
-    <br>
-    <code><strong>def mystery3(f, L):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>if (len(L) == 1):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return L[0]</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>else:</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return f(L[0], mystery3(f, L[1:]))</strong></code><br>
-    <br>
-    <code><strong>def {{params.add_mul_function}}(x, y):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{params.add_mul_function_line_two}}</strong></code><br>
-    <br>
-    <code><strong>def {{params.plus_function}}(n):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{params.plus_function_line_two}}</strong></code><br>
-    <br>
-    <code><strong>def {{params.mul_function}}(n):</strong></code><br>
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{params.mul_function_line_two}}</strong></code><br>
-    <br>
-    <code><em>### import the square root function,</em></code><br>
-    <code><em>### which gets called just like any function</em></code><br>
-    <code><em>### E.g., sqrt(4) &rarr; 2.0</em></code><br>
-    <code><strong>from math import sqrt</strong></code><br>
-    <br>
+<pre>
+<strong>def mystery1(L):</strong> <em>## L is a list</em>
+    <strong>DB = {}</strong>
+    <strong>for word in L:</strong>
+        <strong>if word in DB:</strong>
+            <strong>DB[word] = DB[word] + 1</strong>
+        <strong>else:</strong>
+            <strong>DB[word] = 1</strong>
+    <strong>return DB</strong>
+
+<em>## f is a function, L is a list</em>
+<strong>def mystery2(f, L):</strong>
+    <strong>if len(L) == 0:</strong>
+        <strong>return []</strong>
+    <strong>else:</strong>
+        <strong>first_elt = L[0]</strong>
+        <strong>rest_elts = L[1:]</strong>
+        <strong>if f(first_elt):</strong>
+            <strong>return [first_elt] + mystery2(f, rest_elts)</strong>
+        <strong>else:</strong>
+            <strong>return mystery2(f, rest_elts)</strong>
+
+<strong>def {{params.odd_even_function}}(n):</strong>
+    <strong>{{params.odd_even_function_line_two}}</strong>
+
+<strong>def compose(f, g):</strong>
+    <em>"""Given functions f(x) and g(x), 
+       returns the function equivalent to f(g(x))"""</em>
+    <strong>return lambda x: f(g(x))</strong>
+
+<strong>def mystery3(f, L):</strong>
+    <strong>if (len(L) == 1):</strong>
+        <strong>return L[0]</strong>
+    <strong>else:</strong>
+        <strong>return f(L[0], mystery3(f, L[1:]))</strong>
+
+<strong>def {{params.add_mul_function}}(x, y):</strong>
+    <strong>{{params.add_mul_function_line_two}}</strong>
+
+<strong>def {{params.plus_function}}(n):</strong>
+    <strong>{{params.plus_function_line_two}}</strong>
+
+<strong>def {{params.mul_function}}(n):</strong>
+    <strong>{{params.mul_function_line_two}}</strong>
+
+<em>### import the square root function,</em>
+<em>### which gets called just like any function</em>
+<em>### E.g., sqrt(4) &rarr; 2.0</em>
+<strong>from math import sqrt</strong>
+</pre>
     <p>
         The contents of <strong>exam.py</strong> are shown above. Fill in the blanks to complete our python3 interactive session:<br>
     </p>
     (a) Fill in the list input to <strong>mystery1</strong> that results in the return value specified.<br>
     <code>>>> <strong>mystery1(<pl-string-input answers-name="solution_one" weight = 4 remove-spaces = True allow-blank = True size = 40></pl-string-input>)</strong></code><br>
-    <code><strong>{"BGJ": 1, "love":3, "I":1}</strong></code><br>
+    <code><strong>{{params.d_str}}</strong></code><br>
    <br>
     (b) What is a better name for <code><strong>mystery1</strong></code>?<br>
-    <pl-string-input answers-name="solution_two" weight = 2 remove-spaces = True allow-blank = True size = 40></pl-string-input><br>
+    <pl-dropdown answers-name="solution_two" weight = 2 sort = "random">
+        <pl-answer correct = "true">word_count</pl-answer>
+        <pl-answer correct = "false">iterate_through_every_element_in_the_input_and_add_numbers</pl-answer>
+        <pl-answer correct = "false">count_odd_elements</pl-answer>
+        <pl-answer correct = "false">count_even_elements</pl-answer>
+        <pl-answer correct = "false">sets_count</pl-answer>
+        <pl-answer correct = "false">store_elements_in_sets</pl-answer>
+        <pl-answer correct = "false">add_one_to_elements</pl-answer>
+    </pl-dropdown><br>
     <br>
     (c) What is the return value of the following?<br>
     <code>>>> <strong>mystery2({{params.odd_even_function}}, {{params.numbers}})</strong></code><br>
