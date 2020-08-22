@@ -4,7 +4,7 @@ def generate(data):
     adjectives = ["big", "small", "pretty", "ugly", "red", "blue", "tall", "short"]
     nowns = ["house", "car", "tree", "table", "chair", "fork", "bird", "window"]
     key_one = adjectives[random.randint(0, 7)]
-    key_two = adjectives[random.randint(0, 7)]
+    key_two = nowns[random.randint(0, 7)]
     count_one = random.randint(0, 9)
     count_two = random.randint(0, 9)
     d = {}
