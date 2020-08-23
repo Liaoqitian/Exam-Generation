@@ -105,11 +105,6 @@ def mystery1(N):
     return DB
     """
 
-
-
-
-
-
     count_one = random.randint(1, 3)
     count_two = random.randint(1, 3)
     count_three = random.randint(1, 3)
@@ -129,12 +124,14 @@ def mystery1(N):
     numbers = random.sample(range(10, 31), 7)
     data["params"]["numbers"] = str(numbers)
     if c_function_index == 0:
+        data["params"]["odd_even"] = "isEven"
         data["params"]["odd_even_function"] = """
 def isEven(n):
     return n % 2 == 1
     """
         solution_three = mystery2(isEven, numbers)
     elif c_function_index == 1:
+        data["params"]["odd_even"] = "isOdd"
         data["params"]["odd_even_function"] = """
 def isOdd(n):
     return n % 2 == 1
@@ -145,6 +142,7 @@ def isOdd(n):
     # part(d)
     d_function_index = random.randint(0, 1)
     if d_function_index == 0:
+        data["params"]["add_mul"] = "add"
         data["params"]["add_mul_function"] = """
 def add(x, y):
     return x + y
@@ -155,6 +153,7 @@ def add(x, y):
         data["params"]["res"] = number_one + number_two + number_three
 
     elif d_function_index == 1:
+        data["params"]["add_mul"] = "mul"
         data["params"]["add_mul_function"] = """
 def mul(x, y):
     return x * y
@@ -182,32 +181,38 @@ def mul(x, y):
     data["correct_answers"]["solution_seven"] = result
 
     if plus_function == oneplus:
+        data["params"]["plus"] = "oneplus"
         data["params"]["plus_function"] = """
 def oneplus(n):
     return n + 1
     """
     elif plus_function == twoplus: 
+        data["params"]["plus"] = "twoplus"
         data["params"]["plus_function"] = """
 def twoplus(n):
     return n + 2
     """
     elif plus_function == threeplus: 
+        data["params"]["plus"] = "threeplus"
         data["params"]["plus_function"] = """
 def threeplus(n):
     return n + 3
     """
 
     if mul_function == fourtimes: 
+        data["params"]["mul"] = "fourtimes"
         data["params"]["mul_function"] = """
 def fourtimes(n):
     return n * 4
     """
     elif mul_function == fivetimes: 
+        data["params"]["mul"] = "fivetimes"
         data["params"]["mul_function"] = """
 def fivetimes(n):
     return n * 5    
     """
     elif mul_function == tentimes:
+        data["params"]["mul"] = "tentimes"
         data["params"]["mul_function"] = """
 def tentimes(n):
     return n * 10
