@@ -80,7 +80,35 @@ def generate(data):
     # Two different cases: either word count (0) or integer count (1)
     variant = random.randint(0, 1)
     if variant == 0: # word count 
-        pass 
+        data["params"]["mystery1"] = """
+def mystery1(L): 
+    DB = {}
+    for word in L:
+        if word in DB:
+            DB[word] = DB[word] + 1
+        else:
+            DB[word] = 1 
+    return DB
+    """
+
+    if variant == 1: ## integer count 
+        data["params"]["mystery1"] = """
+def mystery1(N):
+    DB = {}
+    while N > 0:
+        digit = N % 10
+        if digit in DB:
+            DB[digit] = DB[digit] + 1
+        else:
+            DB[digit] = 1
+        N = N // 10 # Floor division
+    return DB
+    """
+
+
+
+
+
 
     count_one = random.randint(1, 3)
     count_two = random.randint(1, 3)
@@ -101,28 +129,36 @@ def generate(data):
     numbers = random.sample(range(10, 31), 7)
     data["params"]["numbers"] = str(numbers)
     if c_function_index == 0:
-        data["params"]["odd_even_function"] = "isEven"
-        data["params"]["odd_even_function_line_two"] = "return n % 2 == 0"
+        data["params"]["odd_even_function"] = """
+def isEven(n):
+    return n % 2 == 1
+    """
         solution_three = mystery2(isEven, numbers)
     elif c_function_index == 1:
-        data["params"]["odd_even_function"] = "isOdd"
-        data["params"]["odd_even_function_line_two"] = "return n % 2 == 1"
+        data["params"]["odd_even_function"] = """
+def isOdd(n):
+    return n % 2 == 1
+    """
         solution_three = mystery2(isOdd, numbers)
     data["correct_answers"]["solution_three"] = str(solution_three)
 
     # part(d)
     d_function_index = random.randint(0, 1)
     if d_function_index == 0:
-        data["params"]["add_mul_function"] = "add"
-        data["params"]["add_mul_function_line_two"] = "return x + y"
+        data["params"]["add_mul_function"] = """
+def add(x, y):
+    return x + y
+    """
         number_one = random.randint(0, 2)
         number_two = random.randint(number_one + 1, number_one + 3)
         number_three = random.randint(number_two + 1, number_two + 3)
         data["params"]["res"] = number_one + number_two + number_three
 
     elif d_function_index == 1:
-        data["params"]["add_mul_function"] = "mul"
-        data["params"]["add_mul_function_line_two"] = "return x * y"
+        data["params"]["add_mul_function"] = """
+def mul(x, y):
+    return x * y
+    """
         number_one = random.randint(1, 2)
         number_two = random.randint(number_one + 1, number_one + 3)
         number_three = random.randint(number_two + 1, number_two + 3)
@@ -146,24 +182,36 @@ def generate(data):
     data["correct_answers"]["solution_seven"] = result
 
     if plus_function == oneplus:
-        data["params"]["plus_function"] = "oneplus"
-        data["params"]["plus_function_line_two"] = "return n + 1"
+        data["params"]["plus_function"] = """
+def oneplus(n):
+    return n + 1
+    """
     elif plus_function == twoplus: 
-        data["params"]["plus_function"] = "twoplus"
-        data["params"]["plus_function_line_two"] = "return n + 2"
+        data["params"]["plus_function"] = """
+def twoplus(n):
+    return n + 2
+    """
     elif plus_function == threeplus: 
-        data["params"]["plus_function"] = "threeplus"
-        data["params"]["plus_function_line_two"] = "return n + 3"
+        data["params"]["plus_function"] = """
+def threeplus(n):
+    return n + 3
+    """
 
     if mul_function == fourtimes: 
-        data["params"]["mul_function"] = "fourtimes"
-        data["params"]["mul_function_line_two"] = "return n * 4"
+        data["params"]["mul_function"] = """
+def fourtimes(n):
+    return n * 4
+    """
     elif mul_function == fivetimes: 
-        data["params"]["mul_function"] = "fivetimes"
-        data["params"]["mul_function_line_two"] = "return n * 5"
+        data["params"]["mul_function"] = """
+def fivetimes(n):
+    return n * 5    
+    """
     elif mul_function == tentimes:
-        data["params"]["mul_function"] = "tentimes"
-        data["params"]["mul_function_line_two"] = "return n * 10"        
+        data["params"]["mul_function"] = """
+def tentimes(n):
+    return n * 10
+    """      
 
 # Helper function to grade (a)
 def check(user_output, d): 

@@ -15,15 +15,7 @@
 <body>
 <pl-question-panel>
 <pre>
-<strong>def mystery1(L):</strong> <em>## L is a list</em>
-    <strong>DB = {}</strong>
-    <strong>for word in L:</strong>
-        <strong>if word in DB:</strong>
-            <strong>DB[word] = DB[word] + 1</strong>
-        <strong>else:</strong>
-            <strong>DB[word] = 1</strong>
-    <strong>return DB</strong>
-
+    <strong>{{params.mystery1}}</strong>
 <em>## f is a function, L is a list</em>
 <strong>def mystery2(f, L):</strong>
     <strong>if len(L) == 0:</strong>
@@ -35,30 +27,18 @@
             <strong>return [first_elt] + mystery2(f, rest_elts)</strong>
         <strong>else:</strong>
             <strong>return mystery2(f, rest_elts)</strong>
-
-<strong>def {{params.odd_even_function}}(n):</strong>
-    <strong>{{params.odd_even_function_line_two}}</strong>
-
+<strong>{{params.odd_even_function}}</strong>
 <strong>def compose(f, g):</strong>
     <em>"""Given functions f(x) and g(x), 
        returns the function equivalent to f(g(x))"""</em>
     <strong>return lambda x: f(g(x))</strong>
-
+    
 <strong>def mystery3(f, L):</strong>
     <strong>if (len(L) == 1):</strong>
         <strong>return L[0]</strong>
     <strong>else:</strong>
         <strong>return f(L[0], mystery3(f, L[1:]))</strong>
-
-<strong>def {{params.add_mul_function}}(x, y):</strong>
-    <strong>{{params.add_mul_function_line_two}}</strong>
-
-<strong>def {{params.plus_function}}(n):</strong>
-    <strong>{{params.plus_function_line_two}}</strong>
-
-<strong>def {{params.mul_function}}(n):</strong>
-    <strong>{{params.mul_function_line_two}}</strong>
-
+<strong>{{params.add_mul_function}}</strong><strong>{{params.plus_function}}</strong><strong>{{params.mul_function}}</strong>
 <em>### import the square root function,</em>
 <em>### which gets called just like any function</em>
 <em>### E.g., sqrt(4) &rarr; 2.0</em>
