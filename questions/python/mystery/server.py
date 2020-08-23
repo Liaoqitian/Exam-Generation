@@ -79,7 +79,14 @@ def generate(data):
     # part(a)
     # Two different cases: either word count (0) or integer count (1)
     variant = random.randint(0, 1)
+    data["params"]["variant"] = variant
+    count_one = random.randint(1, 3)
+    count_two = random.randint(1, 3)
+    count_three = random.randint(1, 3)
+    d = {}
     if variant == 0: # word count 
+        data["params"]["head"] = "string"
+        data["params"]["comment"] = "## L is a list"
         data["params"]["mystery1"] = """
 def mystery1(L): 
     DB = {}
@@ -90,8 +97,16 @@ def mystery1(L):
             DB[word] = 1 
     return DB
     """
+        d["BJC"] = count_one
+        d["love"] = count_two 
+        d["I"] = count_three 
+        data["params"]["d"] = d
+        data["params"]["d_str"] = str(d)
+        data["correct_answers"]["solution_one"] = "this will be graded explicitly"
 
     if variant == 1: ## integer count 
+        data["params"]["head"] = "integer"
+        data["params"]["comment"] = "## N is a positive integer"
         data["params"]["mystery1"] = """
 def mystery1(N):
     DB = {}
@@ -101,20 +116,18 @@ def mystery1(N):
             DB[digit] = DB[digit] + 1
         else:
             DB[digit] = 1
-        N = N // 10 # Floor division
+        N = N // 10
     return DB
     """
-
-    count_one = random.randint(1, 3)
-    count_two = random.randint(1, 3)
-    count_three = random.randint(1, 3)
-    d = {}
-    d["BJC"] = count_one
-    d["love"] = count_two 
-    d["I"] = count_three 
-    data["params"]["d"] = d
-    data["params"]["d_str"] = str(d)
-    data["correct_answers"]["solution_one"] = "this will be graded explicitly"
+        # number = random.randint(100000000, 999999999)
+        list_of_numbers = random.sample(range(1, 9), 3)
+        d[list_of_numbers[0]] = count_one
+        d[list_of_numbers[1]] = count_two 
+        d[list_of_numbers[2]] = count_three 
+        # d = digit_count(number)
+        data["params"]["d"] = d
+        data["params"]["d_str"] = str(d)
+        data["correct_answers"]["solution_one"] = 23456432
 
     # part(b)
     data["correct_answers"]["solution_two"] = ""
@@ -222,20 +235,34 @@ def tentimes(n):
 def check(user_output, d): 
     if len(user_output) != len(d):
         return False
-    for key in user_output:
-        if user_output[key] != d[key]: 
+    for key in d:
+        if key not in user_output or user_output[key] != d[key]: 
             return False
     return True
 
 def grade(data):
     # part(a) grading
     user_input = data["submitted_answers"]["solution_one"]
-    if isinstance(user_input, str) and user_input != "":
-        user_input = eval(user_input)
-    if not isinstance(user_input, list): 
-        data["partial_scores"]["solution_one"]["score"] = 0
-    else: 
-        user_output = mystery1(user_input)
+    if data["params"]["variant"] == 0:
+        if isinstance(user_input, str) and user_input != "":
+            user_input = eval(user_input)
+        if not isinstance(user_input, list): 
+            data["partial_scores"]["solution_one"]["score"] = 0
+        else: 
+            user_output = mystery1(user_input)
+            if check(user_output, data["params"]["d"]): 
+                data["partial_scores"]["solution_one"]["score"] = 1
+                data["score"] += 0.2
+            else:
+                data["partial_scores"]["solution_one"]["score"] = 0
+
+    elif data["params"]["variant"] == 1:
+        # if isinstance(user_input, str) and user_input != "":
+        #     user_input = eval(user_input)
+        # if not isinstance(user_input, int): 
+        #     data["partial_scores"]["solution_one"]["score"] = 0
+        # else: 
+        user_output = digit_count(user_input)
         if check(user_output, data["params"]["d"]): 
             data["partial_scores"]["solution_one"]["score"] = 1
             data["score"] += 0.2

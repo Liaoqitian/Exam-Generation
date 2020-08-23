@@ -15,7 +15,7 @@
 <body>
 <pl-question-panel>
 <pre>
-    <strong>{{params.mystery1}}</strong>
+<em>{{params.comment}}</em><strong>{{params.mystery1}}</strong>
 <em>## f is a function, L is a list</em>
 <strong>def mystery2(f, L):</strong>
     <strong>if len(L) == 0:</strong>
@@ -44,11 +44,12 @@
 <em>### E.g., sqrt(4) &rarr; 2.0</em>
 <strong>from math import sqrt</strong>
 </pre>
+</pl-question-panel>
     <p>
         The contents of <strong>exam.py</strong> are shown above. Fill in the blanks to complete our python3 interactive session:<br>
     </p>
     (a) Fill in the list input to <strong>mystery1</strong> that results in the return value specified.<br>
-    <code>>>> <strong>mystery1(<pl-string-input answers-name="solution_one" weight = 4 remove-spaces = True allow-blank = True size = 40></pl-string-input>)</strong></code><br>
+    <code>>>> <strong>mystery1(<pl-{{params.head}}-input answers-name="solution_one" weight = 4 size = 40></pl-{{params.head}}-input>)</strong></code><br>
     <code><strong>{{params.d_str}}</strong></code><br>
    <br>
     (b) What is a better name for <code><strong>mystery1</strong></code>?<br>
@@ -80,4 +81,3 @@
     <code>>>> <strong>newFun({{params.square_number}})</strong></code><br>
     <code><pl-integer-input answers-name="solution_seven" weight = 7 size = 10></pl-integer-input></code>
 
-</pl-question-panel>
