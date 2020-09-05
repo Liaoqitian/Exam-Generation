@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            pre {
+                font-size: 110%;
+            }
+            code {
+                color: black;
+                padding: 2px;
+                font-size: 110%;
+            }
+        </style>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+<body>
+<pl-question-panel>
+    <p>
+        What is ${{params.Converted_Number1}}_{ {{params.Base1}} }$ $+$ ${{params.Converted_Number2}}_{ {{params.Base2}} }$? 
+    </p> 
+</pl-question-panel>
+<pl-multiple-choice answers-name="b" number-answers = 8 weight="1">
+    <pl-answer correct="true"> 
+        ${{params.solution}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i0}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i1}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i2}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i3}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i4}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i5}}_{ {{params.Base3}} }$
+    </pl-answer>
+    <pl-answer correct="false">
+        ${{params.i6}}_{ {{params.Base3}} }$
+    </pl-answer>
+</pl-question-panel>

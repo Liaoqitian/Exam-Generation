@@ -8,7 +8,7 @@ Make sure all parent directories exist beforehand
 ('snap' & 'iteration' would already exist)
 """
 def question_template(quid):
-    os.chdir('questions/python')
+    os.chdir('questions')
     split_dir = quid.split("/")
     for folder in split_dir:
         if os.path.isdir(folder):
@@ -50,7 +50,7 @@ def generate(data):
     "uuid": "REPLACE",
     "title": "",
     "topic": "",
-    "tags": ["liaoqitian", "final", "blank", "easy", "formative", "berkeley", "alpha", "Fa14Q12"],
+    "tags": ["liaoqitian", "beta", "quest", "radio", "medium", "Sp19Q6", "summative", "berkeley", "1v432"],
     "type": "v3"
 }
 """)
@@ -62,4 +62,4 @@ def generate(data):
 ## Contact liaoqitian1024@gmail.com or find Qitian Liao on Slack for questions
 """)
 
-question_template('negative-list-slicing')
+question_template('number-addition')
