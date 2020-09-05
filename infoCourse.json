@@ -206,8 +206,6 @@
         {"name": "key-value pairs", "color": "gray2", "description": "Dictionaries"},
         {"name": "no order", "color": "gray2", "description": "Dictionaries"},
         
-        {"name": "ireneog", "color": "brown1", "description": "QG originally written by Irene Ortega (ireneog@berkeley.edu, ireneortega743@gmail.com); Github: ireneog"},
-        {"name": "byao", "color": "brown1", "description": "QG originally written by Bojin (Max) Yao (bojinyao@berkeley.edu); Github: bojinyao"},
         {"name": "liaoqitian", "color": "brown1", "description": "QG originally written by Qitian Liao (liao1024@berkeley.edu); Github: Liaoqitian"},
 
         {"name": "berkeley", "color": "blue3", "description": "Intellectual property owned by the University of California, Berkeley"}
