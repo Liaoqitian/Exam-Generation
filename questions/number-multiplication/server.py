@@ -21,7 +21,7 @@ def generate(data):
         Converted_Number1 = str(oct(Number1))
         Converted_Number1 = Converted_Number1[2:]
     elif Base1 == "16":
-        Converted_Number1 = str(hex(Number1))
+        Converted_Number1 = str("0x{:X}".format(Number1))
         Converted_Number1 = Converted_Number1[2:]
     data['params']['Converted_Number1'] = Converted_Number1
 
@@ -40,7 +40,7 @@ def generate(data):
         Converted_Number2 = str(oct(Number2))
         Converted_Number2 = Converted_Number2[2:]
     elif Base2 == "16":
-        Converted_Number2 = str(hex(Number2))
+        Converted_Number2 = str("0x{:X}".format(Number2))
         Converted_Number2 = Converted_Number2[2:]
     data['params']['Converted_Number2'] = Converted_Number2
     
@@ -56,7 +56,7 @@ def generate(data):
         solution = str(oct(unconverted_solution))
         solution = solution[2:]
     elif Base3 == "16":
-        solution = str(hex(unconverted_solution))
+        solution = str("0x{:X}".format(unconverted_solution))
         solution = solution[2:]
     data['params']['solution'] = solution
 
@@ -82,19 +82,30 @@ def generate(data):
     i5 = i_choices[5]
     i6 = i_choices[6]
 
-    # Create two dummy choices based on the question 
-    if Base2 != "16": 
-        i7 = int(str(Converted_Number1) + str(Converted_Number2))
-        i8 = i7 + 2
-    else: 
-        i7 = str(Converted_Number1) + str(Converted_Number2)
-        i8 = str(Converted_Number1) + str(Converted_Number2) + str(random.randint(0, 9))
-
-    # Create two dummy choices with wrong base 
-    i9 = solution
-    i10 = solution
-    iBase9 = Selected_Bases[3]
-    iBase10 = Selected_Bases[0]
+    if Base3 == "2": 
+        i0 = str(bin(i0))[2:]
+        i1 = str(bin(i1))[2:]
+        i2 = str(bin(i2))[2:]
+        i3 = str(bin(i3))[2:]
+        i4 = str(bin(i4))[2:]
+        i5 = str(bin(i5))[2:]
+        i6 = str(bin(i6))[2:]
+    elif Base3 == "8": 
+        i0 = str(oct(i0))[2:]
+        i1 = str(oct(i1))[2:]
+        i2 = str(oct(i2))[2:]
+        i3 = str(oct(i3))[2:]
+        i4 = str(oct(i4))[2:]
+        i5 = str(oct(i5))[2:]
+        i6 = str(oct(i6))[2:]
+    elif Base3 == "16":
+        i0 = str("0x{:X}".format(i0))[2:]
+        i1 = str("0x{:X}".format(i1))[2:]
+        i2 = str("0x{:X}".format(i2))[2:]
+        i3 = str("0x{:X}".format(i3))[2:]
+        i4 = str("0x{:X}".format(i4))[2:]
+        i5 = str("0x{:X}".format(i5))[2:]
+        i6 = str("0x{:X}".format(i6))[2:]
     
     # Store all the variables in params
     data['params']["i0"] = i0
@@ -104,9 +115,3 @@ def generate(data):
     data['params']["i4"] = i4
     data['params']["i5"] = i5
     data['params']["i6"] = i6
-    data['params']["i7"] = i7
-    data['params']["i8"] = i8
-    data['params']['i9'] = i9
-    data['params']['i10'] = i10
-    data['params']['iBase9'] = iBase9
-    data['params']['iBase10'] = iBase10

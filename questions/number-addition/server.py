@@ -17,7 +17,7 @@ def generate(data):
         Converted_Number1 = str(bin(Number1))
         Converted_Number1 = Converted_Number1[2:]
     elif Base1 == "16":
-        Converted_Number1 = str(hex(Number1))
+        Converted_Number1 = str("0x{:X}".format(Number1))
         Converted_Number1 = Converted_Number1[2:]
     data['params']['Converted_Number1'] = Converted_Number1
 
@@ -33,7 +33,7 @@ def generate(data):
         Converted_Number2 = str(bin(Number2))
         Converted_Number2 = Converted_Number2[2:]
     elif Base2 == "16":
-        Converted_Number2 = str(hex(Number2))
+        Converted_Number2 = str("0x{:X}".format(Number2))
         Converted_Number2 = Converted_Number2[2:]
     data['params']['Converted_Number2'] = Converted_Number2
     
@@ -46,7 +46,7 @@ def generate(data):
         solution = str(bin(unconverted_solution))
         solution = solution[2:]
     elif Base3 == "16":
-        solution = str(hex(unconverted_solution))
+        solution = str("0x{:X}".format(unconverted_solution))
         solution = solution[2:]
     data['params']['solution'] = solution
 
@@ -80,13 +80,13 @@ def generate(data):
         i5 = str(bin(i5))[2:]
         i6 = str(bin(i6))[2:]
     elif Base3 == "16":
-        i0 = str(hex(i0))[2:]
-        i1 = str(hex(i1))[2:]
-        i2 = str(hex(i2))[2:]
-        i3 = str(hex(i3))[2:]
-        i4 = str(hex(i4))[2:]
-        i5 = str(hex(i5))[2:]
-        i6 = str(hex(i6))[2:]
+        i0 = str("0x{:X}".format(i0))[2:]
+        i1 = str("0x{:X}".format(i1))[2:]
+        i2 = str("0x{:X}".format(i2))[2:]
+        i3 = str("0x{:X}".format(i3))[2:]
+        i4 = str("0x{:X}".format(i4))[2:]
+        i5 = str("0x{:X}".format(i5))[2:]
+        i6 = str("0x{:X}".format(i6))[2:]
 
     # # Create two dummy choices with wrong base 
     # i9 = solution
