@@ -1,16 +1,31 @@
 import prairielearn as pl
 import random, copy, math
 
-def generate(data):
+def generate(data): 
+    # operations map: 0 - add, 1 - minus, 2 - multiply
+    operation_key = random.randint(0, 2)
+    operator_number = random.randint(2, 3)
+    range_number = random.randint(7, 10)
+    modulo_number = random.randint(2, 4)
+    remainder_number = random.randint(0, modulo_number - 1)
+    if operation_key == 0: 
+        operation = "+"
+        outcome = [x + operator_number for x in range(range_number) if x % modulo_number != remainder_number]
+    elif operation_key == 1: 
+        operation = "-"
+        outcome = [x - operator_number for x in range(range_number) if x % modulo_number != remainder_number]
+    elif operation_key == 2:
+        operation = "*"
+        outcome = [x * operator_number for x in range(range_number) if x % modulo_number != remainder_number]
 
-    # Randomize the count 
-    count = random.randint(5, 9)
-    old_list = random.sample(range(1, 9), 2)
-    new_list = [old_list for x in range(count)]
-    solution = "[input_list for i in range(" + str(count) + ")]"
+    data["params"]["operation_key"] = operation_key
+    # data["params"]["operator_number"] = operator_number 
+    data["params"]["range_number"] = range_number
+    # data["params"]["modulo_number"] = modulo_number
+    data["params"]["remainder_number"] = remainder_number
+    # data["params"]["operation"] = operation
 
-    # Store the variables 
-    data['params']['count'] = count 
-    data['params']['old_list'] = str(old_list)
-    data['params']['new_list'] = str(new_list)
-    data['correct_answers']['solution'] = solution
+    data["params"]["outcome"] = str(outcome)
+    data["correct_answers"]["solution_one"] = operation
+    data["correct_answers"]["solution_two"] = str(operator_number)
+    data["correct_answers"]["solution_three"] = str(modulo_number)

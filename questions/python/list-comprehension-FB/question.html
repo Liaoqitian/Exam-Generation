@@ -9,17 +9,5 @@ code {
 </style>
 </head>
 <body>
-
-<pl-question-panel>
-    <p> We are trying to write a Python function called <code><strong>repeat_{{params.count}}</strong></code>, which takes as input a list, and returns a new list containing 
-        the input list repeated {{params.count}} times. For example: </p>
-        <code>>>> <strong> my_list = {{params.old_list}}</strong></code><br> 
-        <code>>>> <strong> repeat_{{params.count}}(my_list)</strong></code><br>
-        <code><strong>{{params.new_list}}</strong></code>
-        <br>
-        <br>
-    <p>Complete our definition of <code><strong>repeat_{{params.count}}</strong></code> below by writing a one-line list comprehension. Solutions that are more than one line
-    or do not use a list comprehension with <strong>"i"</strong> will not receive credit.</p>
-</pl-question-panel>
-    <code><strong> def repeat_{{params.count}}(input_list)</strong></code><br> 
-    <code>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return<pl-string-input answers-name="solution" remove-leading-trailing = True remove-spaces = True></pl-string-input></strong></code>
+<code>>>> <strong>[x <pl-string-input answers-name="solution_one" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> <pl-string-input answers-name="solution_two" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> for x in range({{params.range_number}}) if x % <pl-string-input answers-name="solution_three" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> != {{params.remainder_number}}]</strong></code><br>
+<code><strong>{{params.outcome}}</strong></code>
