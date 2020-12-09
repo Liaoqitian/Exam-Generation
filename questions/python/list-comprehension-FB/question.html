@@ -9,5 +9,9 @@ code {
 </style>
 </head>
 <body>
-<code>>>> <strong>[x <pl-string-input answers-name="solution_one" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> <pl-string-input answers-name="solution_two" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> for x in range({{params.range_number}}) if x % <pl-string-input answers-name="solution_three" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> != {{params.remainder_number}}]</strong></code><br>
+<code>>>> <strong>[x <pl-string-input answers-name="map_operation" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> 
+    <pl-string-input answers-name="map_number" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> 
+    for x in range({{params.range_number}}) if x % 
+    <pl-string-input answers-name="modulo_number" remove-leading-trailing = True remove-spaces = True allow-blank = True size = 2></pl-string-input> 
+    != {{params.remainder_number}}]</strong></code><br>
 <code><strong>{{params.outcome}}</strong></code>
