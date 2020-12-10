@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+code {
+  color: black;
+  padding: 2px;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
+
+<pl-question-panel>
+    Given the following: <br>
+    a. <code>map</code> <br>
+    b. <code>keep</code> <br>
+    c. <code>combine</code> <br>
+    d. A dyadic reporter named F <br>
+    e. A predicate named P <br>
+    f. A list named L <br>
+    <br>
+</pl-question-panel>
+    1. Of the 6 possible ways of nesting items 1-3 above (e.g., <code>map(keep(combine))</code> or <code>keep(combine(map))</code>), how many can error? <br>
+    (Remember calling map or keep on an empty list does not error.)<br>
+    <pl-integer-input answers-name="solution_one"></pl-integer-input><br>
+    <br>
+    2. How many can give an output other than error? <br>
+    <pl-integer-input answers-name="solution_two"></pl-integer-input><br>
+    <br>
+    3. Give a concrete example specifying items F, P, and L such that combine(map(keep)) and combine(keep(map)) output the same results, but not error.<br>
+    <pl-string-input answers-name="solution" remove-leading-trailing = True remove-spaces = True></pl-string-input>
