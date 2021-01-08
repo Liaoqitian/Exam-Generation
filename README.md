@@ -1,4 +1,4 @@
-# Exam Generation
+# Question Generation
 
 PrairieLearn (PL) course setup for CS10 (Beauty and Joy of Computing) at University of California, Berkeley 
 
