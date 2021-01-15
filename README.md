@@ -16,7 +16,7 @@ PrairieLearn (PL) course setup for CS10 (Beauty and Joy of Computing) at Univers
 
 For detailed instructions to set up PrairieLearn, please direct to [Installing and running PrairieLearn](https://prairielearn.readthedocs.io/en/latest/installing/)
 
-*You must have Docker installed on your system for the following to work!* For Docker download and startup guide, direct to [here](https://docs.docker.com/)
+You must have Docker installed on your system for the following to work. For Docker download and startup guide, direct to [here](https://docs.docker.com/)
 
 
 1. Start Docker application on your machine.
