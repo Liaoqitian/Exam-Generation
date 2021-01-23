@@ -6,7 +6,6 @@ PrairieLearn (PL) course setup for CS10 (Beauty and Joy of Computing) at Univers
 ## Table of Contents
   - [Interface Demonstration](#Interface-Demonstration)
   - [Basic Setup](#basic-setup)
-  - [Basic Usage](#basic-usage)
   - [Examples](#examples)
   - [Contributing](#contributing)
 
@@ -37,10 +36,6 @@ docker run -it --rm -p 3000:3000 \
 4. Once the Docker Container has been initialized, go to [http://localhost:3000/pl](http://localhost:3000/pl)
 
 5. Click `Load from disk` on top-right corner of the page. As long as no error is raised, you can navigate to your desired page.
-
-## Basic Usage
-
-For each new question you author, place the folder containing relevant files and directories inside `questions/`
 
 ## Examples
 
