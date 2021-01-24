@@ -7,7 +7,6 @@ PrairieLearn (PL) course setup for CS10 (Beauty and Joy of Computing) at Univers
   - [Interface Demonstration](#Interface-Demonstration)
   - [Basic Setup](#basic-setup)
   - [Examples](#examples)
-  - [Contributing](#contributing)
 
 ## Interface Demonstration 
 ![alt text](https://github.com/Liaoqitian/Exam-Generation/blob/master/Interface%20Demo/latest.png "Interface Demo")
